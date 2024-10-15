@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}dahira{% endblock %}
+
+{% block body %}
+<div class="page-header">
+		<div class="row">
+			<div class="col-md-6 col-sm-12">
+				<div class="title">
+					<h4>Details du dahira : {{dahira.nom}} </h4>
+				</div>
+				<nav aria-label="breadcrumb" role="navigation">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Tableau de board</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Information de la dahiras</li>
+					</ol>
+				</nav>
+			</div>
+		    <div class="col-md-6 col-sm-12 text-right">
+					<a class="btn btn-success" href="{{ path('app_dahiras_index') }}">
+						Liste des dahiras
+					</a>
+			</div>
+		</div>
+        <div class="demo-inline-spacing mt-3">
+            <ul class="list-group">
+                <li class="list-group-item d-flex align-items-center">
+                       <strong class="mx-3"><i class="bx bx-id-card me-2"></i> Nom: </strong> {{ dahira.nom}}
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+
+                       <strong class="mx-3"><i class="bx bx-id-card me-2"></i> Adresse: </strong> {{ dahira.adresse}}
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+
+                    <strong class="mx-3"><i class="bx bx-pencil me-2"></i> Description: </strong> {{ dahira.description}}
+                </li>
+
+{#                <li class="list-group-item d-flex align-items-center">#}
+
+{#                <strong class="mx-3"> <i class="bx bx-calendar me-2"></i> Date de création: </strong>#}
+{#                {{ dahira.createdAt ? dahira.createdAt|date('Y-m-d H:i:s') : '' }}#}
+{#                </li>#}
+{#                <li class="list-group-item d-flex align-items-center">#}
+
+{#                <strong class="mx-3"><i class="bx bx-calendar-edit me-2"></i> Date de modification:</strong>#}
+{#                {{ dahira.updatedAt ? dahira.updatedAt|date('Y-m-d H:i:s') : '' }}#}
+            </ul>
+        </div>
+    </div>
+
+	</div>
+        
+{% endblock %}
