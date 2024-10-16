@@ -52,6 +52,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column]
     private ?bool $status = null;
 
+    #[ORM\OneToOne(mappedBy: 'user', cascade: ['persist', 'remove'])]
+    private ?Encadreur $encadreur = null;
+
     
     public function getId(): ?int
     {
@@ -196,6 +199,28 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setStatus(bool $status): static
     {
         $this->status = $status;
+
+        return $this;
+    }
+
+    public function getEncadreur(): ?Encadreur
+    {
+        return $this->encadreur;
+    }
+
+    public function setEncadreur(?Encadreur $encadreur): static
+    {
+        // unset the owning side of the relation if necessary
+        if ($encadreur === null && $this->encadreur !== null) {
+            $this->encadreur->setUser(null);
+        }
+
+        // set the owning side of the relation if necessary
+        if ($encadreur !== null && $encadreur->getUser() !== $this) {
+            $encadreur->setUser($this);
+        }
+
+        $this->encadreur = $encadreur;
 
         return $this;
     }

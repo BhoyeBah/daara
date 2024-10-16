@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\DahirasRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -22,6 +24,17 @@ class Dahiras
 
     #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
+
+    /**
+     * @var Collection<int, Encadreur>
+     */
+    #[ORM\OneToMany(targetEntity: Encadreur::class, mappedBy: 'dahiras')]
+    private Collection $encadreurs;
+
+    public function __construct()
+    {
+        $this->encadreurs = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -60,6 +73,36 @@ class Dahiras
     public function setDescription(string $description): static
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Encadreur>
+     */
+    public function getEncadreurs(): Collection
+    {
+        return $this->encadreurs;
+    }
+
+    public function addEncadreur(Encadreur $encadreur): static
+    {
+        if (!$this->encadreurs->contains($encadreur)) {
+            $this->encadreurs->add($encadreur);
+            $encadreur->setDahiras($this);
+        }
+
+        return $this;
+    }
+
+    public function removeEncadreur(Encadreur $encadreur): static
+    {
+        if ($this->encadreurs->removeElement($encadreur)) {
+            // set the owning side to null (unless already changed)
+            if ($encadreur->getDahiras() === $this) {
+                $encadreur->setDahiras(null);
+            }
+        }
 
         return $this;
     }

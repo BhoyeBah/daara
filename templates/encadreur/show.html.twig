@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Encadreur{% endblock %}
+
+{% block body %}
+    <h1>Encadreur</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ encadreur.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ encadreur.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ encadreur.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ encadreur.email }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ encadreur.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Telephone</th>
+                <td>{{ encadreur.telephone }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_encadreur_index') }}">back to list</a>
+
+    <a href="{{ path('app_encadreur_edit', {'id': encadreur.id}) }}">edit</a>
+
+    {{ include('encadreur/_delete_form.html.twig') }}
+{% endblock %}

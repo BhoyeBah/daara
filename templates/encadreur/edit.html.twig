@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Encadreur{% endblock %}
+
+{% block body %}
+    <h1>Edit Encadreur</h1>
+
+    {{ include('encadreur/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_encadreur_index') }}">back to list</a>
+
+    {{ include('encadreur/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Encadreur{% endblock %}
+
+{% block body %}
+    <h1>Create new Encadreur</h1>
+
+    {{ include('encadreur/_form.html.twig') }}
+
+    <a href="{{ path('app_encadreur_index') }}">back to list</a>
+{% endblock %}
