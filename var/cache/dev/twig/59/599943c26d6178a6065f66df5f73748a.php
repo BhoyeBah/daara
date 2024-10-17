@@ -73,7 +73,7 @@ class __TwigTemplate_8e3b781c1db9c2f27475f54005af1ec8 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        yield "New Encadreur";
+        yield "Nouvel encadreur";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -97,17 +97,43 @@ class __TwigTemplate_8e3b781c1db9c2f27475f54005af1ec8 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        yield "    <h1>Create new Encadreur</h1>
+        yield "    <div class=\"page-header\">
+\t\t<div class=\"row\">
+\t\t\t<div class=\"col-md-6 col-sm-12\">
+\t\t\t\t<div class=\"title\">
+\t\t\t\t\t<h4>Form</h4>
+\t\t\t\t</div>
+\t\t\t\t<nav aria-label=\"breadcrumb\" role=\"navigation\">
+\t\t\t\t\t<ol class=\"breadcrumb\">
+\t\t\t\t\t\t<li class=\"breadcrumb-item\"><a href=\"/\">Tableau de board</a></li>
+\t\t\t\t\t\t<li class=\"breadcrumb-item active\" aria-current=\"page\">Formulaire de création d'un encadreur</li>
+\t\t\t\t\t</ol>
+\t\t\t\t</nav>
+\t\t\t</div>
+\t\t    <div class=\"col-md-6 col-sm-12 text-right\">
+\t\t\t\t\t<a class=\"btn btn-success\" href=\"";
+        // line 20
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_encadreur_index");
+        yield "\">
+\t\t\t\t\t\tListe des encadreurs
+\t\t\t\t\t</a>
+\t\t\t</div>
+\t\t</div>
+\t</div>
+\t<div class=\"pd-20 card-box mb-30\">
+    <div class=\"clearfix\">
+        <div class=\"pull-left\">
+            <h4 class=\"text-success h4\">Créer un nouvel encadreur</h4>
+            <p class=\"mb-30\">Remplissez les informations ci-dessous</p>
+        </div>
+    </div>
 
     ";
-        // line 8
+        // line 34
         yield Twig\Extension\CoreExtension::include($this->env, $context, "encadreur/_form.html.twig");
         yield "
-
-    <a href=\"";
-        // line 10
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_encadreur_index");
-        yield "\">back to list</a>
+</div>
+    
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -139,21 +165,47 @@ class __TwigTemplate_8e3b781c1db9c2f27475f54005af1ec8 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  109 => 10,  104 => 8,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
+        return array (  133 => 34,  116 => 20,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
     }
 
     public function getSourceContext(): Source
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}New Encadreur{% endblock %}
+{% block title %}Nouvel encadreur{% endblock %}
 
 {% block body %}
-    <h1>Create new Encadreur</h1>
+    <div class=\"page-header\">
+\t\t<div class=\"row\">
+\t\t\t<div class=\"col-md-6 col-sm-12\">
+\t\t\t\t<div class=\"title\">
+\t\t\t\t\t<h4>Form</h4>
+\t\t\t\t</div>
+\t\t\t\t<nav aria-label=\"breadcrumb\" role=\"navigation\">
+\t\t\t\t\t<ol class=\"breadcrumb\">
+\t\t\t\t\t\t<li class=\"breadcrumb-item\"><a href=\"/\">Tableau de board</a></li>
+\t\t\t\t\t\t<li class=\"breadcrumb-item active\" aria-current=\"page\">Formulaire de création d'un encadreur</li>
+\t\t\t\t\t</ol>
+\t\t\t\t</nav>
+\t\t\t</div>
+\t\t    <div class=\"col-md-6 col-sm-12 text-right\">
+\t\t\t\t\t<a class=\"btn btn-success\" href=\"{{ path('app_encadreur_index') }}\">
+\t\t\t\t\t\tListe des encadreurs
+\t\t\t\t\t</a>
+\t\t\t</div>
+\t\t</div>
+\t</div>
+\t<div class=\"pd-20 card-box mb-30\">
+    <div class=\"clearfix\">
+        <div class=\"pull-left\">
+            <h4 class=\"text-success h4\">Créer un nouvel encadreur</h4>
+            <p class=\"mb-30\">Remplissez les informations ci-dessous</p>
+        </div>
+    </div>
 
     {{ include('encadreur/_form.html.twig') }}
-
-    <a href=\"{{ path('app_encadreur_index') }}\">back to list</a>
+</div>
+    
 {% endblock %}
 ", "encadreur/new.html.twig", "C:\\xampp\\htdocs\\mydaara\\templates\\encadreur\\new.html.twig");
     }

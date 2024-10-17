@@ -131,7 +131,7 @@ class __TwigTemplate_56f663eb54a8e3a8e0d49d10c6d2ebbe extends Template
 \t\t\t\t\t\t\t\t\t<th class=\"table-plus datatable-nosort\">Nom</th>
 \t\t\t\t\t\t\t\t\t<th>Prénom</th>
 \t\t\t\t\t\t\t\t\t<th>Email</th>
-\t\t\t\t\t\t\t\t\t<th>Téléphon\"</th>
+\t\t\t\t\t\t\t\t\t<th>Téléphon</th>
 \t\t\t\t\t\t\t\t\t<th>Adresse</th>
 \t\t\t\t\t\t\t\t\t<th class=\"datatable-nosort\">Action</th>
 \t\t\t\t\t\t\t\t</tr>
@@ -295,7 +295,7 @@ class __TwigTemplate_56f663eb54a8e3a8e0d49d10c6d2ebbe extends Template
 \t\t\t\t\t\t\t\t\t<th class=\"table-plus datatable-nosort\">Nom</th>
 \t\t\t\t\t\t\t\t\t<th>Prénom</th>
 \t\t\t\t\t\t\t\t\t<th>Email</th>
-\t\t\t\t\t\t\t\t\t<th>Téléphon\"</th>
+\t\t\t\t\t\t\t\t\t<th>Téléphon</th>
 \t\t\t\t\t\t\t\t\t<th>Adresse</th>
 \t\t\t\t\t\t\t\t\t<th class=\"datatable-nosort\">Action</th>
 \t\t\t\t\t\t\t\t</tr>
