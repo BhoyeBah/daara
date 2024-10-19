@@ -157,7 +157,10 @@ class __TwigTemplate_d422a4725e48b977acc0ed1fcffe909b extends Template
 
     <div class=\"form-group row\">
         <div class=\"col-sm-12 col-md-10 offset-md-2\">
-            <button type=\"submit\" class=\"btn btn-primary\">Créer</button>
+            <button type=\"submit\" class=\"btn btn-success\">";
+        // line 51
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(((array_key_exists("button_label", $context)) ? (Twig\Extension\CoreExtension::default((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 51, $this->source); })()), "Enrégistrer")) : ("Enrégistrer")), "html", null, true);
+        yield "</button>
         </div>
     </div>
     ";
@@ -189,7 +192,7 @@ class __TwigTemplate_d422a4725e48b977acc0ed1fcffe909b extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  165 => 54,  153 => 45,  148 => 43,  140 => 38,  135 => 36,  127 => 31,  122 => 29,  114 => 24,  109 => 22,  101 => 17,  96 => 15,  88 => 10,  83 => 8,  77 => 5,  72 => 2,  49 => 1,);
+        return array (  168 => 54,  162 => 51,  153 => 45,  148 => 43,  140 => 38,  135 => 36,  127 => 31,  122 => 29,  114 => 24,  109 => 22,  101 => 17,  96 => 15,  88 => 10,  83 => 8,  77 => 5,  72 => 2,  49 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -244,7 +247,7 @@ class __TwigTemplate_d422a4725e48b977acc0ed1fcffe909b extends Template
 
     <div class=\"form-group row\">
         <div class=\"col-sm-12 col-md-10 offset-md-2\">
-            <button type=\"submit\" class=\"btn btn-primary\">Créer</button>
+            <button type=\"submit\" class=\"btn btn-success\">{{ button_label|default('Enrégistrer') }}</button>
         </div>
     </div>
     {{ form_end(formUser) }}

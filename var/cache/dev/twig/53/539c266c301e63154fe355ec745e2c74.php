@@ -327,200 +327,50 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
 \t\t\t<div class=\"sidebar-menu\">
 \t\t\t\t<ul id=\"accordion-menu\">
 \t\t\t\t\t<li class=\"dropdown\">
-\t\t\t\t\t\t<a href=\"javascript:;\" class=\"dropdown-toggle\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-house-1\"></span><span class=\"mtext\">Tableau de board</span>
+\t\t\t\t\t\t<a href=\"./\" class=\"dropdown-toggle no-arrow\">
+\t\t\t\t\t\t\t<span class=\"micon dw dw-house-1\"></span><span class=\"mtext\">Tableau de bord</span>
 \t\t\t\t\t\t</a>
-\t\t\t\t\t\t<ul class=\"submenu\">
-\t\t\t\t\t\t\t<li><a href=\"index.html\">Dashboard style 1</a></li>
-\t\t\t\t\t\t\t<li><a href=\"index2.html\">Dashboard style 2</a></li>
-\t\t\t\t\t\t</ul>
 \t\t\t\t\t</li>
 \t\t\t\t\t<li class=\"dropdown\">
 \t\t\t\t\t\t<a href=\"javascript:;\" class=\"dropdown-toggle\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-edit2\"></span><span class=\"mtext\">Gestion des dahiras</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<!-- <ul class=\"submenu\">
-\t\t\t\t\t\t\t<li><a href=\"form-basic.html\">Form Basic</a></li>
-\t\t\t\t\t\t\t<li><a href=\"advanced-components.html\">Advanced Components</a></li>
-\t\t\t\t\t\t\t<li><a href=\"form-wizard.html\">Form Wizard</a></li>
-\t\t\t\t\t\t\t<li><a href=\"html5-editor.html\">HTML5 Editor</a></li>
-\t\t\t\t\t\t\t<li><a href=\"form-pickers.html\">Form Pickers</a></li>
-\t\t\t\t\t\t\t<li><a href=\"image-cropper.html\">Image Cropper</a></li>
-\t\t\t\t\t\t\t<li><a href=\"image-dropzone.html\">Image Dropzone</a></li>
-\t\t\t\t\t\t</ul> -->
-\t\t\t\t\t</li>
-\t\t\t\t\t<li class=\"dropdown\">
-\t\t\t\t\t\t<a href=\"javascript:;\" class=\"dropdown-toggle\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-library\"></span><span class=\"mtext\">Gestion des encadreurs</span>
+\t\t\t\t\t\t\t<span class=\"micon dw dw-library\"></span><span class=\"mtext\">Dahiras</span>
 \t\t\t\t\t\t</a>
 \t\t\t\t\t\t<ul class=\"submenu\">
 \t\t\t\t\t\t\t<li><a href=\"";
-        // line 277
+        // line 259
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_dahiras_index");
+        yield "\">Gestion des dahiras</a></li>
+\t\t\t\t\t\t\t<li><a href=\"";
+        // line 260
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_encadreur_index");
-        yield "\">Liste des encadreurs</a></li>
-\t\t\t\t\t\t\t<li><a href=\"datatable.html\">DataTables</a></li>
+        yield "\">Gestion des encadreurs</a></li>
+\t\t\t\t\t\t\t<li><a href=\"\">Gestion des membres</a></li>
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t</li>
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"";
-        // line 282
+\t\t\t\t\t<li class=\"dropdown\">
+\t\t\t\t\t\t<a href=\"javascript:;\" class=\"dropdown-toggle\">
+\t\t\t\t\t\t\t<span class=\"micon dw dw-user\"></span><span class=\"mtext\"> Utilisateurs </span>
+\t\t\t\t\t\t</a>
+\t\t\t\t\t\t<ul class=\"submenu\">
+\t\t\t\t\t\t\t<li><a href=\"";
+        // line 269
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_users_index");
-        yield "\" class=\"dropdown-toggle no-arrow\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-user1\"></span><span class=\"mtext\">Gestion des Membres</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t</li>\t\t\t
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"";
-        // line 287
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_users_index");
-        yield "\" class=\"dropdown-toggle no-arrow\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-user1\"></span><span class=\"mtext\">Gestion des utilisateurs</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t</li>
-\t\t\t\t\t<!-- <li class=\"dropdown\">
-\t\t\t\t\t\t<a href=\"javascript:;\" class=\"dropdown-toggle\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-apartment\"></span><span class=\"mtext\"> UI Elements </span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<ul class=\"submenu\">
-\t\t\t\t\t\t\t<li><a href=\"ui-buttons.html\">Buttons</a></li>
-\t\t\t\t\t\t\t<li><a href=\"ui-cards.html\">Cards</a></li>
-\t\t\t\t\t\t\t<li><a href=\"ui-cards-hover.html\">Cards Hover</a></li>
-\t\t\t\t\t\t\t<li><a href=\"ui-modals.html\">Modals</a></li>
-\t\t\t\t\t\t\t<li><a href=\"ui-tabs.html\">Tabs</a></li>
-\t\t\t\t\t\t\t<li><a href=\"ui-tooltip-popover.html\">Tooltip &amp; Popover</a></li>
-\t\t\t\t\t\t\t<li><a href=\"ui-sweet-alert.html\">Sweet Alert</a></li>
-\t\t\t\t\t\t\t<li><a href=\"ui-notification.html\">Notification</a></li>
-\t\t\t\t\t\t\t<li><a href=\"ui-timeline.html\">Timeline</a></li>
-\t\t\t\t\t\t\t<li><a href=\"ui-progressbar.html\">Progressbar</a></li>
-\t\t\t\t\t\t\t<li><a href=\"ui-typography.html\">Typography</a></li>
-\t\t\t\t\t\t\t<li><a href=\"ui-list-group.html\">List group</a></li>
-\t\t\t\t\t\t\t<li><a href=\"ui-range-slider.html\">Range slider</a></li>
-\t\t\t\t\t\t\t<li><a href=\"ui-carousel.html\">Carousel</a></li>
+        yield "\">Gestion des utilisateurs</a></li>
 \t\t\t\t\t\t</ul>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li class=\"dropdown\">
-\t\t\t\t\t\t<a href=\"javascript:;\" class=\"dropdown-toggle\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-paint-brush\"></span><span class=\"mtext\">Icons</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<ul class=\"submenu\">
-\t\t\t\t\t\t\t<li><a href=\"font-awesome.html\">FontAwesome Icons</a></li>
-\t\t\t\t\t\t\t<li><a href=\"foundation.html\">Foundation Icons</a></li>
-\t\t\t\t\t\t\t<li><a href=\"ionicons.html\">Ionicons Icons</a></li>
-\t\t\t\t\t\t\t<li><a href=\"themify.html\">Themify Icons</a></li>
-\t\t\t\t\t\t\t<li><a href=\"custom-icon.html\">Custom Icons</a></li>
-\t\t\t\t\t\t</ul>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li class=\"dropdown\">
-\t\t\t\t\t\t<a href=\"javascript:;\" class=\"dropdown-toggle\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-analytics-21\"></span><span class=\"mtext\">Charts</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<ul class=\"submenu\">
-\t\t\t\t\t\t\t<li><a href=\"highchart.html\">Highchart</a></li>
-\t\t\t\t\t\t\t<li><a href=\"knob-chart.html\">jQuery Knob</a></li>
-\t\t\t\t\t\t\t<li><a href=\"jvectormap.html\">jvectormap</a></li>
-\t\t\t\t\t\t\t<li><a href=\"apexcharts.html\">Apexcharts</a></li>
-\t\t\t\t\t\t</ul>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li class=\"dropdown\">
-\t\t\t\t\t\t<a href=\"javascript:;\" class=\"dropdown-toggle\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-right-arrow1\"></span><span class=\"mtext\">Additional Pages</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<ul class=\"submenu\">
-\t\t\t\t\t\t\t<li><a href=\"video-player.html\">Video Player</a></li>
-\t\t\t\t\t\t\t<li><a href=\"login.html\">Login</a></li>
-\t\t\t\t\t\t\t<li><a href=\"forgot-password.html\">Forgot Password</a></li>
-\t\t\t\t\t\t\t<li><a href=\"reset-password.html\">Reset Password</a></li>
-\t\t\t\t\t\t</ul>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li class=\"dropdown\">
-\t\t\t\t\t\t<a href=\"javascript:;\" class=\"dropdown-toggle\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-browser2\"></span><span class=\"mtext\">Error Pages</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<ul class=\"submenu\">
-\t\t\t\t\t\t\t<li><a href=\"400.html\">400</a></li>
-\t\t\t\t\t\t\t<li><a href=\"403.html\">403</a></li>
-\t\t\t\t\t\t\t<li><a href=\"404.html\">404</a></li>
-\t\t\t\t\t\t\t<li><a href=\"500.html\">500</a></li>
-\t\t\t\t\t\t\t<li><a href=\"503.html\">503</a></li>
-\t\t\t\t\t\t</ul>
-\t\t\t\t\t</li>
-
-\t\t\t\t\t<li class=\"dropdown\">
-\t\t\t\t\t\t<a href=\"javascript:;\" class=\"dropdown-toggle\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-copy\"></span><span class=\"mtext\">Extra Pages</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<ul class=\"submenu\">
-\t\t\t\t\t\t\t<li><a href=\"blank.html\">Blank</a></li>
-\t\t\t\t\t\t\t<li><a href=\"contact-directory.html\">Contact Directory</a></li>
-\t\t\t\t\t\t\t<li><a href=\"blog.html\">Blog</a></li>
-\t\t\t\t\t\t\t<li><a href=\"blog-detail.html\">Blog Detail</a></li>
-\t\t\t\t\t\t\t<li><a href=\"product.html\">Product</a></li>
-\t\t\t\t\t\t\t<li><a href=\"product-detail.html\">Product Detail</a></li>
-\t\t\t\t\t\t\t<li><a href=\"faq.html\">FAQ</a></li>
-\t\t\t\t\t\t\t<li><a href=\"profile.html\">Profile</a></li>
-\t\t\t\t\t\t\t<li><a href=\"gallery.html\">Gallery</a></li>
-\t\t\t\t\t\t\t<li><a href=\"pricing-table.html\">Pricing Tables</a></li>
-\t\t\t\t\t\t</ul>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li class=\"dropdown\">
-\t\t\t\t\t\t<a href=\"javascript:;\" class=\"dropdown-toggle\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-list3\"></span><span class=\"mtext\">Multi Level Menu</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<ul class=\"submenu\">
-\t\t\t\t\t\t\t<li><a href=\"javascript:;\">Level 1</a></li>
-\t\t\t\t\t\t\t<li><a href=\"javascript:;\">Level 1</a></li>
-\t\t\t\t\t\t\t<li><a href=\"javascript:;\">Level 1</a></li>
-\t\t\t\t\t\t\t<li class=\"dropdown\">
-\t\t\t\t\t\t\t\t<a href=\"javascript:;\" class=\"dropdown-toggle\">
-\t\t\t\t\t\t\t\t\t<span class=\"micon fa fa-plug\"></span><span class=\"mtext\">Level 2</span>
-\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t<ul class=\"submenu child\">
-\t\t\t\t\t\t\t\t\t<li><a href=\"javascript:;\">Level 2</a></li>
-\t\t\t\t\t\t\t\t\t<li><a href=\"javascript:;\">Level 2</a></li>
-\t\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li><a href=\"javascript:;\">Level 1</a></li>
-\t\t\t\t\t\t\t<li><a href=\"javascript:;\">Level 1</a></li>
-\t\t\t\t\t\t\t<li><a href=\"javascript:;\">Level 1</a></li>
-\t\t\t\t\t\t</ul>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"sitemap.html\" class=\"dropdown-toggle no-arrow\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-diagram\"></span><span class=\"mtext\">Sitemap</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"chat.html\" class=\"dropdown-toggle no-arrow\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-chat3\"></span><span class=\"mtext\">Chat</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"invoice.html\" class=\"dropdown-toggle no-arrow\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-invoice\"></span><span class=\"mtext\">Invoice</span>
-\t\t\t\t\t\t</a>
 \t\t\t\t\t</li>
 \t\t\t\t\t<li>
 \t\t\t\t\t\t<div class=\"dropdown-divider\"></div>
-\t\t\t\t\t</li> -->
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<div class=\"sidebar-small-cap\">Extra</div>
 \t\t\t\t\t</li>
-\t\t\t\t\t<li>
+\t\t\t\t\t<li class=\"dropdown\">
 \t\t\t\t\t\t<a href=\"javascript:;\" class=\"dropdown-toggle\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-edit-2\"></span><span class=\"mtext\">Documentation</span>
+\t\t\t\t\t\t\t<span class=\"micon ion-android-menu\"></span><span class=\"mtext\">Autres</span>
 \t\t\t\t\t\t</a>
 \t\t\t\t\t\t<ul class=\"submenu\">
-\t\t\t\t\t\t\t<li><a href=\"introduction.html\">Introduction</a></li>
-\t\t\t\t\t\t\t<li><a href=\"getting-started.html\">Getting Started</a></li>
-\t\t\t\t\t\t\t<li><a href=\"color-settings.html\">Color Settings</a></li>
-\t\t\t\t\t\t\t<li><a href=\"third-party-plugins.html\">Third Party Plugins</a></li>
+\t\t\t\t\t\t\t<li><a href=\"";
+        // line 280
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_specialites_index");
+        yield "\">Spécialités</a></li>
 \t\t\t\t\t\t</ul>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"https://dropways.github.io/deskapp-free-single-page-website-template/\" target=\"_blank\" class=\"dropdown-toggle no-arrow\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-paper-plane1\"></span>
-\t\t\t\t\t\t\t<span class=\"mtext\">Landing Page <img src=\"vendors/images/coming-soon.png\" alt=\"\" width=\"25\"></span>
-\t\t\t\t\t\t</a>
 \t\t\t\t\t</li>
 \t\t\t\t</ul>
 \t\t\t</div>
@@ -530,9 +380,9 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
 \t\t<div class=\"pd-ltr-20 xs-pd-20-10\">
 \t\t\t<div class=\"min-height-200px\">
         ";
-        // line 443
+        // line 290
         yield from $this->unwrap()->yieldBlock('body', $context, $blocks);
-        // line 444
+        // line 291
         yield "   
         <div class=\"footer-wrap pd-20 mb-20 card-box\">
 \t\t\t\tDeskApp - Bootstrap 4 Admin Template By <a href=\"https://github.com/dropways\" target=\"_blank\">Ankit Hingarajiya</a>
@@ -541,76 +391,76 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
 \t</div>
 \t\t<!-- JS inclusions -->
 \t<script src=\"";
-        // line 451
+        // line 298
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/scripts/core.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 452
+        // line 299
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/scripts/script.min.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 453
+        // line 300
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/scripts/process.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 454
+        // line 301
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/scripts/layout-settings.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 455
+        // line 302
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("src/plugins/datatables/js/jquery.dataTables.min.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 456
+        // line 303
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("src/plugins/datatables/js/dataTables.bootstrap4.min.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 457
+        // line 304
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("src/plugins/datatables/js/dataTables.responsive.min.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 458
+        // line 305
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("src/plugins/datatables/js/responsive.bootstrap4.min.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 459
+        // line 306
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("src/plugins/datatables/js/dataTables.buttons.min.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 460
+        // line 307
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("src/plugins/datatables/js/buttons.bootstrap4.min.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 461
+        // line 308
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("src/plugins/datatables/js/buttons.print.min.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 462
+        // line 309
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("src/plugins/datatables/js/buttons.html5.min.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 463
+        // line 310
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("src/plugins/datatables/js/buttons.flash.min.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 464
+        // line 311
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("src/plugins/datatables/js/pdfmake.min.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 465
+        // line 312
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("src/plugins/datatables/js/vfs_fonts.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 466
+        // line 313
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/scripts/datatable-setting.js"), "html", null, true);
         yield "\"></script>
 \t<!-- js -->
 \t<script src=\"";
-        // line 468
+        // line 315
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("src/plugins/apexcharts/apexcharts.min.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 469
+        // line 316
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/scripts/dashboard.js"), "html", null, true);
         yield "\"></script>
 \t
@@ -625,7 +475,7 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
         yield from [];
     }
 
-    // line 443
+    // line 290
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -668,7 +518,7 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  629 => 443,  614 => 469,  610 => 468,  605 => 466,  601 => 465,  597 => 464,  593 => 463,  589 => 462,  585 => 461,  581 => 460,  577 => 459,  573 => 458,  569 => 457,  565 => 456,  561 => 455,  557 => 454,  553 => 453,  549 => 452,  545 => 451,  536 => 444,  534 => 443,  375 => 287,  367 => 282,  359 => 277,  233 => 154,  222 => 148,  94 => 23,  90 => 22,  86 => 21,  82 => 20,  78 => 19,  67 => 11,  63 => 10,  59 => 9,  49 => 1,);
+        return array (  479 => 290,  464 => 316,  460 => 315,  455 => 313,  451 => 312,  447 => 311,  443 => 310,  439 => 309,  435 => 308,  431 => 307,  427 => 306,  423 => 305,  419 => 304,  415 => 303,  411 => 302,  407 => 301,  403 => 300,  399 => 299,  395 => 298,  386 => 291,  384 => 290,  371 => 280,  357 => 269,  345 => 260,  341 => 259,  233 => 154,  222 => 148,  94 => 23,  90 => 22,  86 => 21,  82 => 20,  78 => 19,  67 => 11,  63 => 10,  59 => 9,  49 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -922,191 +772,38 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
 \t\t\t<div class=\"sidebar-menu\">
 \t\t\t\t<ul id=\"accordion-menu\">
 \t\t\t\t\t<li class=\"dropdown\">
+\t\t\t\t\t\t<a href=\"./\" class=\"dropdown-toggle no-arrow\">
+\t\t\t\t\t\t\t<span class=\"micon dw dw-house-1\"></span><span class=\"mtext\">Tableau de bord</span>
+\t\t\t\t\t\t</a>
+\t\t\t\t\t</li>
+\t\t\t\t\t<li class=\"dropdown\">
 \t\t\t\t\t\t<a href=\"javascript:;\" class=\"dropdown-toggle\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-house-1\"></span><span class=\"mtext\">Tableau de board</span>
+\t\t\t\t\t\t\t<span class=\"micon dw dw-library\"></span><span class=\"mtext\">Dahiras</span>
 \t\t\t\t\t\t</a>
 \t\t\t\t\t\t<ul class=\"submenu\">
-\t\t\t\t\t\t\t<li><a href=\"index.html\">Dashboard style 1</a></li>
-\t\t\t\t\t\t\t<li><a href=\"index2.html\">Dashboard style 2</a></li>
+\t\t\t\t\t\t\t<li><a href=\"{{ path('app_dahiras_index') }}\">Gestion des dahiras</a></li>
+\t\t\t\t\t\t\t<li><a href=\"{{ path('app_encadreur_index') }}\">Gestion des encadreurs</a></li>
+\t\t\t\t\t\t\t<li><a href=\"\">Gestion des membres</a></li>
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t</li>
 \t\t\t\t\t<li class=\"dropdown\">
 \t\t\t\t\t\t<a href=\"javascript:;\" class=\"dropdown-toggle\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-edit2\"></span><span class=\"mtext\">Gestion des dahiras</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<!-- <ul class=\"submenu\">
-\t\t\t\t\t\t\t<li><a href=\"form-basic.html\">Form Basic</a></li>
-\t\t\t\t\t\t\t<li><a href=\"advanced-components.html\">Advanced Components</a></li>
-\t\t\t\t\t\t\t<li><a href=\"form-wizard.html\">Form Wizard</a></li>
-\t\t\t\t\t\t\t<li><a href=\"html5-editor.html\">HTML5 Editor</a></li>
-\t\t\t\t\t\t\t<li><a href=\"form-pickers.html\">Form Pickers</a></li>
-\t\t\t\t\t\t\t<li><a href=\"image-cropper.html\">Image Cropper</a></li>
-\t\t\t\t\t\t\t<li><a href=\"image-dropzone.html\">Image Dropzone</a></li>
-\t\t\t\t\t\t</ul> -->
-\t\t\t\t\t</li>
-\t\t\t\t\t<li class=\"dropdown\">
-\t\t\t\t\t\t<a href=\"javascript:;\" class=\"dropdown-toggle\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-library\"></span><span class=\"mtext\">Gestion des encadreurs</span>
+\t\t\t\t\t\t\t<span class=\"micon dw dw-user\"></span><span class=\"mtext\"> Utilisateurs </span>
 \t\t\t\t\t\t</a>
 \t\t\t\t\t\t<ul class=\"submenu\">
-\t\t\t\t\t\t\t<li><a href=\"{{ path('app_encadreur_index') }}\">Liste des encadreurs</a></li>
-\t\t\t\t\t\t\t<li><a href=\"datatable.html\">DataTables</a></li>
+\t\t\t\t\t\t\t<li><a href=\"{{ path('app_users_index') }}\">Gestion des utilisateurs</a></li>
 \t\t\t\t\t\t</ul>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"{{ path('app_users_index') }}\" class=\"dropdown-toggle no-arrow\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-user1\"></span><span class=\"mtext\">Gestion des Membres</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t</li>\t\t\t
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"{{ path('app_users_index') }}\" class=\"dropdown-toggle no-arrow\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-user1\"></span><span class=\"mtext\">Gestion des utilisateurs</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t</li>
-\t\t\t\t\t<!-- <li class=\"dropdown\">
-\t\t\t\t\t\t<a href=\"javascript:;\" class=\"dropdown-toggle\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-apartment\"></span><span class=\"mtext\"> UI Elements </span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<ul class=\"submenu\">
-\t\t\t\t\t\t\t<li><a href=\"ui-buttons.html\">Buttons</a></li>
-\t\t\t\t\t\t\t<li><a href=\"ui-cards.html\">Cards</a></li>
-\t\t\t\t\t\t\t<li><a href=\"ui-cards-hover.html\">Cards Hover</a></li>
-\t\t\t\t\t\t\t<li><a href=\"ui-modals.html\">Modals</a></li>
-\t\t\t\t\t\t\t<li><a href=\"ui-tabs.html\">Tabs</a></li>
-\t\t\t\t\t\t\t<li><a href=\"ui-tooltip-popover.html\">Tooltip &amp; Popover</a></li>
-\t\t\t\t\t\t\t<li><a href=\"ui-sweet-alert.html\">Sweet Alert</a></li>
-\t\t\t\t\t\t\t<li><a href=\"ui-notification.html\">Notification</a></li>
-\t\t\t\t\t\t\t<li><a href=\"ui-timeline.html\">Timeline</a></li>
-\t\t\t\t\t\t\t<li><a href=\"ui-progressbar.html\">Progressbar</a></li>
-\t\t\t\t\t\t\t<li><a href=\"ui-typography.html\">Typography</a></li>
-\t\t\t\t\t\t\t<li><a href=\"ui-list-group.html\">List group</a></li>
-\t\t\t\t\t\t\t<li><a href=\"ui-range-slider.html\">Range slider</a></li>
-\t\t\t\t\t\t\t<li><a href=\"ui-carousel.html\">Carousel</a></li>
-\t\t\t\t\t\t</ul>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li class=\"dropdown\">
-\t\t\t\t\t\t<a href=\"javascript:;\" class=\"dropdown-toggle\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-paint-brush\"></span><span class=\"mtext\">Icons</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<ul class=\"submenu\">
-\t\t\t\t\t\t\t<li><a href=\"font-awesome.html\">FontAwesome Icons</a></li>
-\t\t\t\t\t\t\t<li><a href=\"foundation.html\">Foundation Icons</a></li>
-\t\t\t\t\t\t\t<li><a href=\"ionicons.html\">Ionicons Icons</a></li>
-\t\t\t\t\t\t\t<li><a href=\"themify.html\">Themify Icons</a></li>
-\t\t\t\t\t\t\t<li><a href=\"custom-icon.html\">Custom Icons</a></li>
-\t\t\t\t\t\t</ul>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li class=\"dropdown\">
-\t\t\t\t\t\t<a href=\"javascript:;\" class=\"dropdown-toggle\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-analytics-21\"></span><span class=\"mtext\">Charts</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<ul class=\"submenu\">
-\t\t\t\t\t\t\t<li><a href=\"highchart.html\">Highchart</a></li>
-\t\t\t\t\t\t\t<li><a href=\"knob-chart.html\">jQuery Knob</a></li>
-\t\t\t\t\t\t\t<li><a href=\"jvectormap.html\">jvectormap</a></li>
-\t\t\t\t\t\t\t<li><a href=\"apexcharts.html\">Apexcharts</a></li>
-\t\t\t\t\t\t</ul>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li class=\"dropdown\">
-\t\t\t\t\t\t<a href=\"javascript:;\" class=\"dropdown-toggle\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-right-arrow1\"></span><span class=\"mtext\">Additional Pages</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<ul class=\"submenu\">
-\t\t\t\t\t\t\t<li><a href=\"video-player.html\">Video Player</a></li>
-\t\t\t\t\t\t\t<li><a href=\"login.html\">Login</a></li>
-\t\t\t\t\t\t\t<li><a href=\"forgot-password.html\">Forgot Password</a></li>
-\t\t\t\t\t\t\t<li><a href=\"reset-password.html\">Reset Password</a></li>
-\t\t\t\t\t\t</ul>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li class=\"dropdown\">
-\t\t\t\t\t\t<a href=\"javascript:;\" class=\"dropdown-toggle\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-browser2\"></span><span class=\"mtext\">Error Pages</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<ul class=\"submenu\">
-\t\t\t\t\t\t\t<li><a href=\"400.html\">400</a></li>
-\t\t\t\t\t\t\t<li><a href=\"403.html\">403</a></li>
-\t\t\t\t\t\t\t<li><a href=\"404.html\">404</a></li>
-\t\t\t\t\t\t\t<li><a href=\"500.html\">500</a></li>
-\t\t\t\t\t\t\t<li><a href=\"503.html\">503</a></li>
-\t\t\t\t\t\t</ul>
-\t\t\t\t\t</li>
-
-\t\t\t\t\t<li class=\"dropdown\">
-\t\t\t\t\t\t<a href=\"javascript:;\" class=\"dropdown-toggle\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-copy\"></span><span class=\"mtext\">Extra Pages</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<ul class=\"submenu\">
-\t\t\t\t\t\t\t<li><a href=\"blank.html\">Blank</a></li>
-\t\t\t\t\t\t\t<li><a href=\"contact-directory.html\">Contact Directory</a></li>
-\t\t\t\t\t\t\t<li><a href=\"blog.html\">Blog</a></li>
-\t\t\t\t\t\t\t<li><a href=\"blog-detail.html\">Blog Detail</a></li>
-\t\t\t\t\t\t\t<li><a href=\"product.html\">Product</a></li>
-\t\t\t\t\t\t\t<li><a href=\"product-detail.html\">Product Detail</a></li>
-\t\t\t\t\t\t\t<li><a href=\"faq.html\">FAQ</a></li>
-\t\t\t\t\t\t\t<li><a href=\"profile.html\">Profile</a></li>
-\t\t\t\t\t\t\t<li><a href=\"gallery.html\">Gallery</a></li>
-\t\t\t\t\t\t\t<li><a href=\"pricing-table.html\">Pricing Tables</a></li>
-\t\t\t\t\t\t</ul>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li class=\"dropdown\">
-\t\t\t\t\t\t<a href=\"javascript:;\" class=\"dropdown-toggle\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-list3\"></span><span class=\"mtext\">Multi Level Menu</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<ul class=\"submenu\">
-\t\t\t\t\t\t\t<li><a href=\"javascript:;\">Level 1</a></li>
-\t\t\t\t\t\t\t<li><a href=\"javascript:;\">Level 1</a></li>
-\t\t\t\t\t\t\t<li><a href=\"javascript:;\">Level 1</a></li>
-\t\t\t\t\t\t\t<li class=\"dropdown\">
-\t\t\t\t\t\t\t\t<a href=\"javascript:;\" class=\"dropdown-toggle\">
-\t\t\t\t\t\t\t\t\t<span class=\"micon fa fa-plug\"></span><span class=\"mtext\">Level 2</span>
-\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t<ul class=\"submenu child\">
-\t\t\t\t\t\t\t\t\t<li><a href=\"javascript:;\">Level 2</a></li>
-\t\t\t\t\t\t\t\t\t<li><a href=\"javascript:;\">Level 2</a></li>
-\t\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li><a href=\"javascript:;\">Level 1</a></li>
-\t\t\t\t\t\t\t<li><a href=\"javascript:;\">Level 1</a></li>
-\t\t\t\t\t\t\t<li><a href=\"javascript:;\">Level 1</a></li>
-\t\t\t\t\t\t</ul>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"sitemap.html\" class=\"dropdown-toggle no-arrow\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-diagram\"></span><span class=\"mtext\">Sitemap</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"chat.html\" class=\"dropdown-toggle no-arrow\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-chat3\"></span><span class=\"mtext\">Chat</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"invoice.html\" class=\"dropdown-toggle no-arrow\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-invoice\"></span><span class=\"mtext\">Invoice</span>
-\t\t\t\t\t\t</a>
 \t\t\t\t\t</li>
 \t\t\t\t\t<li>
 \t\t\t\t\t\t<div class=\"dropdown-divider\"></div>
-\t\t\t\t\t</li> -->
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<div class=\"sidebar-small-cap\">Extra</div>
 \t\t\t\t\t</li>
-\t\t\t\t\t<li>
+\t\t\t\t\t<li class=\"dropdown\">
 \t\t\t\t\t\t<a href=\"javascript:;\" class=\"dropdown-toggle\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-edit-2\"></span><span class=\"mtext\">Documentation</span>
+\t\t\t\t\t\t\t<span class=\"micon ion-android-menu\"></span><span class=\"mtext\">Autres</span>
 \t\t\t\t\t\t</a>
 \t\t\t\t\t\t<ul class=\"submenu\">
-\t\t\t\t\t\t\t<li><a href=\"introduction.html\">Introduction</a></li>
-\t\t\t\t\t\t\t<li><a href=\"getting-started.html\">Getting Started</a></li>
-\t\t\t\t\t\t\t<li><a href=\"color-settings.html\">Color Settings</a></li>
-\t\t\t\t\t\t\t<li><a href=\"third-party-plugins.html\">Third Party Plugins</a></li>
+\t\t\t\t\t\t\t<li><a href=\"{{ path('app_specialites_index') }}\">Spécialités</a></li>
 \t\t\t\t\t\t</ul>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"https://dropways.github.io/deskapp-free-single-page-website-template/\" target=\"_blank\" class=\"dropdown-toggle no-arrow\">
-\t\t\t\t\t\t\t<span class=\"micon dw dw-paper-plane1\"></span>
-\t\t\t\t\t\t\t<span class=\"mtext\">Landing Page <img src=\"vendors/images/coming-soon.png\" alt=\"\" width=\"25\"></span>
-\t\t\t\t\t\t</a>
 \t\t\t\t\t</li>
 \t\t\t\t</ul>
 \t\t\t</div>

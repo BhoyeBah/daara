@@ -28,9 +28,6 @@ class Membres
     private ?string $adresse = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $profession = null;
-
-    #[ORM\Column(length: 255)]
     private ?string $email = null;
 
     /**
@@ -93,18 +90,6 @@ class Membres
     public function setAdresse(string $adresse): static
     {
         $this->adresse = $adresse;
-
-        return $this;
-    }
-
-    public function getProfession(): ?string
-    {
-        return $this->profession;
-    }
-
-    public function setProfession(string $profession): static
-    {
-        $this->profession = $profession;
 
         return $this;
     }
