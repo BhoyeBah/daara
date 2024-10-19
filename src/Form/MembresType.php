@@ -23,18 +23,10 @@ class MembresType extends AbstractType
             ->add('email')
             ->add('specialite', EntityType::class, [
                 'class' => Specialites::class,
-                'choice_label' => 'id',
+                'choice_label' => 'nom',
                 'multiple' => true,
             ])
-            ->add('dahiras', EntityType::class, [
-                'class' => Dahiras::class,
-                'choice_label' => 'id',
-            ])
-            ->add('encadreur', EntityType::class, [
-                'class' => Encadreur::class,
-                'choice_label' => 'id',
-            ])
-        ;
+       ;
     }
 
     public function configureOptions(OptionsResolver $resolver): void

@@ -26,11 +26,13 @@ class Dahiras extends \App\Entity\Dahiras implements \Doctrine\ORM\Proxy\Interna
         "\0".parent::class."\0".'description' => [parent::class, 'description', null],
         "\0".parent::class."\0".'encadreurs' => [parent::class, 'encadreurs', null],
         "\0".parent::class."\0".'id' => [parent::class, 'id', null],
+        "\0".parent::class."\0".'membres' => [parent::class, 'membres', null],
         "\0".parent::class."\0".'nom' => [parent::class, 'nom', null],
         'adresse' => [parent::class, 'adresse', null],
         'description' => [parent::class, 'description', null],
         'encadreurs' => [parent::class, 'encadreurs', null],
         'id' => [parent::class, 'id', null],
+        'membres' => [parent::class, 'membres', null],
         'nom' => [parent::class, 'nom', null],
     ];
 

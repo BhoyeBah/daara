@@ -1,43 +1,69 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Membres index{% endblock %}
+{% block title %}Liste des membres{% endblock %}
 
 {% block body %}
-    <h1>Membres index</h1>
+<div class="page-header">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <div class="title">
+                <h4>DataTable</h4>
+            </div>
+            <nav aria-label="breadcrumb" role="navigation">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Tableau de bord</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Liste des membres</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="col-md-6 col-sm-12 text-right">
+            <a href="{{ path('app_membres_new') }}" class="btn btn-success">Créer un membre</a>
+        </div>
+    </div>
+</div>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nom</th>
-                <th>Prenom</th>
-                <th>Telephone</th>
-                <th>Adresse</th>
-                <th>Email</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for membre in membres %}
-            <tr>
-                <td>{{ membre.id }}</td>
-                <td>{{ membre.nom }}</td>
-                <td>{{ membre.prenom }}</td>
-                <td>{{ membre.telephone }}</td>
-                <td>{{ membre.adresse }}</td>
-                <td>{{ membre.email }}</td>
-                <td>
-                    <a href="{{ path('app_membres_show', {'id': membre.id}) }}">show</a>
-                    <a href="{{ path('app_membres_edit', {'id': membre.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="7">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+<!-- Simple Datatable start -->
+<div class="card-box mb-30">
+    <div class="pd-20">
+        <h4 class="text-success h4">Liste des membres</h4>
+    </div>
+    <div class="pb-20">
+        <table class="data-table table stripe hover nowrap table-bordered">
+            <thead>
+                <tr>
+                    <th class="table-plus datatable-nosort">Nom</th>
+                    <th>Prénom</th>
+                    <th>Email</th>
+                    <th>Téléphone</th>
+                    <th>Adresse</th>
+                    <!-- <th>Professions</th> -->
+                    <th class="datatable-nosort">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for membre in membres %}
+                    <tr>
+                        <td class="table-plus">{{ membre.nom }}</td>
+                        <td>{{ membre.prenom }}</td>
+                        <td>{{ membre.email }}</td>
+                        <td>{{ membre.telephone }}</td>
+                        <td>{{ membre.adresse }}</td>
 
-    <a href="{{ path('app_membres_new') }}">Create new</a>
+                        <td>
+                            <a href="{{ path('app_membres_show', {'id': membre.id}) }}" class="btn btn-sm btn-success"><i class="dw dw-eye"></i></a>
+                            <a href="{{ path('app_membres_edit', {'id': membre.id}) }}" class="btn btn-sm btn-secondary"><i class="dw dw-edit2"></i></a>
+                            {{ include('membres/_delete_form.html.twig') }}
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="7">Aucun enregistrement trouvé</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- Simple Datatable End -->
+
 {% endblock %}

@@ -17,8 +17,14 @@ final class MembresController extends AbstractController
     #[Route(name: 'app_membres_index', methods: ['GET'])]
     public function index(MembresRepository $membresRepository): Response
     {
+        $currentUser = $this->getUser();
+        $encadreur = $currentUser->getEncadreur();
+        $dahiras = $encadreur->getDahiras();
+        
+        $membres = $membresRepository->findBy(['dahiras' => $dahiras]);
+       
         return $this->render('membres/index.html.twig', [
-            'membres' => $membresRepository->findAll(),
+            'membres' => $membres,
         ]);
     }
 
@@ -29,7 +35,19 @@ final class MembresController extends AbstractController
         $form = $this->createForm(MembresType::class, $membre);
         $form->handleRequest($request);
 
+        // Récupérer l'utilisateur connecté (qui est l'encadreur)
+        $currentUser = $this->getUser();
+        $encadreur = $currentUser->getEncadreur();
+        
+         // Récupérer le dahira de l'encadreur
+         $dahira = $encadreur->getDahiras();
+
         if ($form->isSubmitted() && $form->isValid()) {
+            
+            $membre->setEncadreur($encadreur);
+            $membre->setDahiras($dahira);
+            // dd($membre,$encadreur,$dahira->getNom());
+
             $entityManager->persist($membre);
             $entityManager->flush();
 
