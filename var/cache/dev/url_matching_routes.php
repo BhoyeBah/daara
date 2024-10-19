@@ -19,6 +19,8 @@ return [
         '/encadreur' => [[['_route' => 'app_encadreur_index', '_controller' => 'App\\Controller\\EncadreurController::index'], null, ['GET' => 0], null, false, false, null]],
         '/encadreur/new' => [[['_route' => 'app_encadreur_new', '_controller' => 'App\\Controller\\EncadreurController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/' => [[['_route' => 'app_home', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
+        '/membres' => [[['_route' => 'app_membres_index', '_controller' => 'App\\Controller\\MembresController::index'], null, ['GET' => 0], null, false, false, null]],
+        '/membres/new' => [[['_route' => 'app_membres_new', '_controller' => 'App\\Controller\\MembresController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/inscription' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
         '/verify/email' => [[['_route' => 'app_verify_email', '_controller' => 'App\\Controller\\RegistrationController::verifyUserEmail'], null, null, null, false, false, null]],
         '/reset-password' => [[['_route' => 'app_forgot_password_request', '_controller' => 'App\\Controller\\ResetPasswordController::request'], null, null, null, false, false, null]],
@@ -60,19 +62,24 @@ return [
                     .'|/edit(*:287)'
                     .'|(*:295)'
                 .')'
-                .'|/reset\\-password/reset(?:/([^/]++))?(*:340)'
+                .'|/membres/([^/]++)(?'
+                    .'|(*:324)'
+                    .'|/edit(*:337)'
+                    .'|(*:345)'
+                .')'
+                .'|/reset\\-password/reset(?:/([^/]++))?(*:390)'
                 .'|/specialites/([^/]++)(?'
-                    .'|(*:372)'
-                    .'|/edit(*:385)'
-                    .'|(*:393)'
+                    .'|(*:422)'
+                    .'|/edit(*:435)'
+                    .'|(*:443)'
                 .')'
                 .'|/users/(?'
                     .'|([^/]++)(?'
-                        .'|(*:423)'
-                        .'|/edit(*:436)'
+                        .'|(*:473)'
+                        .'|/edit(*:486)'
                     .')'
-                    .'|state/([^/]++)(*:459)'
-                    .'|delete/([^/]++)(*:482)'
+                    .'|state/([^/]++)(*:509)'
+                    .'|delete/([^/]++)(*:532)'
                 .')'
             .')/?$}sDu',
     ],
@@ -91,14 +98,17 @@ return [
         274 => [[['_route' => 'app_encadreur_show', '_controller' => 'App\\Controller\\EncadreurController::show'], ['id'], ['GET' => 0], null, false, true, null]],
         287 => [[['_route' => 'app_encadreur_edit', '_controller' => 'App\\Controller\\EncadreurController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
         295 => [[['_route' => 'app_encadreur_delete', '_controller' => 'App\\Controller\\EncadreurController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        340 => [[['_route' => 'app_reset_password', 'token' => null, '_controller' => 'App\\Controller\\ResetPasswordController::reset'], ['token'], null, null, false, true, null]],
-        372 => [[['_route' => 'app_specialites_show', '_controller' => 'App\\Controller\\SpecialitesController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        385 => [[['_route' => 'app_specialites_edit', '_controller' => 'App\\Controller\\SpecialitesController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        393 => [[['_route' => 'app_specialites_delete', '_controller' => 'App\\Controller\\SpecialitesController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        423 => [[['_route' => 'app_users_show', '_controller' => 'App\\Controller\\UserController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        436 => [[['_route' => 'app_users_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        459 => [[['_route' => 'app_users_state', '_controller' => 'App\\Controller\\UserController::state'], ['id'], ['POST' => 0], null, false, true, null]],
-        482 => [
+        324 => [[['_route' => 'app_membres_show', '_controller' => 'App\\Controller\\MembresController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        337 => [[['_route' => 'app_membres_edit', '_controller' => 'App\\Controller\\MembresController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        345 => [[['_route' => 'app_membres_delete', '_controller' => 'App\\Controller\\MembresController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        390 => [[['_route' => 'app_reset_password', 'token' => null, '_controller' => 'App\\Controller\\ResetPasswordController::reset'], ['token'], null, null, false, true, null]],
+        422 => [[['_route' => 'app_specialites_show', '_controller' => 'App\\Controller\\SpecialitesController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        435 => [[['_route' => 'app_specialites_edit', '_controller' => 'App\\Controller\\SpecialitesController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        443 => [[['_route' => 'app_specialites_delete', '_controller' => 'App\\Controller\\SpecialitesController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        473 => [[['_route' => 'app_users_show', '_controller' => 'App\\Controller\\UserController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        486 => [[['_route' => 'app_users_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        509 => [[['_route' => 'app_users_state', '_controller' => 'App\\Controller\\UserController::state'], ['id'], ['POST' => 0], null, false, true, null]],
+        532 => [
             [['_route' => 'app_users_delete', '_controller' => 'App\\Controller\\UserController::delete'], ['id'], ['POST' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

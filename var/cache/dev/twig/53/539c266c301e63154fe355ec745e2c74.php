@@ -344,7 +344,10 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
         // line 260
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_encadreur_index");
         yield "\">Gestion des encadreurs</a></li>
-\t\t\t\t\t\t\t<li><a href=\"\">Gestion des membres</a></li>
+\t\t\t\t\t\t\t<li><a href=\"";
+        // line 261
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_membres_index");
+        yield "\">Gestion des membres</a></li>
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t</li>
 \t\t\t\t\t<li class=\"dropdown\">
@@ -518,7 +521,7 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  479 => 290,  464 => 316,  460 => 315,  455 => 313,  451 => 312,  447 => 311,  443 => 310,  439 => 309,  435 => 308,  431 => 307,  427 => 306,  423 => 305,  419 => 304,  415 => 303,  411 => 302,  407 => 301,  403 => 300,  399 => 299,  395 => 298,  386 => 291,  384 => 290,  371 => 280,  357 => 269,  345 => 260,  341 => 259,  233 => 154,  222 => 148,  94 => 23,  90 => 22,  86 => 21,  82 => 20,  78 => 19,  67 => 11,  63 => 10,  59 => 9,  49 => 1,);
+        return array (  482 => 290,  467 => 316,  463 => 315,  458 => 313,  454 => 312,  450 => 311,  446 => 310,  442 => 309,  438 => 308,  434 => 307,  430 => 306,  426 => 305,  422 => 304,  418 => 303,  414 => 302,  410 => 301,  406 => 300,  402 => 299,  398 => 298,  389 => 291,  387 => 290,  374 => 280,  360 => 269,  349 => 261,  345 => 260,  341 => 259,  233 => 154,  222 => 148,  94 => 23,  90 => 22,  86 => 21,  82 => 20,  78 => 19,  67 => 11,  63 => 10,  59 => 9,  49 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -783,7 +786,7 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
 \t\t\t\t\t\t<ul class=\"submenu\">
 \t\t\t\t\t\t\t<li><a href=\"{{ path('app_dahiras_index') }}\">Gestion des dahiras</a></li>
 \t\t\t\t\t\t\t<li><a href=\"{{ path('app_encadreur_index') }}\">Gestion des encadreurs</a></li>
-\t\t\t\t\t\t\t<li><a href=\"\">Gestion des membres</a></li>
+\t\t\t\t\t\t\t<li><a href=\"{{ path('app_membres_index') }}\">Gestion des membres</a></li>
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t</li>
 \t\t\t\t\t<li class=\"dropdown\">

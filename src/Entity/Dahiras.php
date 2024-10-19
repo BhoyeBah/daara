@@ -31,9 +31,16 @@ class Dahiras
     #[ORM\OneToMany(targetEntity: Encadreur::class, mappedBy: 'dahiras')]
     private Collection $encadreurs;
 
+    /**
+     * @var Collection<int, Membres>
+     */
+    #[ORM\OneToMany(targetEntity: Membres::class, mappedBy: 'dahiras')]
+    private Collection $membres;
+
     public function __construct()
     {
         $this->encadreurs = new ArrayCollection();
+        $this->membres = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -101,6 +108,36 @@ class Dahiras
             // set the owning side to null (unless already changed)
             if ($encadreur->getDahiras() === $this) {
                 $encadreur->setDahiras(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Membres>
+     */
+    public function getMembres(): Collection
+    {
+        return $this->membres;
+    }
+
+    public function addMembre(Membres $membre): static
+    {
+        if (!$this->membres->contains($membre)) {
+            $this->membres->add($membre);
+            $membre->setDahiras($this);
+        }
+
+        return $this;
+    }
+
+    public function removeMembre(Membres $membre): static
+    {
+        if ($this->membres->removeElement($membre)) {
+            // set the owning side to null (unless already changed)
+            if ($membre->getDahiras() === $this) {
+                $membre->setDahiras(null);
             }
         }
 

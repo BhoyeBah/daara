@@ -36,6 +36,12 @@ class Membres
     #[ORM\ManyToMany(targetEntity: Specialites::class, inversedBy: 'membres')]
     private Collection $specialite;
 
+    #[ORM\ManyToOne(inversedBy: 'membres')]
+    private ?Dahiras $dahiras = null;
+
+    #[ORM\ManyToOne(inversedBy: 'membres')]
+    private ?Encadreur $encadreur = null;
+
     public function __construct()
     {
         $this->specialite = new ArrayCollection();
@@ -126,6 +132,30 @@ class Membres
     public function removeSpecialite(Specialites $specialite): static
     {
         $this->specialite->removeElement($specialite);
+
+        return $this;
+    }
+
+    public function getDahiras(): ?Dahiras
+    {
+        return $this->dahiras;
+    }
+
+    public function setDahiras(?Dahiras $dahiras): static
+    {
+        $this->dahiras = $dahiras;
+
+        return $this;
+    }
+
+    public function getEncadreur(): ?Encadreur
+    {
+        return $this->encadreur;
+    }
+
+    public function setEncadreur(?Encadreur $encadreur): static
+    {
+        $this->encadreur = $encadreur;
 
         return $this;
     }
