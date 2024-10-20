@@ -189,7 +189,7 @@ class __TwigTemplate_9a9f9bb32bf59bda12a2c8b62c23df43 extends Template
             // line 117
             yield "\t\t\t\t\t\t\t\t<div class=\"font-16 weight-600 pt-10 pb-10 text-center\" data-color=\"#707373\">Vous n'avez pas de compte</div>
 \t\t\t\t\t\t\t\t\t<div class=\"input-group mb-0\">
-\t\t\t\t\t\t\t\t\t\t<a class=\"btn btn-outline-primary btn-lg btn-block\" href=\"";
+\t\t\t\t\t\t\t\t\t\t<a class=\"btn btn-outline-success btn-lg btn-block\" href=\"";
             // line 119
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
             yield "\">S'inscrire</a>
@@ -366,7 +366,7 @@ class __TwigTemplate_9a9f9bb32bf59bda12a2c8b62c23df43 extends Template
 \t\t\t\t\t\t\t\t{% if users|length == 0 %}
 \t\t\t\t\t\t\t\t<div class=\"font-16 weight-600 pt-10 pb-10 text-center\" data-color=\"#707373\">Vous n'avez pas de compte</div>
 \t\t\t\t\t\t\t\t\t<div class=\"input-group mb-0\">
-\t\t\t\t\t\t\t\t\t\t<a class=\"btn btn-outline-primary btn-lg btn-block\" href=\"{{ path('app_register') }}\">S'inscrire</a>
+\t\t\t\t\t\t\t\t\t\t<a class=\"btn btn-outline-success btn-lg btn-block\" href=\"{{ path('app_register') }}\">S'inscrire</a>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t\t</div>

@@ -18,14 +18,21 @@ final class MembresController extends AbstractController
     public function index(MembresRepository $membresRepository): Response
     {
         $currentUser = $this->getUser();
+        // Si l'utilisateur a le rôle ADMIN
+        if(in_array('ROLE_ADMIN', $currentUser->getRoles(), true)){
+            $membres = $membresRepository->findAll(); // Montre tous les membres
+        }else{
+
         $encadreur = $currentUser->getEncadreur();
+
         $dahiras = $encadreur->getDahiras();
         
         $membres = $membresRepository->findBy(['dahiras' => $dahiras]);
-       
+        }
         return $this->render('membres/index.html.twig', [
             'membres' => $membres,
         ]);
+
     }
 
     #[Route('/new', name: 'app_membres_new', methods: ['GET', 'POST'])]
@@ -38,7 +45,7 @@ final class MembresController extends AbstractController
         // Récupérer l'utilisateur connecté (qui est l'encadreur)
         $currentUser = $this->getUser();
         $encadreur = $currentUser->getEncadreur();
-        
+        dd($currentUser, $currentUser->getEncadreur());
          // Récupérer le dahira de l'encadreur
          $dahira = $encadreur->getDahiras();
 

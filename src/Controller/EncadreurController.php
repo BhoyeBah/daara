@@ -44,6 +44,7 @@ final class EncadreurController extends AbstractController
             $user->setPrenom($encadreur->getPrenom());
             $user->setTelephone($encadreur->getTelephone());
             $user->setAdresse($encadreur->getAdresse());
+            $user->setRoles(['ROLE_ENCADREUR']);
             $user->setStatus(false);
 
             // Définir un mot de passe par défaut "123456789"

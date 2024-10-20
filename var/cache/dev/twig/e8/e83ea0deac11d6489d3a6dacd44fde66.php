@@ -97,8 +97,7 @@ class __TwigTemplate_baa08d5ec19672bdf5d258caeda4c657 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        yield "<div class=\"main-container\">
-<!-- <div class=\"main-container\">
+        yield "<!-- <div class=\"main-container\">
 \t\t<div class=\"pd-ltr-20\">
 \t\t\t<div class=\"card-box pd-20 height-100-p mb-30\">
 \t\t\t\t<div class=\"row align-items-center\">
@@ -328,20 +327,20 @@ class __TwigTemplate_baa08d5ec19672bdf5d258caeda4c657 extends Template
 <h1>Tableau de Bord</h1>
 
 ";
-        // line 236
+        // line 235
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_SUPER_ADMIN")) {
-            // line 237
+            // line 236
             yield "    <p>Bienvenue,role Super Admin ";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 237, $this->source); })()), "user", [], "any", false, false, false, 237), "nom", [], "any", false, false, false, 237), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 236, $this->source); })()), "user", [], "any", false, false, false, 236), "nom", [], "any", false, false, false, 236), "html", null, true);
             yield " ";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 237, $this->source); })()), "user", [], "any", false, false, false, 237), "prenom", [], "any", false, false, false, 237), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 236, $this->source); })()), "user", [], "any", false, false, false, 236), "prenom", [], "any", false, false, false, 236), "html", null, true);
             yield "!</p>
 \t";
-            // line 238
+            // line 237
             $context['_parent'] = $context;
-            $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 238, $this->source); })()), "user", [], "any", false, false, false, 238), "roles", [], "any", false, false, false, 238));
+            $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 237, $this->source); })()), "user", [], "any", false, false, false, 237), "roles", [], "any", false, false, false, 237));
             foreach ($context['_seq'] as $context["_key"] => $context["role"]) {
-                // line 239
+                // line 238
                 yield "    <p>Role: ";
                 yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($context["role"], "html", null, true);
                 yield "</p>
@@ -350,22 +349,22 @@ class __TwigTemplate_baa08d5ec19672bdf5d258caeda4c657 extends Template
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_key'], $context['role'], $context['_parent']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 241
+            // line 240
             yield "    <!-- Contenu spécifique au super-admin -->
 ";
         } elseif ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-            // line 243
+            // line 242
             yield "    <p>Bienvenue,role Admin ";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 243, $this->source); })()), "user", [], "any", false, false, false, 243), "nom", [], "any", false, false, false, 243), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 242, $this->source); })()), "user", [], "any", false, false, false, 242), "nom", [], "any", false, false, false, 242), "html", null, true);
             yield " ";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 243, $this->source); })()), "user", [], "any", false, false, false, 243), "prenom", [], "any", false, false, false, 243), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 242, $this->source); })()), "user", [], "any", false, false, false, 242), "prenom", [], "any", false, false, false, 242), "html", null, true);
             yield "!</p>
 \t";
-            // line 244
+            // line 243
             $context['_parent'] = $context;
-            $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 244, $this->source); })()), "user", [], "any", false, false, false, 244), "roles", [], "any", false, false, false, 244));
+            $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 243, $this->source); })()), "user", [], "any", false, false, false, 243), "roles", [], "any", false, false, false, 243));
             foreach ($context['_seq'] as $context["_key"] => $context["role"]) {
-                // line 245
+                // line 244
                 yield "    <p>Role: ";
                 yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($context["role"], "html", null, true);
                 yield "</p>
@@ -374,22 +373,22 @@ class __TwigTemplate_baa08d5ec19672bdf5d258caeda4c657 extends Template
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_key'], $context['role'], $context['_parent']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 247
+            // line 246
             yield "    <!-- Contenu spécifique à l'admin -->
 ";
         } elseif ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_USER")) {
-            // line 249
+            // line 248
             yield "    <p>Bienvenue,role Utilisateur ";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 249, $this->source); })()), "user", [], "any", false, false, false, 249), "nom", [], "any", false, false, false, 249), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 248, $this->source); })()), "user", [], "any", false, false, false, 248), "nom", [], "any", false, false, false, 248), "html", null, true);
             yield " ";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 249, $this->source); })()), "user", [], "any", false, false, false, 249), "prenom", [], "any", false, false, false, 249), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 248, $this->source); })()), "user", [], "any", false, false, false, 248), "prenom", [], "any", false, false, false, 248), "html", null, true);
             yield "!</p>
 \t";
-            // line 250
+            // line 249
             $context['_parent'] = $context;
-            $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 250, $this->source); })()), "user", [], "any", false, false, false, 250), "roles", [], "any", false, false, false, 250));
+            $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 249, $this->source); })()), "user", [], "any", false, false, false, 249), "roles", [], "any", false, false, false, 249));
             foreach ($context['_seq'] as $context["_key"] => $context["role"]) {
-                // line 251
+                // line 250
                 yield "    <p>Role: ";
                 yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($context["role"], "html", null, true);
                 yield "</p>
@@ -398,15 +397,15 @@ class __TwigTemplate_baa08d5ec19672bdf5d258caeda4c657 extends Template
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_key'], $context['role'], $context['_parent']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 253
+            // line 252
             yield "    <!-- Contenu spécifique à l'utilisateur -->
 ";
         } else {
-            // line 255
+            // line 254
             yield "    <p>Accès refusé.</p>
 ";
         }
-        // line 257
+        // line 256
         yield "
 ";
         
@@ -439,7 +438,7 @@ class __TwigTemplate_baa08d5ec19672bdf5d258caeda4c657 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  410 => 257,  406 => 255,  402 => 253,  393 => 251,  389 => 250,  382 => 249,  378 => 247,  369 => 245,  365 => 244,  358 => 243,  354 => 241,  345 => 239,  341 => 238,  334 => 237,  332 => 236,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
+        return array (  409 => 256,  405 => 254,  401 => 252,  392 => 250,  388 => 249,  381 => 248,  377 => 246,  368 => 244,  364 => 243,  357 => 242,  353 => 240,  344 => 238,  340 => 237,  333 => 236,  331 => 235,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -449,7 +448,6 @@ class __TwigTemplate_baa08d5ec19672bdf5d258caeda4c657 extends Template
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
-<div class=\"main-container\">
 <!-- <div class=\"main-container\">
 \t\t<div class=\"pd-ltr-20\">
 \t\t\t<div class=\"card-box pd-20 height-100-p mb-30\">
