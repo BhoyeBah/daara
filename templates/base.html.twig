@@ -261,14 +261,23 @@
 
 							{% if is_granted('ROLE_ADMIN') %}
 							<li><a href="{{ path('app_dahiras_index') }}">Gestion des dahiras</a></li>
-							{% endif %}
-
-							{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_ENCADREUR') %}
 							<li><a href="{{ path('app_encadreur_index') }}">Gestion des encadreurs</a></li>
+							{% endif %}
+							{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_ENCADREUR') %}
 							<li><a href="{{ path('app_membres_index') }}">Gestion des membres</a></li>
 							{% endif %}
 						</ul>
 					</li>
+					{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_ENCADREUR') %}
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="micon dw dw-user"></span><span class="mtext"> Reunion </span>
+						</a>
+						<ul class="submenu">
+							<li><a href="{{ path('app_users_index') }}">Gestion des thémes</a></li>
+						</ul>
+					</li>
+					{% endif %}
 					{% if is_granted('ROLE_ADMIN') %}
 					<li class="dropdown">
 						<a href="javascript:;" class="dropdown-toggle">

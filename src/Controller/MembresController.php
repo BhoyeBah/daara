@@ -20,7 +20,8 @@ final class MembresController extends AbstractController
         $currentUser = $this->getUser();
         // Si l'utilisateur a le rôle ADMIN
         if(in_array('ROLE_ADMIN', $currentUser->getRoles(), true)){
-            $membres = $membresRepository->findAll(); // Montre tous les membres
+            $membres = $membresRepository->findAll(); 
+            // Montre tous les membres
         }else{
 
         $currentUser = $this->getUser();
@@ -46,10 +47,15 @@ final class MembresController extends AbstractController
 
         // Récupérer l'utilisateur connecté (qui est l'encadreur)
         $currentUser = $this->getUser();
+
         $encadreur = $currentUser->getEncadreur();
-        //dd($currentUser, $currentUser->getEncadreur());
          // Récupérer le dahira de l'encadreur
+         if($this->isGranted('ROLE_ADMIN')){
+            return $this->redirectToRoute('app_membres_index');
+         }
+         
          $dahira = $encadreur->getDahiras();
+
 
         if ($form->isSubmitted() && $form->isValid()) {
             

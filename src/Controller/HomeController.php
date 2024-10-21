@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Dahiras;
 use App\Entity\Encadreur;
 use App\Entity\Membres;
+use App\Entity\User;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -26,6 +27,9 @@ class HomeController extends AbstractController
     {
         // Compter les dahiras
           $membreCount = $this->entityManager->getRepository(Membres::class)->count([]);
+          if($this->IsGranted('ROLE_USER')){
+            $userCount = $this->entityManager->getRepository(User::class)->count(['roles' => 'ROLE_USER']);
+          }
           // Compter les dahiras
           $dahiraCount = $this->entityManager->getRepository(Dahiras::class)->count([]);
           // Compter les encadreurs
@@ -33,6 +37,7 @@ class HomeController extends AbstractController
   
           // Passer les comptages à la vue
           $data = [
+              'userCount' => $userCount,
               'membreCount' => $membreCount,
               'dahiraCount' => $dahiraCount,
               'encadreurCount' => $encadreurCount,

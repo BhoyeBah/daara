@@ -48,7 +48,63 @@
             </ul>
         </div>
     </div>
-
+<!-- Simple Datatable start -->
+<div class="card-box mb-30">
+    <div class="pd-20">
+        <h4 class="text-success h4">Liste des membres</h4>
+    </div>
+    <div class="pb-20">
+        <table class="data-table table stripe hover nowrap table-bordered">
+            <thead>
+                <tr>
+                    <th class="table-plus datatable-nosort">id</th>
+                    <th class="table-plus datatable-nosort">Nom</th>
+                    <th>Prénom</th>
+                    <th>Email</th>
+                    <th>Téléphone</th>
+                    <th>Adresse</th>
+                    <th>Dahiras</th>
+                    <th>Professions</th>
+                    <th class="datatable-nosort">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for membre in dahira.membres %}
+                    <tr>
+                        <td class="table-plus">{{ membre.id }}</td>
+                        <td class="table-plus">{{ membre.nom }}</td>
+                        <td>{{ membre.prenom }}</td>
+                        <td>{{ membre.email }}</td>
+                        <td>{{ membre.telephone }}</td>
+                        <td>{{ membre.adresse }}</td>
+                        <td>{{ membre.dahiras.nom }}</td>
+                        <td>
+                        {% if membre.specialite is not empty %}
+                            <ul>
+                                {% for specialite in membre.specialite %}
+                                    <li>{{ specialite.nom }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% else %}
+                            Pas de profession
+                        {% endif %}
+                    </td>
+                                
+                        <td>
+                            <a href="{{ path('app_membres_show', {'id': membre.id}) }}" class="btn btn-sm btn-success"><i class="dw dw-eye"></i></a>
+                            <a href="{{ path('app_membres_edit', {'id': membre.id}) }}" class="btn btn-sm btn-secondary"><i class="dw dw-edit2"></i></a>
+                            {{ include('membres/_delete_form.html.twig') }}
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="7">Aucun enregistrement trouvé</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
 	</div>
         
 {% endblock %}
