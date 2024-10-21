@@ -326,56 +326,92 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
 \t\t<div class=\"menu-block customscroll\">
 \t\t\t<div class=\"sidebar-menu\">
 \t\t\t\t<ul id=\"accordion-menu\">
-\t\t\t\t\t<li class=\"dropdown\">
+\t\t\t\t";
+        // line 249
+        if (($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN") || $this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ENCADREUR"))) {
+            // line 250
+            yield "\t\t\t\t\t<li class=\"dropdown\">
 \t\t\t\t\t\t<a href=\"/\" class=\"dropdown-toggle no-arrow\">
 \t\t\t\t\t\t\t<span class=\"micon dw dw-house-1\"></span><span class=\"mtext\">Tableau de bord</span>
 \t\t\t\t\t\t</a>
 \t\t\t\t\t</li>
+\t\t\t\t";
+        }
+        // line 255
+        yield "\t
 \t\t\t\t\t<li class=\"dropdown\">
 \t\t\t\t\t\t<a href=\"javascript:;\" class=\"dropdown-toggle\">
 \t\t\t\t\t\t\t<span class=\"micon dw dw-library\"></span><span class=\"mtext\">Dahiras</span>
 \t\t\t\t\t\t</a>
 \t\t\t\t\t\t<ul class=\"submenu\">
+
+\t\t\t\t\t\t\t";
+        // line 262
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
+            // line 263
+            yield "\t\t\t\t\t\t\t<li><a href=\"";
+            yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_dahiras_index");
+            yield "\">Gestion des dahiras</a></li>
+\t\t\t\t\t\t\t";
+        }
+        // line 265
+        yield "
+\t\t\t\t\t\t\t";
+        // line 266
+        if (($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN") || $this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ENCADREUR"))) {
+            // line 267
+            yield "\t\t\t\t\t\t\t<li><a href=\"";
+            yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_encadreur_index");
+            yield "\">Gestion des encadreurs</a></li>
 \t\t\t\t\t\t\t<li><a href=\"";
-        // line 259
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_dahiras_index");
-        yield "\">Gestion des dahiras</a></li>
-\t\t\t\t\t\t\t<li><a href=\"";
-        // line 260
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_encadreur_index");
-        yield "\">Gestion des encadreurs</a></li>
-\t\t\t\t\t\t\t<li><a href=\"";
-        // line 261
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_membres_index");
-        yield "\">Gestion des membres</a></li>
-\t\t\t\t\t\t</ul>
+            // line 268
+            yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_membres_index");
+            yield "\">Gestion des membres</a></li>
+\t\t\t\t\t\t\t";
+        }
+        // line 270
+        yield "\t\t\t\t\t\t</ul>
 \t\t\t\t\t</li>
-\t\t\t\t\t<li class=\"dropdown\">
+\t\t\t\t\t";
+        // line 272
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
+            // line 273
+            yield "\t\t\t\t\t<li class=\"dropdown\">
 \t\t\t\t\t\t<a href=\"javascript:;\" class=\"dropdown-toggle\">
 \t\t\t\t\t\t\t<span class=\"micon dw dw-user\"></span><span class=\"mtext\"> Utilisateurs </span>
 \t\t\t\t\t\t</a>
 \t\t\t\t\t\t<ul class=\"submenu\">
 \t\t\t\t\t\t\t<li><a href=\"";
-        // line 269
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_users_index");
-        yield "\">Gestion des utilisateurs</a></li>
+            // line 278
+            yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_users_index");
+            yield "\">Gestion des utilisateurs</a></li>
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t</li>
-\t\t\t\t\t<li>
+\t\t\t\t\t";
+        }
+        // line 282
+        yield "\t\t\t\t\t<li>
 \t\t\t\t\t\t<div class=\"dropdown-divider\"></div>
 \t\t\t\t\t</li>
-\t\t\t\t\t<li class=\"dropdown\">
+\t\t\t\t\t";
+        // line 285
+        if (($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN") || $this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ENCADREUR"))) {
+            // line 286
+            yield "\t\t\t\t\t<li class=\"dropdown\">
 \t\t\t\t\t\t<a href=\"javascript:;\" class=\"dropdown-toggle\">
 \t\t\t\t\t\t\t<span class=\"micon ion-android-menu\"></span><span class=\"mtext\">Autres</span>
 \t\t\t\t\t\t</a>
 \t\t\t\t\t\t<ul class=\"submenu\">
 \t\t\t\t\t\t\t<li><a href=\"";
-        // line 280
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_specialites_index");
-        yield "\">Spécialités</a></li>
+            // line 291
+            yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_specialites_index");
+            yield "\">Spécialités</a></li>
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t</li>
-\t\t\t\t</ul>
+\t\t\t\t\t";
+        }
+        // line 295
+        yield "\t\t\t\t</ul>
 \t\t\t</div>
 \t\t</div>
 \t</div>
@@ -383,87 +419,87 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
 \t\t<div class=\"pd-ltr-20 xs-pd-20-10\">
 \t\t\t<div class=\"min-height-200px\">
         ";
-        // line 290
+        // line 302
         yield from $this->unwrap()->yieldBlock('body', $context, $blocks);
-        // line 291
+        // line 303
         yield "   
         <div class=\"footer-wrap pd-20 mb-20 card-box\">
-\t\t\t\tDeskApp - Bootstrap 4 Admin Template By <a href=\"https://github.com/dropways\" target=\"_blank\">Ankit Hingarajiya</a>
+\t\t\t\tDaara - design By <a href=\"https://github.com/dropways\" target=\"_blank\">Bah Mamadou Bhoye</a>
 \t\t\t</div>
 \t\t</div>
 \t</div>
 \t\t<!-- JS inclusions -->
 \t<script src=\"";
-        // line 298
+        // line 310
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/scripts/core.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 299
+        // line 311
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/scripts/script.min.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 300
+        // line 312
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/scripts/process.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 301
+        // line 313
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/scripts/layout-settings.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 302
+        // line 314
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("src/plugins/datatables/js/jquery.dataTables.min.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 303
+        // line 315
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("src/plugins/datatables/js/dataTables.bootstrap4.min.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 304
+        // line 316
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("src/plugins/datatables/js/dataTables.responsive.min.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 305
+        // line 317
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("src/plugins/datatables/js/responsive.bootstrap4.min.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 306
+        // line 318
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("src/plugins/datatables/js/dataTables.buttons.min.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 307
+        // line 319
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("src/plugins/datatables/js/buttons.bootstrap4.min.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 308
+        // line 320
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("src/plugins/datatables/js/buttons.print.min.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 309
+        // line 321
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("src/plugins/datatables/js/buttons.html5.min.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 310
+        // line 322
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("src/plugins/datatables/js/buttons.flash.min.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 311
+        // line 323
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("src/plugins/datatables/js/pdfmake.min.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 312
+        // line 324
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("src/plugins/datatables/js/vfs_fonts.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 313
+        // line 325
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/scripts/datatable-setting.js"), "html", null, true);
         yield "\"></script>
 \t<!-- js -->
 \t<script src=\"";
-        // line 315
+        // line 327
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("src/plugins/apexcharts/apexcharts.min.js"), "html", null, true);
         yield "\"></script>
 \t<script src=\"";
-        // line 316
+        // line 328
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/scripts/dashboard.js"), "html", null, true);
         yield "\"></script>
 \t
@@ -478,7 +514,7 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
         yield from [];
     }
 
-    // line 290
+    // line 302
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -521,7 +557,7 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  482 => 290,  467 => 316,  463 => 315,  458 => 313,  454 => 312,  450 => 311,  446 => 310,  442 => 309,  438 => 308,  434 => 307,  430 => 306,  426 => 305,  422 => 304,  418 => 303,  414 => 302,  410 => 301,  406 => 300,  402 => 299,  398 => 298,  389 => 291,  387 => 290,  374 => 280,  360 => 269,  349 => 261,  345 => 260,  341 => 259,  233 => 154,  222 => 148,  94 => 23,  90 => 22,  86 => 21,  82 => 20,  78 => 19,  67 => 11,  63 => 10,  59 => 9,  49 => 1,);
+        return array (  518 => 302,  503 => 328,  499 => 327,  494 => 325,  490 => 324,  486 => 323,  482 => 322,  478 => 321,  474 => 320,  470 => 319,  466 => 318,  462 => 317,  458 => 316,  454 => 315,  450 => 314,  446 => 313,  442 => 312,  438 => 311,  434 => 310,  425 => 303,  423 => 302,  414 => 295,  407 => 291,  400 => 286,  398 => 285,  393 => 282,  386 => 278,  379 => 273,  377 => 272,  373 => 270,  368 => 268,  363 => 267,  361 => 266,  358 => 265,  352 => 263,  350 => 262,  341 => 255,  333 => 250,  331 => 249,  233 => 154,  222 => 148,  94 => 23,  90 => 22,  86 => 21,  82 => 20,  78 => 19,  67 => 11,  63 => 10,  59 => 9,  49 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -774,21 +810,30 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
 \t\t<div class=\"menu-block customscroll\">
 \t\t\t<div class=\"sidebar-menu\">
 \t\t\t\t<ul id=\"accordion-menu\">
+\t\t\t\t{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_ENCADREUR') %}
 \t\t\t\t\t<li class=\"dropdown\">
 \t\t\t\t\t\t<a href=\"/\" class=\"dropdown-toggle no-arrow\">
 \t\t\t\t\t\t\t<span class=\"micon dw dw-house-1\"></span><span class=\"mtext\">Tableau de bord</span>
 \t\t\t\t\t\t</a>
 \t\t\t\t\t</li>
+\t\t\t\t{% endif %}\t
 \t\t\t\t\t<li class=\"dropdown\">
 \t\t\t\t\t\t<a href=\"javascript:;\" class=\"dropdown-toggle\">
 \t\t\t\t\t\t\t<span class=\"micon dw dw-library\"></span><span class=\"mtext\">Dahiras</span>
 \t\t\t\t\t\t</a>
 \t\t\t\t\t\t<ul class=\"submenu\">
+
+\t\t\t\t\t\t\t{% if is_granted('ROLE_ADMIN') %}
 \t\t\t\t\t\t\t<li><a href=\"{{ path('app_dahiras_index') }}\">Gestion des dahiras</a></li>
+\t\t\t\t\t\t\t{% endif %}
+
+\t\t\t\t\t\t\t{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_ENCADREUR') %}
 \t\t\t\t\t\t\t<li><a href=\"{{ path('app_encadreur_index') }}\">Gestion des encadreurs</a></li>
 \t\t\t\t\t\t\t<li><a href=\"{{ path('app_membres_index') }}\">Gestion des membres</a></li>
+\t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t</li>
+\t\t\t\t\t{% if is_granted('ROLE_ADMIN') %}
 \t\t\t\t\t<li class=\"dropdown\">
 \t\t\t\t\t\t<a href=\"javascript:;\" class=\"dropdown-toggle\">
 \t\t\t\t\t\t\t<span class=\"micon dw dw-user\"></span><span class=\"mtext\"> Utilisateurs </span>
@@ -797,9 +842,11 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
 \t\t\t\t\t\t\t<li><a href=\"{{ path('app_users_index') }}\">Gestion des utilisateurs</a></li>
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t</li>
+\t\t\t\t\t{% endif %}
 \t\t\t\t\t<li>
 \t\t\t\t\t\t<div class=\"dropdown-divider\"></div>
 \t\t\t\t\t</li>
+\t\t\t\t\t{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_ENCADREUR') %}
 \t\t\t\t\t<li class=\"dropdown\">
 \t\t\t\t\t\t<a href=\"javascript:;\" class=\"dropdown-toggle\">
 \t\t\t\t\t\t\t<span class=\"micon ion-android-menu\"></span><span class=\"mtext\">Autres</span>
@@ -808,6 +855,7 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
 \t\t\t\t\t\t\t<li><a href=\"{{ path('app_specialites_index') }}\">Spécialités</a></li>
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t</li>
+\t\t\t\t\t{% endif %}
 \t\t\t\t</ul>
 \t\t\t</div>
 \t\t</div>
@@ -818,7 +866,7 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
         {% block body %}{% endblock %}
    
         <div class=\"footer-wrap pd-20 mb-20 card-box\">
-\t\t\t\tDeskApp - Bootstrap 4 Admin Template By <a href=\"https://github.com/dropways\" target=\"_blank\">Ankit Hingarajiya</a>
+\t\t\t\tDaara - design By <a href=\"https://github.com/dropways\" target=\"_blank\">Bah Mamadou Bhoye</a>
 \t\t\t</div>
 \t\t</div>
 \t</div>

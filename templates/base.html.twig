@@ -246,21 +246,30 @@
 		<div class="menu-block customscroll">
 			<div class="sidebar-menu">
 				<ul id="accordion-menu">
+				{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_ENCADREUR') %}
 					<li class="dropdown">
 						<a href="/" class="dropdown-toggle no-arrow">
 							<span class="micon dw dw-house-1"></span><span class="mtext">Tableau de bord</span>
 						</a>
 					</li>
+				{% endif %}	
 					<li class="dropdown">
 						<a href="javascript:;" class="dropdown-toggle">
 							<span class="micon dw dw-library"></span><span class="mtext">Dahiras</span>
 						</a>
 						<ul class="submenu">
+
+							{% if is_granted('ROLE_ADMIN') %}
 							<li><a href="{{ path('app_dahiras_index') }}">Gestion des dahiras</a></li>
+							{% endif %}
+
+							{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_ENCADREUR') %}
 							<li><a href="{{ path('app_encadreur_index') }}">Gestion des encadreurs</a></li>
 							<li><a href="{{ path('app_membres_index') }}">Gestion des membres</a></li>
+							{% endif %}
 						</ul>
 					</li>
+					{% if is_granted('ROLE_ADMIN') %}
 					<li class="dropdown">
 						<a href="javascript:;" class="dropdown-toggle">
 							<span class="micon dw dw-user"></span><span class="mtext"> Utilisateurs </span>
@@ -269,9 +278,11 @@
 							<li><a href="{{ path('app_users_index') }}">Gestion des utilisateurs</a></li>
 						</ul>
 					</li>
+					{% endif %}
 					<li>
 						<div class="dropdown-divider"></div>
 					</li>
+					{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_ENCADREUR') %}
 					<li class="dropdown">
 						<a href="javascript:;" class="dropdown-toggle">
 							<span class="micon ion-android-menu"></span><span class="mtext">Autres</span>
@@ -280,6 +291,7 @@
 							<li><a href="{{ path('app_specialites_index') }}">Spécialités</a></li>
 						</ul>
 					</li>
+					{% endif %}
 				</ul>
 			</div>
 		</div>
@@ -290,7 +302,7 @@
         {% block body %}{% endblock %}
    
         <div class="footer-wrap pd-20 mb-20 card-box">
-				DeskApp - Bootstrap 4 Admin Template By <a href="https://github.com/dropways" target="_blank">Ankit Hingarajiya</a>
+				Daara - design By <a href="https://github.com/dropways" target="_blank">Bah Mamadou Bhoye</a>
 			</div>
 		</div>
 	</div>
