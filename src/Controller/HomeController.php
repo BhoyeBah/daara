@@ -19,7 +19,7 @@ class HomeController extends AbstractController
     {
         $this->entityManager = $entityManager;
     }
-    
+
     #[Route('/', name: 'app_home')]
     #[IsGranted('IS_AUTHENTICATED_FULLY')]
     public function index(): Response
@@ -33,7 +33,7 @@ class HomeController extends AbstractController
   
           // Passer les comptages à la vue
           $data = [
-              'membre' => $membreCount,
+              'membreCount' => $membreCount,
               'dahiraCount' => $dahiraCount,
               'encadreurCount' => $encadreurCount,
           ];
