@@ -381,7 +381,7 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
 \t\t\t\t\t\t<ul class=\"submenu\">
 \t\t\t\t\t\t\t<li><a href=\"";
             // line 277
-            yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_users_index");
+            yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_themes_index");
             yield "\">Gestion des thémes</a></li>
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t</li>
@@ -853,7 +853,7 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
 \t\t\t\t\t\t\t<span class=\"micon dw dw-user\"></span><span class=\"mtext\"> Reunion </span>
 \t\t\t\t\t\t</a>
 \t\t\t\t\t\t<ul class=\"submenu\">
-\t\t\t\t\t\t\t<li><a href=\"{{ path('app_users_index') }}\">Gestion des thémes</a></li>
+\t\t\t\t\t\t\t<li><a href=\"{{ path('app_themes_index') }}\">Gestion des thémes</a></li>
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t</li>
 \t\t\t\t\t{% endif %}
