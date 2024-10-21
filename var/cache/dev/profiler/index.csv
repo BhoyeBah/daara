@@ -7696,3 +7696,5 @@ bcbcb8,::1,GET,http://localhost:8000/encadreur/vendors/images/photo3.jpg,1729474
 ab1be7,::1,GET,http://localhost:8000/encadreur/vendors/images/deskapp-logo-white.svg,1729474636,,404,request
 a42f03,::1,GET,http://localhost:8000/encadreur/vendors/images/deskapp-logo.svg,1729474637,71066c,404,request
 71066c,::1,GET,http://localhost:8000/encadreur/vendors/images/deskapp-logo.svg,1729474637,,404,request
+d546eb,::1,GET,http://localhost:8000/encadreur/new,1729474943,49426f,500,request
+49426f,::1,POST,http://localhost:8000/encadreur/new,1729474943,,500,request

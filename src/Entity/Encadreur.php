@@ -33,8 +33,8 @@ class Encadreur
     #[ORM\Column(length: 255)]
     private ?string $adresse = null;
 
-    #[ORM\Column]
-    private ?int $telephone = null;
+    #[ORM\Column(length:255)]
+    private ?string $telephone = null;
 
     /**
      * @var Collection<int, Membres>
@@ -124,12 +124,12 @@ class Encadreur
         return $this;
     }
 
-    public function getTelephone(): ?int
+    public function getTelephone(): ?string
     {
         return $this->telephone;
     }
 
-    public function setTelephone(int $telephone): static
+    public function setTelephone(string $telephone): static
     {
         $this->telephone = $telephone;
 
