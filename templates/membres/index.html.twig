@@ -37,6 +37,7 @@
                     <th>Email</th>
                     <th>Téléphone</th>
                     <th>Adresse</th>
+                    <!-- <th>Dahiras</th> -->
                     <!-- <th>Professions</th> -->
                     <th class="datatable-nosort">Action</th>
                 </tr>
@@ -50,7 +51,6 @@
                         <td>{{ membre.email }}</td>
                         <td>{{ membre.telephone }}</td>
                         <td>{{ membre.adresse }}</td>
-
                         <td>
                             <a href="{{ path('app_membres_show', {'id': membre.id}) }}" class="btn btn-sm btn-success"><i class="dw dw-eye"></i></a>
                             <a href="{{ path('app_membres_edit', {'id': membre.id}) }}" class="btn btn-sm btn-secondary"><i class="dw dw-edit2"></i></a>

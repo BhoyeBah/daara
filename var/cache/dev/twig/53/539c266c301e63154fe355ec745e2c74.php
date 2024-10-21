@@ -327,7 +327,7 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
 \t\t\t<div class=\"sidebar-menu\">
 \t\t\t\t<ul id=\"accordion-menu\">
 \t\t\t\t\t<li class=\"dropdown\">
-\t\t\t\t\t\t<a href=\"./\" class=\"dropdown-toggle no-arrow\">
+\t\t\t\t\t\t<a href=\"/\" class=\"dropdown-toggle no-arrow\">
 \t\t\t\t\t\t\t<span class=\"micon dw dw-house-1\"></span><span class=\"mtext\">Tableau de bord</span>
 \t\t\t\t\t\t</a>
 \t\t\t\t\t</li>
@@ -775,7 +775,7 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
 \t\t\t<div class=\"sidebar-menu\">
 \t\t\t\t<ul id=\"accordion-menu\">
 \t\t\t\t\t<li class=\"dropdown\">
-\t\t\t\t\t\t<a href=\"./\" class=\"dropdown-toggle no-arrow\">
+\t\t\t\t\t\t<a href=\"/\" class=\"dropdown-toggle no-arrow\">
 \t\t\t\t\t\t\t<span class=\"micon dw dw-house-1\"></span><span class=\"mtext\">Tableau de bord</span>
 \t\t\t\t\t\t</a>
 \t\t\t\t\t</li>

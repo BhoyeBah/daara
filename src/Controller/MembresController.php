@@ -23,6 +23,8 @@ final class MembresController extends AbstractController
             $membres = $membresRepository->findAll(); // Montre tous les membres
         }else{
 
+        $currentUser = $this->getUser();
+
         $encadreur = $currentUser->getEncadreur();
 
         $dahiras = $encadreur->getDahiras();
@@ -45,7 +47,7 @@ final class MembresController extends AbstractController
         // Récupérer l'utilisateur connecté (qui est l'encadreur)
         $currentUser = $this->getUser();
         $encadreur = $currentUser->getEncadreur();
-        dd($currentUser, $currentUser->getEncadreur());
+        //dd($currentUser, $currentUser->getEncadreur());
          // Récupérer le dahira de l'encadreur
          $dahira = $encadreur->getDahiras();
 

@@ -29,14 +29,21 @@ class RegistrationFormType extends AbstractType
                         'message' => "Le numéro de téléphone ne doivent pas être vide.",
                     ]),
                     new Length([
-                        'min' => 7,
-                        'max' => 13,
+                        'min' => 9,
+                        'max' => 14,
                         'minMessage' => 'Le numéro de téléphone doit contenir au moins {{ limit }} chiffres.',
                         'maxMessage' => 'Le numéro de téléphone ne peut pas contenir plus de {{ limit }} chiffres.',
                     ]),
-                ]
+                    new Regex([
+                        'pattern' => '/^\d+$/',
+                        'message' => 'Le numéro de téléphone doit contenir uniquement des chiffres.',
+                    ]),
+                ],
+                'attr' => [
+                    'oninput' => "this.value = this.value.replace(/[^0-9]/g, '')", // Supprime les caractères non numériques pendant la saisie
+                ],
             ])
-            ->add('adresse')
+            ->add('adresse',TextType::class)
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
                 'constraints' => [
