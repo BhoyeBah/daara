@@ -42,10 +42,17 @@ class Membres
     #[ORM\ManyToOne(inversedBy: 'membres')]
     private ?Encadreur $encadreur = null;
 
+    /**
+     * @var Collection<int, DetailReunion>
+     */
+    #[ORM\OneToMany(targetEntity: DetailReunion::class, mappedBy: 'membre')]
+    private Collection $detailReunions;
+
     
     public function __construct()
     {
         $this->specialite = new ArrayCollection();
+        $this->detailReunions = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -157,6 +164,36 @@ class Membres
     public function setEncadreur(?Encadreur $encadreur): static
     {
         $this->encadreur = $encadreur;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, DetailReunion>
+     */
+    public function getDetailReunions(): Collection
+    {
+        return $this->detailReunions;
+    }
+
+    public function addDetailReunion(DetailReunion $detailReunion): static
+    {
+        if (!$this->detailReunions->contains($detailReunion)) {
+            $this->detailReunions->add($detailReunion);
+            $detailReunion->setMembre($this);
+        }
+
+        return $this;
+    }
+
+    public function removeDetailReunion(DetailReunion $detailReunion): static
+    {
+        if ($this->detailReunions->removeElement($detailReunion)) {
+            // set the owning side to null (unless already changed)
+            if ($detailReunion->getMembre() === $this) {
+                $detailReunion->setMembre(null);
+            }
+        }
 
         return $this;
     }

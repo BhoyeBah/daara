@@ -37,10 +37,17 @@ class Dahiras
     #[ORM\OneToMany(targetEntity: Membres::class, mappedBy: 'dahiras')]
     private Collection $membres;
 
+    /**
+     * @var Collection<int, Reunion>
+     */
+    #[ORM\OneToMany(targetEntity: Reunion::class, mappedBy: 'dahiras')]
+    private Collection $reunions;
+
     public function __construct()
     {
         $this->encadreurs = new ArrayCollection();
         $this->membres = new ArrayCollection();
+        $this->reunions = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -138,6 +145,36 @@ class Dahiras
             // set the owning side to null (unless already changed)
             if ($membre->getDahiras() === $this) {
                 $membre->setDahiras(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Reunion>
+     */
+    public function getReunions(): Collection
+    {
+        return $this->reunions;
+    }
+
+    public function addReunion(Reunion $reunion): static
+    {
+        if (!$this->reunions->contains($reunion)) {
+            $this->reunions->add($reunion);
+            $reunion->setDahiras($this);
+        }
+
+        return $this;
+    }
+
+    public function removeReunion(Reunion $reunion): static
+    {
+        if ($this->reunions->removeElement($reunion)) {
+            // set the owning side to null (unless already changed)
+            if ($reunion->getDahiras() === $this) {
+                $reunion->setDahiras(null);
             }
         }
 

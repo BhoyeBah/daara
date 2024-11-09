@@ -474,6 +474,10 @@
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
+    <service id="App\Repository\DetailReunionRepository" class="App\Repository\DetailReunionRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
     <service id="App\Repository\EncadreurRepository" class="App\Repository\EncadreurRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
@@ -483,6 +487,10 @@
       <argument type="service" id="doctrine"/>
     </service>
     <service id="App\Repository\ResetPasswordRequestRepository" class="App\Repository\ResetPasswordRequestRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\ReunionRepository" class="App\Repository\ReunionRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
@@ -5288,7 +5296,7 @@
     <service id="doctrine.orm.configuration" class="Doctrine\ORM\Configuration" abstract="true"/>
     <service id="doctrine.orm.entity_manager.abstract" class="Doctrine\ORM\EntityManager" lazy="true" abstract="true"/>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory">
-      <argument type="service" id=".service_locator.2gCIh8Q"/>
+      <argument type="service" id=".service_locator.5c1d_iI"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -7483,12 +7491,16 @@
     <service id=".abstract.instanceof.App\Form\ThemesType" class="App\Form\ThemesType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\DahirasRepository" class="App\Repository\DahirasRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\DahirasRepository" class="App\Repository\DahirasRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\DetailReunionRepository" class="App\Repository\DetailReunionRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\DetailReunionRepository" class="App\Repository\DetailReunionRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\EncadreurRepository" class="App\Repository\EncadreurRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\EncadreurRepository" class="App\Repository\EncadreurRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\MembresRepository" class="App\Repository\MembresRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\MembresRepository" class="App\Repository\MembresRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ResetPasswordRequestRepository" class="App\Repository\ResetPasswordRequestRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\ResetPasswordRequestRepository" class="App\Repository\ResetPasswordRequestRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ReunionRepository" class="App\Repository\ReunionRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\ReunionRepository" class="App\Repository\ReunionRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\SpecialitesRepository" class="App\Repository\SpecialitesRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\SpecialitesRepository" class="App\Repository\SpecialitesRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ThemesRepository" class="App\Repository\ThemesRepository" autowire="true" abstract="true"/>
@@ -8810,13 +8822,15 @@
         <argument key="turbo.doctrine.event_listener" type="service_closure" id="turbo.doctrine.event_listener"/>
       </argument>
     </service>
-    <service id=".service_locator.2gCIh8Q" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.5c1d_iI" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\DahirasRepository" type="service_closure" id="App\Repository\DahirasRepository"/>
+        <argument key="App\Repository\DetailReunionRepository" type="service_closure" id="App\Repository\DetailReunionRepository"/>
         <argument key="App\Repository\EncadreurRepository" type="service_closure" id="App\Repository\EncadreurRepository"/>
         <argument key="App\Repository\MembresRepository" type="service_closure" id="App\Repository\MembresRepository"/>
         <argument key="App\Repository\ResetPasswordRequestRepository" type="service_closure" id="App\Repository\ResetPasswordRequestRepository"/>
+        <argument key="App\Repository\ReunionRepository" type="service_closure" id="App\Repository\ReunionRepository"/>
         <argument key="App\Repository\SpecialitesRepository" type="service_closure" id="App\Repository\SpecialitesRepository"/>
         <argument key="App\Repository\ThemesRepository" type="service_closure" id="App\Repository\ThemesRepository"/>
         <argument key="App\Repository\UserRepository" type="service_closure" id="App\Repository\UserRepository"/>
