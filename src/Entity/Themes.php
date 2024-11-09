@@ -22,17 +22,7 @@ class Themes
     #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
 
-    /**
-     * @var Collection<int, Reunion>
-     */
-    #[ORM\OneToMany(targetEntity: Reunion::class, mappedBy: 'themes')]
-    private Collection $reunions;
-
-    public function __construct()
-    {
-        $this->reunions = new ArrayCollection();
-    }
-
+   
     public function getId(): ?int
     {
         return $this->id;
@@ -62,33 +52,5 @@ class Themes
         return $this;
     }
 
-    /**
-     * @return Collection<int, Reunion>
-     */
-    public function getReunions(): Collection
-    {
-        return $this->reunions;
-    }
-
-    public function addReunion(Reunion $reunion): static
-    {
-        if (!$this->reunions->contains($reunion)) {
-            $this->reunions->add($reunion);
-            $reunion->setThemes($this);
-        }
-
-        return $this;
-    }
-
-    public function removeReunion(Reunion $reunion): static
-    {
-        if ($this->reunions->removeElement($reunion)) {
-            // set the owning side to null (unless already changed)
-            if ($reunion->getThemes() === $this) {
-                $reunion->setThemes(null);
-            }
-        }
-
-        return $this;
-    }
+    
 }
