@@ -42,9 +42,16 @@ class Membres
     #[ORM\ManyToOne(inversedBy: 'membres')]
     private ?Encadreur $encadreur = null;
 
+    /**
+     * @var Collection<int, Presence>
+     */
+    #[ORM\OneToMany(targetEntity: Presence::class, mappedBy: 'membres')]
+    private Collection $presences;
+
     public function __construct()
     {
         $this->specialite = new ArrayCollection();
+        $this->presences = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -156,6 +163,36 @@ class Membres
     public function setEncadreur(?Encadreur $encadreur): static
     {
         $this->encadreur = $encadreur;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Presence>
+     */
+    public function getPresences(): Collection
+    {
+        return $this->presences;
+    }
+
+    public function addPresence(Presence $presence): static
+    {
+        if (!$this->presences->contains($presence)) {
+            $this->presences->add($presence);
+            $presence->setMembres($this);
+        }
+
+        return $this;
+    }
+
+    public function removePresence(Presence $presence): static
+    {
+        if ($this->presences->removeElement($presence)) {
+            // set the owning side to null (unless already changed)
+            if ($presence->getMembres() === $this) {
+                $presence->setMembres(null);
+            }
+        }
 
         return $this;
     }

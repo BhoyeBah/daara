@@ -42,9 +42,16 @@ class Encadreur
     #[ORM\OneToMany(targetEntity: Membres::class, mappedBy: 'encadreur')]
     private Collection $membres;
 
+    /**
+     * @var Collection<int, Reunion>
+     */
+    #[ORM\OneToMany(targetEntity: Reunion::class, mappedBy: 'encadreur')]
+    private Collection $reunions;
+
     public function __construct()
     {
         $this->membres = new ArrayCollection();
+        $this->reunions = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -160,6 +167,36 @@ class Encadreur
             // set the owning side to null (unless already changed)
             if ($membre->getEncadreur() === $this) {
                 $membre->setEncadreur(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Reunion>
+     */
+    public function getReunions(): Collection
+    {
+        return $this->reunions;
+    }
+
+    public function addReunion(Reunion $reunion): static
+    {
+        if (!$this->reunions->contains($reunion)) {
+            $this->reunions->add($reunion);
+            $reunion->setEncadreur($this);
+        }
+
+        return $this;
+    }
+
+    public function removeReunion(Reunion $reunion): static
+    {
+        if ($this->reunions->removeElement($reunion)) {
+            // set the owning side to null (unless already changed)
+            if ($reunion->getEncadreur() === $this) {
+                $reunion->setEncadreur(null);
             }
         }
 
