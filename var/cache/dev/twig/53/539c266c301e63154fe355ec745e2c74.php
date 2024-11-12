@@ -383,7 +383,10 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
             // line 277
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_themes_index");
             yield "\">Gestion des thémes</a></li>
-\t\t\t\t\t\t\t<li><a href=\"\">Gestion des Reunions</a></li>
+\t\t\t\t\t\t\t<li><a href=\"";
+            // line 278
+            yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reunion_index");
+            yield "\">Gestion des Reunions</a></li>
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t</li>
 \t\t\t\t\t";
@@ -573,7 +576,7 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  534 => 312,  519 => 338,  515 => 337,  510 => 335,  506 => 334,  502 => 333,  498 => 332,  494 => 331,  490 => 330,  486 => 329,  482 => 328,  478 => 327,  474 => 326,  470 => 325,  466 => 324,  462 => 323,  458 => 322,  454 => 321,  450 => 320,  441 => 313,  439 => 312,  430 => 305,  423 => 301,  416 => 296,  414 => 295,  409 => 292,  402 => 288,  395 => 283,  392 => 282,  384 => 277,  377 => 272,  375 => 271,  371 => 269,  365 => 267,  362 => 266,  357 => 264,  352 => 263,  350 => 262,  341 => 255,  333 => 250,  331 => 249,  233 => 154,  222 => 148,  94 => 23,  90 => 22,  86 => 21,  82 => 20,  78 => 19,  67 => 11,  63 => 10,  59 => 9,  49 => 1,);
+        return array (  537 => 312,  522 => 338,  518 => 337,  513 => 335,  509 => 334,  505 => 333,  501 => 332,  497 => 331,  493 => 330,  489 => 329,  485 => 328,  481 => 327,  477 => 326,  473 => 325,  469 => 324,  465 => 323,  461 => 322,  457 => 321,  453 => 320,  444 => 313,  442 => 312,  433 => 305,  426 => 301,  419 => 296,  417 => 295,  412 => 292,  405 => 288,  398 => 283,  395 => 282,  388 => 278,  384 => 277,  377 => 272,  375 => 271,  371 => 269,  365 => 267,  362 => 266,  357 => 264,  352 => 263,  350 => 262,  341 => 255,  333 => 250,  331 => 249,  233 => 154,  222 => 148,  94 => 23,  90 => 22,  86 => 21,  82 => 20,  78 => 19,  67 => 11,  63 => 10,  59 => 9,  49 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -855,7 +858,7 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
 \t\t\t\t\t\t</a>
 \t\t\t\t\t\t<ul class=\"submenu\">
 \t\t\t\t\t\t\t<li><a href=\"{{ path('app_themes_index') }}\">Gestion des thémes</a></li>
-\t\t\t\t\t\t\t<li><a href=\"\">Gestion des Reunions</a></li>
+\t\t\t\t\t\t\t<li><a href=\"{{ path('app_reunion_index') }}\">Gestion des Reunions</a></li>
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t</li>
 \t\t\t\t\t{% endif %}
