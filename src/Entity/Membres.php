@@ -43,16 +43,17 @@ class Membres
     private ?Encadreur $encadreur = null;
 
     /**
-     * @var Collection<int, DetailReunion>
+     * @var Collection<int, Presence>
      */
-    #[ORM\OneToMany(targetEntity: DetailReunion::class, mappedBy: 'membre')]
-    private Collection $detailReunions;
+    #[ORM\OneToMany(targetEntity: Presence::class, mappedBy: 'membre')]
+    private Collection $presences;
 
-    
+
     public function __construct()
     {
         $this->specialite = new ArrayCollection();
-        $this->detailReunions = new ArrayCollection();
+        $this->presences = new ArrayCollection();
+       
     }
 
     public function getId(): ?int
@@ -169,29 +170,29 @@ class Membres
     }
 
     /**
-     * @return Collection<int, DetailReunion>
+     * @return Collection<int, Presence>
      */
-    public function getDetailReunions(): Collection
+    public function getPresences(): Collection
     {
-        return $this->detailReunions;
+        return $this->presences;
     }
 
-    public function addDetailReunion(DetailReunion $detailReunion): static
+    public function addPresence(Presence $presence): static
     {
-        if (!$this->detailReunions->contains($detailReunion)) {
-            $this->detailReunions->add($detailReunion);
-            $detailReunion->setMembre($this);
+        if (!$this->presences->contains($presence)) {
+            $this->presences->add($presence);
+            $presence->setMembre($this);
         }
 
         return $this;
     }
 
-    public function removeDetailReunion(DetailReunion $detailReunion): static
+    public function removePresence(Presence $presence): static
     {
-        if ($this->detailReunions->removeElement($detailReunion)) {
+        if ($this->presences->removeElement($presence)) {
             // set the owning side to null (unless already changed)
-            if ($detailReunion->getMembre() === $this) {
-                $detailReunion->setMembre(null);
+            if ($presence->getMembre() === $this) {
+                $presence->setMembre(null);
             }
         }
 

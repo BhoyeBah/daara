@@ -496,6 +496,10 @@
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
+    <service id="App\Repository\PresenceRepository" class="App\Repository\PresenceRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
     <service id="App\Repository\ResetPasswordRequestRepository" class="App\Repository\ResetPasswordRequestRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
@@ -548,7 +552,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
       <tag priority="-50" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">controller.argument_value_resolver</tag>
-      <argument type="service" id=".service_locator.rdvlZ2d"/>
+      <argument type="service" id=".service_locator.QgMG7CN"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">
       <tag priority="-100" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">controller.argument_value_resolver</tag>
@@ -3530,7 +3534,7 @@
     </service>
     <service id="argument_resolver.not_tagged_controller" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
       <tag name="controller.argument_value_resolver" priority="-200"/>
-      <argument type="service" id=".service_locator.rdvlZ2d"/>
+      <argument type="service" id=".service_locator.QgMG7CN"/>
     </service>
     <service id="debug.log_processor" class="Symfony\Bridge\Monolog\Processor\DebugProcessor">
       <tag name="kernel.reset" method="reset"/>
@@ -5307,7 +5311,7 @@
     <service id="doctrine.orm.configuration" class="Doctrine\ORM\Configuration" abstract="true"/>
     <service id="doctrine.orm.entity_manager.abstract" class="Doctrine\ORM\EntityManager" lazy="true" abstract="true"/>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory">
-      <argument type="service" id=".service_locator.5c1d_iI"/>
+      <argument type="service" id=".service_locator.jzhJMti"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -7513,6 +7517,8 @@
     <service id=".abstract.instanceof.App\Repository\EncadreurRepository" class="App\Repository\EncadreurRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\MembresRepository" class="App\Repository\MembresRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\MembresRepository" class="App\Repository\MembresRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\PresenceRepository" class="App\Repository\PresenceRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\PresenceRepository" class="App\Repository\PresenceRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ResetPasswordRequestRepository" class="App\Repository\ResetPasswordRequestRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\ResetPasswordRequestRepository" class="App\Repository\ResetPasswordRequestRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ReunionRepository" class="App\Repository\ReunionRepository" autowire="true" abstract="true"/>
@@ -8280,6 +8286,12 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.2DjqodR" method="withContext"/>
     </service>
+    <service id=".service_locator.P.blNFL.App\Controller\ReunionController::new()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\ReunionController::new()"/>
+      <argument>App\Controller\ReunionController::new()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.P.blNFL" method="withContext"/>
+    </service>
     <service id=".service_locator.JTVina6" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -8461,7 +8473,7 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.nLtHlEw" method="withContext"/>
     </service>
-    <service id=".service_locator.rdvlZ2d" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.QgMG7CN" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.4wc4Ag1.kernel::registerContainerConfiguration()"/>
@@ -8487,6 +8499,7 @@
         <argument key="App\Controller\RegistrationController::verifyUserEmail" type="service_closure" id=".service_locator.SSsS_et.App\Controller\RegistrationController::verifyUserEmail()"/>
         <argument key="App\Controller\ResetPasswordController::request" type="service_closure" id=".service_locator.D.nMOje.App\Controller\ResetPasswordController::request()"/>
         <argument key="App\Controller\ResetPasswordController::reset" type="service_closure" id=".service_locator.2DjqodR.App\Controller\ResetPasswordController::reset()"/>
+        <argument key="App\Controller\ReunionController::new" type="service_closure" id=".service_locator.P.blNFL.App\Controller\ReunionController::new()"/>
         <argument key="App\Controller\SecurityController::login" type="service_closure" id=".service_locator.JTVina6.App\Controller\SecurityController::login()"/>
         <argument key="App\Controller\SpecialitesController::index" type="service_closure" id=".service_locator.MtxOC_2.App\Controller\SpecialitesController::index()"/>
         <argument key="App\Controller\SpecialitesController::new" type="service_closure" id=".service_locator.P.blNFL.App\Controller\SpecialitesController::new()"/>
@@ -8525,6 +8538,7 @@
         <argument key="App\Controller\RegistrationController:verifyUserEmail" type="service_closure" id=".service_locator.SSsS_et.App\Controller\RegistrationController::verifyUserEmail()"/>
         <argument key="App\Controller\ResetPasswordController:request" type="service_closure" id=".service_locator.D.nMOje.App\Controller\ResetPasswordController::request()"/>
         <argument key="App\Controller\ResetPasswordController:reset" type="service_closure" id=".service_locator.2DjqodR.App\Controller\ResetPasswordController::reset()"/>
+        <argument key="App\Controller\ReunionController:new" type="service_closure" id=".service_locator.P.blNFL.App\Controller\ReunionController::new()"/>
         <argument key="App\Controller\SecurityController:login" type="service_closure" id=".service_locator.JTVina6.App\Controller\SecurityController::login()"/>
         <argument key="App\Controller\SpecialitesController:index" type="service_closure" id=".service_locator.MtxOC_2.App\Controller\SpecialitesController::index()"/>
         <argument key="App\Controller\SpecialitesController:new" type="service_closure" id=".service_locator.P.blNFL.App\Controller\SpecialitesController::new()"/>
@@ -8839,13 +8853,14 @@
         <argument key="turbo.doctrine.event_listener" type="service_closure" id="turbo.doctrine.event_listener"/>
       </argument>
     </service>
-    <service id=".service_locator.5c1d_iI" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.jzhJMti" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\DahirasRepository" type="service_closure" id="App\Repository\DahirasRepository"/>
         <argument key="App\Repository\DetailReunionRepository" type="service_closure" id="App\Repository\DetailReunionRepository"/>
         <argument key="App\Repository\EncadreurRepository" type="service_closure" id="App\Repository\EncadreurRepository"/>
         <argument key="App\Repository\MembresRepository" type="service_closure" id="App\Repository\MembresRepository"/>
+        <argument key="App\Repository\PresenceRepository" type="service_closure" id="App\Repository\PresenceRepository"/>
         <argument key="App\Repository\ResetPasswordRequestRepository" type="service_closure" id="App\Repository\ResetPasswordRequestRepository"/>
         <argument key="App\Repository\ReunionRepository" type="service_closure" id="App\Repository\ReunionRepository"/>
         <argument key="App\Repository\SpecialitesRepository" type="service_closure" id="App\Repository\SpecialitesRepository"/>
@@ -10762,7 +10777,7 @@
     <service id="SymfonyCasts\Bundle\ResetPassword\ResetPasswordHelperInterface" alias="symfonycasts.reset_password.helper"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.pRu6x_4" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.rdvlZ2d"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.QgMG7CN"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.BxSdgVt"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>

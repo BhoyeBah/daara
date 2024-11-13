@@ -19,13 +19,15 @@ class ReunionType extends AbstractType
             ->add('date', null, [
                 'widget' => 'single_text',
             ])
-            ->add('lieu')
-            ->add('encadreur', EntityType::class, [
-                'class' => Encadreur::class,
-                'choice_label' => 'nom',
-            ])
             ->add('theme', EntityType::class, [
                 'class' => Themes::class,
+                'choice_label' => 'nom',
+            ])
+            ->add('lieu')
+            ->add('sujetaborde')
+            ->add('decisionprise')
+            ->add('encadreur', EntityType::class, [
+                'class' => Encadreur::class,
                 'choice_label' => 'nom',
             ])
             ->add('dahiras', EntityType::class, [

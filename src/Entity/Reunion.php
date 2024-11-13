@@ -31,17 +31,24 @@ class Reunion
     #[ORM\ManyToOne(inversedBy: 'reunions')]
     private ?Dahiras $dahiras = null;
 
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $sujetaborde = null;
+
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $decisionprise = null;
+
     /**
-     * @var Collection<int, DetailReunion>
+     * @var Collection<int, Presence>
      */
-    #[ORM\OneToMany(targetEntity: DetailReunion::class, mappedBy: 'reunion')]
-    private Collection $detailReunions;
+    #[ORM\OneToMany(targetEntity: Presence::class, mappedBy: 'reunion')]
+    private Collection $presences;
 
     public function __construct()
     {
-        $this->detailReunions = new ArrayCollection();
+        $this->presences = new ArrayCollection();
     }
 
+    
     public function getId(): ?int
     {
         return $this->id;
@@ -107,30 +114,54 @@ class Reunion
         return $this;
     }
 
-    /**
-     * @return Collection<int, DetailReunion>
-     */
-    public function getDetailReunions(): Collection
+    public function getSujetaborde(): ?string
     {
-        return $this->detailReunions;
+        return $this->sujetaborde;
     }
 
-    public function addDetailReunion(DetailReunion $detailReunion): static
+    public function setSujetaborde(string $sujetaborde): static
     {
-        if (!$this->detailReunions->contains($detailReunion)) {
-            $this->detailReunions->add($detailReunion);
-            $detailReunion->setReunion($this);
+        $this->sujetaborde = $sujetaborde;
+
+        return $this;
+    }
+
+    public function getDecisionprise(): ?string
+    {
+        return $this->decisionprise;
+    }
+
+    public function setDecisionprise(string $decisionprise): static
+    {
+        $this->decisionprise = $decisionprise;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Presence>
+     */
+    public function getPresences(): Collection
+    {
+        return $this->presences;
+    }
+
+    public function addPresence(Presence $presence): static
+    {
+        if (!$this->presences->contains($presence)) {
+            $this->presences->add($presence);
+            $presence->setReunion($this);
         }
 
         return $this;
     }
 
-    public function removeDetailReunion(DetailReunion $detailReunion): static
+    public function removePresence(Presence $presence): static
     {
-        if ($this->detailReunions->removeElement($detailReunion)) {
+        if ($this->presences->removeElement($presence)) {
             // set the owning side to null (unless already changed)
-            if ($detailReunion->getReunion() === $this) {
-                $detailReunion->setReunion(null);
+            if ($presence->getReunion() === $this) {
+                $presence->setReunion(null);
             }
         }
 
