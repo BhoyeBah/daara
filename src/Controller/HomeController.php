@@ -22,9 +22,12 @@ class HomeController extends AbstractController
     }
 
     #[Route('/', name: 'app_home')]
-    #[IsGranted('IS_AUTHENTICATED_FULLY')]
     public function index(): Response
     {
+        $user = $this->getUser();
+        if($user === null){
+            return $this->redirectToRoute('app_login');
+        }
         // Compter les dahiras
           $membreCount = $this->entityManager->getRepository(Membres::class)->count([]);
           if($this->IsGranted('ROLE_USER')){

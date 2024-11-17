@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Détails de la réunion{% endblock %}
+
+{% block body %}
+    <div class="page-header">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <div class="title">
+                    <h4>Détails de la réunion</h4>
+                </div>
+                <nav aria-label="breadcrumb" role="navigation">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Tableau de bord</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Détails de la réunion</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="pd-20 card-box mb-30">
+        <h4 class="text-success h4">Reunion numéro : {{ reunion.id }} de la dahiras {{ reunion.dahiras.nom}}</h4>
+        <h4 class="text-success h4">Encadreur : {{ reunion.encadreur.nom }} {{ reunion.encadreur.prenom }}</h4>
+        <p><strong>Date :</strong> {{ reunion.date|date('d/m/Y H:i') }}</p>
+        <p><strong>Lieu :</strong> {{ reunion.lieu }}</p>
+        <p><strong>Thèmes :</strong> {{ reunion.theme.nom }}</p>
+        <p><strong>Sujet abordé :</strong> {{ reunion.sujetaborde }}</p>
+        <p><strong>Décisions prises :</strong> {{ reunion.decisionprise }}</p>
+        
+        <h5 class="text-success">Liste des présences</h5>
+        <table class="table table-bordered data-table">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Présent</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for presence in presences %}
+                    <tr>
+                        <td>{{ presence.membre.nom }}</td>
+                        <td>{{ presence.membre.prenom }}</td>
+                        <td>{{ presence.present ? 'Oui' : 'Non' }}</td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="2">Aucune présence enregistrée.</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

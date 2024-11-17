@@ -552,7 +552,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
       <tag priority="-50" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">controller.argument_value_resolver</tag>
-      <argument type="service" id=".service_locator.QgMG7CN"/>
+      <argument type="service" id=".service_locator.uowKibY"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">
       <tag priority="-100" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">controller.argument_value_resolver</tag>
@@ -3534,7 +3534,7 @@
     </service>
     <service id="argument_resolver.not_tagged_controller" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
       <tag name="controller.argument_value_resolver" priority="-200"/>
-      <argument type="service" id=".service_locator.QgMG7CN"/>
+      <argument type="service" id=".service_locator.uowKibY"/>
     </service>
     <service id="debug.log_processor" class="Symfony\Bridge\Monolog\Processor\DebugProcessor">
       <tag name="kernel.reset" method="reset"/>
@@ -8286,11 +8286,42 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.2DjqodR" method="withContext"/>
     </service>
-    <service id=".service_locator.P.blNFL.App\Controller\ReunionController::new()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.158Sx_t" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="reunionRepository" type="service_closure" id="App\Repository\ReunionRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.158Sx_t.App\Controller\ReunionController::index()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\ReunionController::index()"/>
+      <argument>App\Controller\ReunionController::index()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.158Sx_t" method="withContext"/>
+    </service>
+    <service id=".service_locator.R77Zl9c" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+        <argument key="membresRepository" type="service_closure" id="App\Repository\MembresRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.R77Zl9c.App\Controller\ReunionController::new()" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\ReunionController::new()"/>
       <argument>App\Controller\ReunionController::new()</argument>
       <argument type="service" id="service_container"/>
-      <factory service=".service_locator.P.blNFL" method="withContext"/>
+      <factory service=".service_locator.R77Zl9c" method="withContext"/>
+    </service>
+    <service id=".service_locator.8U2gOPW" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="reunion" type="service_closure" id=".errored..service_locator.8U2gOPW.App\Entity\Reunion"/>
+      </argument>
+    </service>
+    <service id=".service_locator.8U2gOPW.App\Controller\ReunionController::show()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\ReunionController::show()"/>
+      <argument>App\Controller\ReunionController::show()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.8U2gOPW" method="withContext"/>
     </service>
     <service id=".service_locator.JTVina6" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
@@ -8473,7 +8504,7 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.nLtHlEw" method="withContext"/>
     </service>
-    <service id=".service_locator.QgMG7CN" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.uowKibY" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.4wc4Ag1.kernel::registerContainerConfiguration()"/>
@@ -8499,7 +8530,9 @@
         <argument key="App\Controller\RegistrationController::verifyUserEmail" type="service_closure" id=".service_locator.SSsS_et.App\Controller\RegistrationController::verifyUserEmail()"/>
         <argument key="App\Controller\ResetPasswordController::request" type="service_closure" id=".service_locator.D.nMOje.App\Controller\ResetPasswordController::request()"/>
         <argument key="App\Controller\ResetPasswordController::reset" type="service_closure" id=".service_locator.2DjqodR.App\Controller\ResetPasswordController::reset()"/>
-        <argument key="App\Controller\ReunionController::new" type="service_closure" id=".service_locator.P.blNFL.App\Controller\ReunionController::new()"/>
+        <argument key="App\Controller\ReunionController::index" type="service_closure" id=".service_locator.158Sx_t.App\Controller\ReunionController::index()"/>
+        <argument key="App\Controller\ReunionController::new" type="service_closure" id=".service_locator.R77Zl9c.App\Controller\ReunionController::new()"/>
+        <argument key="App\Controller\ReunionController::show" type="service_closure" id=".service_locator.8U2gOPW.App\Controller\ReunionController::show()"/>
         <argument key="App\Controller\SecurityController::login" type="service_closure" id=".service_locator.JTVina6.App\Controller\SecurityController::login()"/>
         <argument key="App\Controller\SpecialitesController::index" type="service_closure" id=".service_locator.MtxOC_2.App\Controller\SpecialitesController::index()"/>
         <argument key="App\Controller\SpecialitesController::new" type="service_closure" id=".service_locator.P.blNFL.App\Controller\SpecialitesController::new()"/>
@@ -8538,7 +8571,9 @@
         <argument key="App\Controller\RegistrationController:verifyUserEmail" type="service_closure" id=".service_locator.SSsS_et.App\Controller\RegistrationController::verifyUserEmail()"/>
         <argument key="App\Controller\ResetPasswordController:request" type="service_closure" id=".service_locator.D.nMOje.App\Controller\ResetPasswordController::request()"/>
         <argument key="App\Controller\ResetPasswordController:reset" type="service_closure" id=".service_locator.2DjqodR.App\Controller\ResetPasswordController::reset()"/>
-        <argument key="App\Controller\ReunionController:new" type="service_closure" id=".service_locator.P.blNFL.App\Controller\ReunionController::new()"/>
+        <argument key="App\Controller\ReunionController:index" type="service_closure" id=".service_locator.158Sx_t.App\Controller\ReunionController::index()"/>
+        <argument key="App\Controller\ReunionController:new" type="service_closure" id=".service_locator.R77Zl9c.App\Controller\ReunionController::new()"/>
+        <argument key="App\Controller\ReunionController:show" type="service_closure" id=".service_locator.8U2gOPW.App\Controller\ReunionController::show()"/>
         <argument key="App\Controller\SecurityController:login" type="service_closure" id=".service_locator.JTVina6.App\Controller\SecurityController::login()"/>
         <argument key="App\Controller\SpecialitesController:index" type="service_closure" id=".service_locator.MtxOC_2.App\Controller\SpecialitesController::index()"/>
         <argument key="App\Controller\SpecialitesController:new" type="service_closure" id=".service_locator.P.blNFL.App\Controller\SpecialitesController::new()"/>
@@ -9587,6 +9622,9 @@
     </service>
     <service id=".errored..service_locator.Jj2911m.App\Entity\Membres" class="App\Entity\Membres">
       <tag name="container.error" message="Cannot autowire service &quot;.service_locator.Jj2911m&quot;: it needs an instance of &quot;App\Entity\Membres&quot; but this type has been excluded in &quot;config/services.yaml&quot;."/>
+    </service>
+    <service id=".errored..service_locator.8U2gOPW.App\Entity\Reunion" class="App\Entity\Reunion">
+      <tag name="container.error" message="Cannot autowire service &quot;.service_locator.8U2gOPW&quot;: it needs an instance of &quot;App\Entity\Reunion&quot; but this type has been excluded in &quot;config/services.yaml&quot;."/>
     </service>
     <service id=".errored..service_locator.g0Pmaam.App\Entity\Specialites" class="App\Entity\Specialites">
       <tag name="container.error" message="Cannot autowire service &quot;.service_locator.g0Pmaam&quot;: it needs an instance of &quot;App\Entity\Specialites&quot; but this type has been excluded in &quot;config/services.yaml&quot;."/>
@@ -10777,7 +10815,7 @@
     <service id="SymfonyCasts\Bundle\ResetPassword\ResetPasswordHelperInterface" alias="symfonycasts.reset_password.helper"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.pRu6x_4" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.QgMG7CN"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.uowKibY"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.BxSdgVt"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
@@ -10835,6 +10873,9 @@
     <service id=".service_locator.LdR28Rm" alias=".service_locator.SSsS_et"/>
     <service id=".service_locator.BeKAW3g" alias=".service_locator.D.nMOje"/>
     <service id=".service_locator._zZz8Cp" alias=".service_locator.2DjqodR"/>
+    <service id=".service_locator.EwwF_n_" alias=".service_locator.158Sx_t"/>
+    <service id=".service_locator.E1WxvbY" alias=".service_locator.R77Zl9c"/>
+    <service id=".service_locator.y1xpFg0" alias=".service_locator.8U2gOPW"/>
     <service id=".service_locator.hWg0Nl1" alias=".service_locator.JTVina6"/>
     <service id=".service_locator._7kDrJu" alias=".service_locator.MtxOC_2"/>
     <service id=".service_locator.37ZOg1B" alias=".service_locator.g0Pmaam"/>

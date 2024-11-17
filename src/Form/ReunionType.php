@@ -25,16 +25,7 @@ class ReunionType extends AbstractType
             ])
             ->add('lieu')
             ->add('sujetaborde')
-            ->add('decisionprise')
-            ->add('encadreur', EntityType::class, [
-                'class' => Encadreur::class,
-                'choice_label' => 'nom',
-            ])
-            ->add('dahiras', EntityType::class, [
-                'class' => Dahiras::class,
-                'choice_label' => 'nom',
-            ])
-        ;
+            ->add('decisionprise');
     }
 
     public function configureOptions(OptionsResolver $resolver): void

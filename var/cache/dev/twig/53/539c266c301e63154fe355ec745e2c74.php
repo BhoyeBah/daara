@@ -315,7 +315,7 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
 
 \t<div class=\"left-side-bar\">
 \t\t<div class=\"brand-logo\">
-\t\t\t<a href=\"index.html\">
+\t\t\t<a href=\"/\">
 \t\t\t\t<img src=\"vendors/images/deskapp-logo.svg\" alt=\"\" class=\"dark-logo\">
 \t\t\t\t<img src=\"vendors/images/deskapp-logo-white.svg\" alt=\"\" class=\"light-logo\">
 \t\t\t</a>
@@ -818,7 +818,7 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
 
 \t<div class=\"left-side-bar\">
 \t\t<div class=\"brand-logo\">
-\t\t\t<a href=\"index.html\">
+\t\t\t<a href=\"/\">
 \t\t\t\t<img src=\"vendors/images/deskapp-logo.svg\" alt=\"\" class=\"dark-logo\">
 \t\t\t\t<img src=\"vendors/images/deskapp-logo-white.svg\" alt=\"\" class=\"light-logo\">
 \t\t\t</a>
