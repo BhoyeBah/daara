@@ -19,9 +19,16 @@ class ReunionController extends AbstractController
     public function index(ReunionRepository $reunionRepository): Response
     {
         $currentUser = $this->getUser();
+        // Si l'utilisateur a le rôle ADMIN
+        if(in_array('ROLE_ADMIN', $currentUser->getRoles(), true)){
+            $reunion = $reunionRepository->findAll(); 
+            // Montre tous les membres
+        }else{
         $encadreur = $currentUser->getEncadreur();
         $dahira = $encadreur->getDahiras();
         $reunion = $reunionRepository->findBy(['dahiras' => $dahira], ['date' => 'DESC']);
+        }
+
         return $this->render('reunion/index.html.twig', [
             'reunion' => $reunion,
         ]);
@@ -33,6 +40,9 @@ class ReunionController extends AbstractController
         $reunion = new Reunion();
         $currentUser = $this->getUser();
         $encadreur = $currentUser->getEncadreur();
+        if($this->isGranted('ROLE_ADMIN')){
+            return $this->redirectToRoute('app_reunion_index');
+         }
         $dahira = $encadreur->getDahiras();
         $membres = $membresRepository->findBy(['dahiras' => $dahira]);
 
@@ -75,6 +85,7 @@ class ReunionController extends AbstractController
             'membres' => $membres,
         ]);
     }
+    
     #[Route('/{id}', name: 'app_reunion_show', methods: ['GET'])]
     public function show(Reunion $reunion): Response
     {

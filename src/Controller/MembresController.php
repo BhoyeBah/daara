@@ -14,7 +14,7 @@ use Symfony\Component\Routing\Attribute\Route;
 #[Route('/membres')]
 final class MembresController extends AbstractController
 {
-    #[Route(name: 'app_membres_index', methods: ['GET'])]
+    #[Route('/', name: 'app_membres_index', methods: ['GET'])]
     public function index(MembresRepository $membresRepository): Response
     {
         $currentUser = $this->getUser();

@@ -166,42 +166,60 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
 \t\t\t\t\t\t\t<ul>
 \t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t<a href=\"#\">
-\t\t\t\t\t\t\t\t\t\t<img src=\"vendors/images/img.jpg\" alt=\"\">
+\t\t\t\t\t\t\t\t\t\t<img src=\"";
+        // line 97
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/images/img.jpg"), "html", null, true);
+        yield "\" alt=\"\">
 \t\t\t\t\t\t\t\t\t\t<h3>John Doe</h3>
 \t\t\t\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t<a href=\"#\">
-\t\t\t\t\t\t\t\t\t\t<img src=\"vendors/images/photo1.jpg\" alt=\"\">
+\t\t\t\t\t\t\t\t\t\t<img src=\"";
+        // line 104
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/images/photo1.jpg"), "html", null, true);
+        yield "\" alt=\"\">
 \t\t\t\t\t\t\t\t\t\t<h3>Lea R. Frith</h3>
 \t\t\t\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t<a href=\"#\">
-\t\t\t\t\t\t\t\t\t\t<img src=\"vendors/images/photo2.jpg\" alt=\"\">
+\t\t\t\t\t\t\t\t\t\t<img src=\"";
+        // line 111
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/images/photo2.jpg"), "html", null, true);
+        yield "\" alt=\"\">
 \t\t\t\t\t\t\t\t\t\t<h3>Erik L. Richards</h3>
 \t\t\t\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t<a href=\"#\">
-\t\t\t\t\t\t\t\t\t\t<img src=\"vendors/images/photo3.jpg\" alt=\"\">
+\t\t\t\t\t\t\t\t\t\t<img src=\"";
+        // line 118
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/images/photo3.jpg"), "html", null, true);
+        yield "\" alt=\"\">
 \t\t\t\t\t\t\t\t\t\t<h3>John Doe</h3>
 \t\t\t\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t<a href=\"#\">
-\t\t\t\t\t\t\t\t\t\t<img src=\"vendors/images/photo4.jpg\" alt=\"\">
+\t\t\t\t\t\t\t\t\t\t<img src=\"";
+        // line 125
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/images/photo4.jpg"), "html", null, true);
+        yield "\" alt=\"\">
 \t\t\t\t\t\t\t\t\t\t<h3>Renee I. Hansen</h3>
 \t\t\t\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t<a href=\"#\">
-\t\t\t\t\t\t\t\t\t\t<img src=\"vendors/images/img.jpg\" alt=\"\">
+\t\t\t\t\t\t\t\t\t\t<img src=\"";
+        // line 132
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/images/img.jpg"), "html", null, true);
+        yield "\" alt=\"\">
 \t\t\t\t\t\t\t\t\t\t<h3>Vicki M. Coleman</h3>
 \t\t\t\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
 \t\t\t\t\t\t\t\t\t</a>
@@ -215,7 +233,10 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
 \t\t\t\t<div class=\"dropdown\">
 \t\t\t\t\t<a class=\"dropdown-toggle\" href=\"#\" role=\"button\" data-toggle=\"dropdown\">
 \t\t\t\t\t\t<span class=\"user-icon\">
-\t\t\t\t\t\t\t<img src=\"vendors/images/photo1.jpg\" alt=\"\">
+\t\t\t\t\t\t\t<img src=\"";
+        // line 146
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/images/photo1.jpg"), "html", null, true);
+        yield "\" alt=\"\">
 \t\t\t\t\t\t</span>
 \t\t\t\t\t\t<span class=\"user-name\">";
         // line 148
@@ -316,8 +337,14 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
 \t<div class=\"left-side-bar\">
 \t\t<div class=\"brand-logo\">
 \t\t\t<a href=\"/\">
-\t\t\t\t<img src=\"vendors/images/deskapp-logo.svg\" alt=\"\" class=\"dark-logo\">
-\t\t\t\t<img src=\"vendors/images/deskapp-logo-white.svg\" alt=\"\" class=\"light-logo\">
+\t\t\t\t<img src=\"";
+        // line 239
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/images/deskapp-logo.svg"), "html", null, true);
+        yield "\" alt=\"\" class=\"dark-logo\">
+\t\t\t\t<img src=\"";
+        // line 240
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/images/deskapp-logo-white.svg"), "html", null, true);
+        yield "\" alt=\"\" class=\"light-logo\">
 \t\t\t</a>
 \t\t\t<div class=\"close-sidebar\" data-toggle=\"left-sidebar-close\">
 \t\t\t\t<i class=\"ion-close-round\"></i>
@@ -443,7 +470,7 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
         // line 313
         yield "   
         <div class=\"footer-wrap pd-20 mb-20 card-box\">
-\t\t\t\tDaara - design By <a href=\"https://github.com/dropways\" target=\"_blank\">Bah Mamadou Bhoye</a>
+\t\t\t\tDaara - design By <a href=\"https://github.com/dropways\" target=\"_blank\"></a>
 \t\t\t</div>
 \t\t</div>
 \t</div>
@@ -576,7 +603,7 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  537 => 312,  522 => 338,  518 => 337,  513 => 335,  509 => 334,  505 => 333,  501 => 332,  497 => 331,  493 => 330,  489 => 329,  485 => 328,  481 => 327,  477 => 326,  473 => 325,  469 => 324,  465 => 323,  461 => 322,  457 => 321,  453 => 320,  444 => 313,  442 => 312,  433 => 305,  426 => 301,  419 => 296,  417 => 295,  412 => 292,  405 => 288,  398 => 283,  395 => 282,  388 => 278,  384 => 277,  377 => 272,  375 => 271,  371 => 269,  365 => 267,  362 => 266,  357 => 264,  352 => 263,  350 => 262,  341 => 255,  333 => 250,  331 => 249,  233 => 154,  222 => 148,  94 => 23,  90 => 22,  86 => 21,  82 => 20,  78 => 19,  67 => 11,  63 => 10,  59 => 9,  49 => 1,);
+        return array (  564 => 312,  549 => 338,  545 => 337,  540 => 335,  536 => 334,  532 => 333,  528 => 332,  524 => 331,  520 => 330,  516 => 329,  512 => 328,  508 => 327,  504 => 326,  500 => 325,  496 => 324,  492 => 323,  488 => 322,  484 => 321,  480 => 320,  471 => 313,  469 => 312,  460 => 305,  453 => 301,  446 => 296,  444 => 295,  439 => 292,  432 => 288,  425 => 283,  422 => 282,  415 => 278,  411 => 277,  404 => 272,  402 => 271,  398 => 269,  392 => 267,  389 => 266,  384 => 264,  379 => 263,  377 => 262,  368 => 255,  360 => 250,  358 => 249,  346 => 240,  342 => 239,  254 => 154,  243 => 148,  238 => 146,  221 => 132,  211 => 125,  201 => 118,  191 => 111,  181 => 104,  171 => 97,  94 => 23,  90 => 22,  86 => 21,  82 => 20,  78 => 19,  67 => 11,  63 => 10,  59 => 9,  49 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -677,42 +704,42 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
 \t\t\t\t\t\t\t<ul>
 \t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t<a href=\"#\">
-\t\t\t\t\t\t\t\t\t\t<img src=\"vendors/images/img.jpg\" alt=\"\">
+\t\t\t\t\t\t\t\t\t\t<img src=\"{{ asset('vendors/images/img.jpg')}}\" alt=\"\">
 \t\t\t\t\t\t\t\t\t\t<h3>John Doe</h3>
 \t\t\t\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t<a href=\"#\">
-\t\t\t\t\t\t\t\t\t\t<img src=\"vendors/images/photo1.jpg\" alt=\"\">
+\t\t\t\t\t\t\t\t\t\t<img src=\"{{ asset('vendors/images/photo1.jpg')}}\" alt=\"\">
 \t\t\t\t\t\t\t\t\t\t<h3>Lea R. Frith</h3>
 \t\t\t\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t<a href=\"#\">
-\t\t\t\t\t\t\t\t\t\t<img src=\"vendors/images/photo2.jpg\" alt=\"\">
+\t\t\t\t\t\t\t\t\t\t<img src=\"{{ asset('vendors/images/photo2.jpg')}}\" alt=\"\">
 \t\t\t\t\t\t\t\t\t\t<h3>Erik L. Richards</h3>
 \t\t\t\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t<a href=\"#\">
-\t\t\t\t\t\t\t\t\t\t<img src=\"vendors/images/photo3.jpg\" alt=\"\">
+\t\t\t\t\t\t\t\t\t\t<img src=\"{{ asset('vendors/images/photo3.jpg')}}\" alt=\"\">
 \t\t\t\t\t\t\t\t\t\t<h3>John Doe</h3>
 \t\t\t\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t<a href=\"#\">
-\t\t\t\t\t\t\t\t\t\t<img src=\"vendors/images/photo4.jpg\" alt=\"\">
+\t\t\t\t\t\t\t\t\t\t<img src=\"{{ asset('vendors/images/photo4.jpg')}}\" alt=\"\">
 \t\t\t\t\t\t\t\t\t\t<h3>Renee I. Hansen</h3>
 \t\t\t\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t<a href=\"#\">
-\t\t\t\t\t\t\t\t\t\t<img src=\"vendors/images/img.jpg\" alt=\"\">
+\t\t\t\t\t\t\t\t\t\t<img src=\"{{ asset('vendors/images/img.jpg')}}\" alt=\"\">
 \t\t\t\t\t\t\t\t\t\t<h3>Vicki M. Coleman</h3>
 \t\t\t\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
 \t\t\t\t\t\t\t\t\t</a>
@@ -726,7 +753,7 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
 \t\t\t\t<div class=\"dropdown\">
 \t\t\t\t\t<a class=\"dropdown-toggle\" href=\"#\" role=\"button\" data-toggle=\"dropdown\">
 \t\t\t\t\t\t<span class=\"user-icon\">
-\t\t\t\t\t\t\t<img src=\"vendors/images/photo1.jpg\" alt=\"\">
+\t\t\t\t\t\t\t<img src=\"{{ asset('vendors/images/photo1.jpg')}}\" alt=\"\">
 \t\t\t\t\t\t</span>
 \t\t\t\t\t\t<span class=\"user-name\">{{ app.user.nom }} {{ app.user.prenom }}</span>
 \t\t\t\t\t</a>
@@ -819,8 +846,8 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
 \t<div class=\"left-side-bar\">
 \t\t<div class=\"brand-logo\">
 \t\t\t<a href=\"/\">
-\t\t\t\t<img src=\"vendors/images/deskapp-logo.svg\" alt=\"\" class=\"dark-logo\">
-\t\t\t\t<img src=\"vendors/images/deskapp-logo-white.svg\" alt=\"\" class=\"light-logo\">
+\t\t\t\t<img src=\"{{ asset('vendors/images/deskapp-logo.svg')}}\" alt=\"\" class=\"dark-logo\">
+\t\t\t\t<img src=\"{{ asset('vendors/images/deskapp-logo-white.svg')}}\" alt=\"\" class=\"light-logo\">
 \t\t\t</a>
 \t\t\t<div class=\"close-sidebar\" data-toggle=\"left-sidebar-close\">
 \t\t\t\t<i class=\"ion-close-round\"></i>
@@ -895,7 +922,7 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
         {% block body %}{% endblock %}
    
         <div class=\"footer-wrap pd-20 mb-20 card-box\">
-\t\t\t\tDaara - design By <a href=\"https://github.com/dropways\" target=\"_blank\">Bah Mamadou Bhoye</a>
+\t\t\t\tDaara - design By <a href=\"https://github.com/dropways\" target=\"_blank\"></a>
 \t\t\t</div>
 \t\t</div>
 \t</div>
