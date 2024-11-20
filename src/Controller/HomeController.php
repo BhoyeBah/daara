@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Dahiras;
 use App\Entity\Encadreur;
 use App\Entity\Membres;
+use App\Entity\Reunion;
 use App\Entity\User;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -34,6 +35,7 @@ class HomeController extends AbstractController
           $dahiraCount = $this->entityManager->getRepository(Dahiras::class)->count([]);
           // Compter les encadreurs
           $encadreurCount = $this->entityManager->getRepository(Encadreur::class)->count([]);
+          $reunionCount = $this->entityManager->getRepository(Reunion::class)->count([]);
   
           // Passer les comptages à la vue
           $data = [
@@ -41,6 +43,7 @@ class HomeController extends AbstractController
               'membreCount' => $membreCount,
               'dahiraCount' => $dahiraCount,
               'encadreurCount' => $encadreurCount,
+              'reunionCount' => $reunionCount,
           ];
 
         if ($this->isGranted('ROLE_ADMIN')) {
@@ -49,9 +52,23 @@ class HomeController extends AbstractController
         }
         
         if ($this->isGranted('ROLE_ENCADREUR')) {
-            // dd("role encadreur");
-            return $this->render('home/dashboard_encadreur.html.twig', $data);
+            $user = $this->getUser();
+            $encadreur = $user->getEncadreur();
+            $dahira = $encadreur->getDahiras();
+        
+            $membreCount = $this->entityManager->getRepository(Membres::class)->count(['dahiras' => $dahira]);
+            $reunionCount = $this->entityManager->getRepository(Reunion::class)->count(['dahiras' => $dahira]);
+        
+            // Préparer les données pour le rendu
+            $dataDahira = [
+                'dahira' => $dahira,
+                'membreCount' => $membreCount,
+                'reunionCount' => $reunionCount,
+            ];
+        
+            return $this->render('home/dashboard_encadreur.html.twig', $dataDahira);
         }
+        
         
         return $this->render('home/dashboard_admin.html.twig', $data);
     }

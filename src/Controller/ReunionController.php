@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Intervenant;
 use App\Entity\Presence;
 use App\Entity\Reunion;
 use App\Form\ReunionType;
@@ -54,7 +55,6 @@ class ReunionController extends AbstractController
             foreach ($membres as $membre) {
                
                 $presence = new Presence();
-
                 $presence->setMembre($membre); 
                 $presence->setReunion($reunion); 
                 $presence->setDate(new \DateTime());    
@@ -69,14 +69,24 @@ class ReunionController extends AbstractController
                 // Persister chaque présence individuellement
                 $entityManager->persist($presence);
                 $reunion->addPresence($presence);
-            }
-            
+                //enregistrement des intervenant
+                $intervenant = new Intervenant();
+                $intervenant->setMembre($membre);
+                $intervenant->setReunion($reunion);
+                $intervenant->setNom($membre->getNom());
+                $intervenant->setPrenom($membre->getPrenom());
+                $intervenant->setDahira($dahira);
+                // Persister l'intervenant
+                $entityManager->persist($intervenant);
+                $reunion->addIntervenant($intervenant);
+            }       
             $reunion->setDahiras($dahira);
             $reunion->setEncadreur($encadreur);
+            // dd($presence,$intervenant,$reunion);
            
             $entityManager->persist($reunion);
             $entityManager->flush();
-            return $this->redirectToRoute("app_reunion_index", [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute("reunion_print_Detail", ['id' => $reunion->getId()]);
         }
 
         return $this->render("reunion/new.html.twig", [
@@ -99,5 +109,19 @@ class ReunionController extends AbstractController
         ]);
     }
 
+    #[Route('/imprimer/{id}', name: 'reunion_print_Detail', methods: ['GET'])]
+    public function impression(Reunion $reunion){
+
+        // Récupérer les présences associées à cette réunion
+        $presences = $reunion->getPresences();
+        $intervenants = $reunion->getIntervenants();
+
+        return $this->render("reunion/rapport_print.html.twig",[
+            'reunion' => $reunion,
+            'presences' => $presences,
+            'intervenants' => $intervenants,
+        ]);
+
+    }
 
 }

@@ -68,12 +68,12 @@
         <p><strong>Décisions prises :</strong> {{ reunion.decisionprise }}</p>
 
         <div class="mt-4 d-flex justify-content-between">
-            <a id="back" href="" class="btn rounded-pill btn-warning">
-                <i class="bx bx-arrow-back"></i> Retour
-            </a>
-            <a id="print" href="" class="btn rounded-pill btn-success" onclick="window.print()">
-                <i class="bx bx-printer"></i> Imprimer
-            </a>
+             <a id="back" href="{{ path('app_reunion_index') }}" class="btn rounded-pill btn-warning">
+            <i class="bx bx-arrow-back"></i> Retour
+        </a>
+        <a id="back" href="{{ path('reunion_print_Detail', { 'id': reunion.id }) }}" class="btn rounded-pill btn-warning">
+            <i class="bx bx-arrow-back"></i> imprimer
+        </a>
         </div>
     </div>
 {% endblock %}

@@ -43,9 +43,16 @@ class Reunion
     #[ORM\OneToMany(targetEntity: Presence::class, mappedBy: 'reunion')]
     private Collection $presences;
 
+    /**
+     * @var Collection<int, Intervenant>
+     */
+    #[ORM\OneToMany(targetEntity: Intervenant::class, mappedBy: 'reunion')]
+    private Collection $intervenants;
+
     public function __construct()
     {
         $this->presences = new ArrayCollection();
+        $this->intervenants = new ArrayCollection();
     }
 
     
@@ -162,6 +169,36 @@ class Reunion
             // set the owning side to null (unless already changed)
             if ($presence->getReunion() === $this) {
                 $presence->setReunion(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Intervenant>
+     */
+    public function getIntervenants(): Collection
+    {
+        return $this->intervenants;
+    }
+
+    public function addIntervenant(Intervenant $intervenant): static
+    {
+        if (!$this->intervenants->contains($intervenant)) {
+            $this->intervenants->add($intervenant);
+            $intervenant->setReunion($this);
+        }
+
+        return $this;
+    }
+
+    public function removeIntervenant(Intervenant $intervenant): static
+    {
+        if ($this->intervenants->removeElement($intervenant)) {
+            // set the owning side to null (unless already changed)
+            if ($intervenant->getReunion() === $this) {
+                $intervenant->setReunion(null);
             }
         }
 

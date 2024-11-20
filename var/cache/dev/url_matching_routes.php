@@ -73,25 +73,28 @@ return [
                 .')'
                 .'|/re(?'
                     .'|set\\-password/reset(?:/([^/]++))?(*:393)'
-                    .'|union/([^/]++)(*:415)'
+                    .'|union/(?'
+                        .'|([^/]++)(*:418)'
+                        .'|imprimer/([^/]++)(*:443)'
+                    .')'
                 .')'
                 .'|/specialites/([^/]++)(?'
-                    .'|(*:448)'
-                    .'|/edit(*:461)'
-                    .'|(*:469)'
+                    .'|(*:477)'
+                    .'|/edit(*:490)'
+                    .'|(*:498)'
                 .')'
                 .'|/themes/([^/]++)(?'
-                    .'|(*:497)'
-                    .'|/edit(*:510)'
-                    .'|(*:518)'
+                    .'|(*:526)'
+                    .'|/edit(*:539)'
+                    .'|(*:547)'
                 .')'
                 .'|/users/(?'
                     .'|([^/]++)(?'
-                        .'|(*:548)'
-                        .'|/edit(*:561)'
+                        .'|(*:577)'
+                        .'|/edit(*:590)'
                     .')'
-                    .'|state/([^/]++)(*:584)'
-                    .'|delete/([^/]++)(*:607)'
+                    .'|state/([^/]++)(*:613)'
+                    .'|delete/([^/]++)(*:636)'
                 .')'
             .')/?$}sDu',
     ],
@@ -114,17 +117,18 @@ return [
         337 => [[['_route' => 'app_membres_edit', '_controller' => 'App\\Controller\\MembresController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
         345 => [[['_route' => 'app_membres_delete', '_controller' => 'App\\Controller\\MembresController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
         393 => [[['_route' => 'app_reset_password', 'token' => null, '_controller' => 'App\\Controller\\ResetPasswordController::reset'], ['token'], null, null, false, true, null]],
-        415 => [[['_route' => 'app_reunion_show', '_controller' => 'App\\Controller\\ReunionController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        448 => [[['_route' => 'app_specialites_show', '_controller' => 'App\\Controller\\SpecialitesController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        461 => [[['_route' => 'app_specialites_edit', '_controller' => 'App\\Controller\\SpecialitesController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        469 => [[['_route' => 'app_specialites_delete', '_controller' => 'App\\Controller\\SpecialitesController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        497 => [[['_route' => 'app_themes_show', '_controller' => 'App\\Controller\\ThemesController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        510 => [[['_route' => 'app_themes_edit', '_controller' => 'App\\Controller\\ThemesController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        518 => [[['_route' => 'app_themes_delete', '_controller' => 'App\\Controller\\ThemesController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        548 => [[['_route' => 'app_users_show', '_controller' => 'App\\Controller\\UserController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        561 => [[['_route' => 'app_users_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        584 => [[['_route' => 'app_users_state', '_controller' => 'App\\Controller\\UserController::state'], ['id'], ['POST' => 0], null, false, true, null]],
-        607 => [
+        418 => [[['_route' => 'app_reunion_show', '_controller' => 'App\\Controller\\ReunionController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        443 => [[['_route' => 'reunion_print_Detail', '_controller' => 'App\\Controller\\ReunionController::impression'], ['id'], ['GET' => 0], null, false, true, null]],
+        477 => [[['_route' => 'app_specialites_show', '_controller' => 'App\\Controller\\SpecialitesController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        490 => [[['_route' => 'app_specialites_edit', '_controller' => 'App\\Controller\\SpecialitesController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        498 => [[['_route' => 'app_specialites_delete', '_controller' => 'App\\Controller\\SpecialitesController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        526 => [[['_route' => 'app_themes_show', '_controller' => 'App\\Controller\\ThemesController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        539 => [[['_route' => 'app_themes_edit', '_controller' => 'App\\Controller\\ThemesController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        547 => [[['_route' => 'app_themes_delete', '_controller' => 'App\\Controller\\ThemesController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        577 => [[['_route' => 'app_users_show', '_controller' => 'App\\Controller\\UserController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        590 => [[['_route' => 'app_users_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        613 => [[['_route' => 'app_users_state', '_controller' => 'App\\Controller\\UserController::state'], ['id'], ['POST' => 0], null, false, true, null]],
+        636 => [
             [['_route' => 'app_users_delete', '_controller' => 'App\\Controller\\UserController::delete'], ['id'], ['POST' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
