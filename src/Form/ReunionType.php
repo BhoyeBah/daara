@@ -4,8 +4,10 @@ namespace App\Form;
 
 use App\Entity\Dahiras;
 use App\Entity\Encadreur;
+use App\Entity\Intervenant;
 use App\Entity\Reunion;
 use App\Entity\Themes;
+use Doctrine\ORM\Mapping\Entity;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -25,7 +27,8 @@ class ReunionType extends AbstractType
             ])
             ->add('lieu')
             ->add('sujetaborde')
-            ->add('decisionprise');
+            ->add('decisionprise')
+            ;
     }
 
     public function configureOptions(OptionsResolver $resolver): void

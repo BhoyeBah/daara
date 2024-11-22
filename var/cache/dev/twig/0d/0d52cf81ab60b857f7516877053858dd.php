@@ -144,15 +144,40 @@ class __TwigTemplate_015f79be0f092271be9779b930bc5a94 extends Template
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["dahira"]) || array_key_exists("dahira", $context) ? $context["dahira"] : (function () { throw new RuntimeError('Variable "dahira" does not exist.', 36, $this->source); })()), "description", [], "any", false, false, false, 36), "html", null, true);
         yield "
                 </li>
+                <li class=\"list-group-item d-flex align-items-center\">
 
-";
+                    <strong class=\"mx-3\"><i class=\"bx bx-pencil me-2\"></i> Description: </strong> ";
         // line 40
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["dahira"]) || array_key_exists("dahira", $context) ? $context["dahira"] : (function () { throw new RuntimeError('Variable "dahira" does not exist.', 40, $this->source); })()), "description", [], "any", false, false, false, 40), "html", null, true);
+        yield "
+                </li>
+                ";
+        // line 42
+        $context['_parent'] = $context;
+        $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, (isset($context["dahira"]) || array_key_exists("dahira", $context) ? $context["dahira"] : (function () { throw new RuntimeError('Variable "dahira" does not exist.', 42, $this->source); })()), "encadreurs", [], "any", false, false, false, 42));
+        foreach ($context['_seq'] as $context["_key"] => $context["encadreur"]) {
+            // line 43
+            yield "                <li class=\"list-group-item d-flex align-items-center\">
+
+                    <strong class=\"mx-3\"><i class=\"bx bx-pencil me-2\"></i> Encadreur: </strong> ";
+            // line 45
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["encadreur"], "nom", [], "any", false, false, false, 45), "html", null, true);
+            yield " ";
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["encadreur"], "prenom", [], "any", false, false, false, 45), "html", null, true);
+            yield " 
+                </li>
+                ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_key'], $context['encadreur'], $context['_parent']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 49
         yield "
 ";
-        // line 45
+        // line 54
         yield "
 ";
-        // line 48
+        // line 57
         yield "            </ul>
         </div>
     </div>
@@ -165,7 +190,7 @@ class __TwigTemplate_015f79be0f092271be9779b930bc5a94 extends Template
         <table class=\"data-table table stripe hover nowrap table-bordered\">
             <thead>
                 <tr>
-                    <th class=\"table-plus datatable-nosort\">id</th>
+                    <th class=\"table-plus datatable-nosort\">Matricule</th>
                     <th class=\"table-plus datatable-nosort\">Nom</th>
                     <th>Prénom</th>
                     <th>Email</th>
@@ -178,9 +203,9 @@ class __TwigTemplate_015f79be0f092271be9779b930bc5a94 extends Template
             </thead>
             <tbody>
                 ";
-        // line 72
+        // line 81
         $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, (isset($context["dahira"]) || array_key_exists("dahira", $context) ? $context["dahira"] : (function () { throw new RuntimeError('Variable "dahira" does not exist.', 72, $this->source); })()), "membres", [], "any", false, false, false, 72));
+        $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, (isset($context["dahira"]) || array_key_exists("dahira", $context) ? $context["dahira"] : (function () { throw new RuntimeError('Variable "dahira" does not exist.', 81, $this->source); })()), "membres", [], "any", false, false, false, 81));
         $context['_iterated'] = false;
         $context['loop'] = [
           'parent' => $context['_parent'],
@@ -196,78 +221,78 @@ class __TwigTemplate_015f79be0f092271be9779b930bc5a94 extends Template
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["membre"]) {
-            // line 73
+            // line 82
             yield "                    <tr>
                         <td class=\"table-plus\">";
-            // line 74
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["membre"], "id", [], "any", false, false, false, 74), "html", null, true);
+            // line 83
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["membre"], "numero", [], "any", false, false, false, 83), "html", null, true);
             yield "</td>
                         <td class=\"table-plus\">";
-            // line 75
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["membre"], "nom", [], "any", false, false, false, 75), "html", null, true);
+            // line 84
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["membre"], "nom", [], "any", false, false, false, 84), "html", null, true);
             yield "</td>
                         <td>";
-            // line 76
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["membre"], "prenom", [], "any", false, false, false, 76), "html", null, true);
+            // line 85
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["membre"], "prenom", [], "any", false, false, false, 85), "html", null, true);
             yield "</td>
                         <td>";
-            // line 77
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["membre"], "email", [], "any", false, false, false, 77), "html", null, true);
+            // line 86
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["membre"], "email", [], "any", false, false, false, 86), "html", null, true);
             yield "</td>
                         <td>";
-            // line 78
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["membre"], "telephone", [], "any", false, false, false, 78), "html", null, true);
+            // line 87
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["membre"], "telephone", [], "any", false, false, false, 87), "html", null, true);
             yield "</td>
                         <td>";
-            // line 79
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["membre"], "adresse", [], "any", false, false, false, 79), "html", null, true);
+            // line 88
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["membre"], "adresse", [], "any", false, false, false, 88), "html", null, true);
             yield "</td>
                         <td>";
-            // line 80
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["membre"], "dahiras", [], "any", false, false, false, 80), "nom", [], "any", false, false, false, 80), "html", null, true);
+            // line 89
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["membre"], "dahiras", [], "any", false, false, false, 89), "nom", [], "any", false, false, false, 89), "html", null, true);
             yield "</td>
                         <td>
                         ";
-            // line 82
-            if ( !Twig\Extension\CoreExtension::testEmpty(CoreExtension::getAttribute($this->env, $this->source, $context["membre"], "specialite", [], "any", false, false, false, 82))) {
-                // line 83
+            // line 91
+            if ( !Twig\Extension\CoreExtension::testEmpty(CoreExtension::getAttribute($this->env, $this->source, $context["membre"], "specialite", [], "any", false, false, false, 91))) {
+                // line 92
                 yield "                            <ul>
                                 ";
-                // line 84
+                // line 93
                 $context['_parent'] = $context;
-                $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["membre"], "specialite", [], "any", false, false, false, 84));
+                $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["membre"], "specialite", [], "any", false, false, false, 93));
                 foreach ($context['_seq'] as $context["_key"] => $context["specialite"]) {
-                    // line 85
+                    // line 94
                     yield "                                    <li>";
-                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["specialite"], "nom", [], "any", false, false, false, 85), "html", null, true);
+                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["specialite"], "nom", [], "any", false, false, false, 94), "html", null, true);
                     yield "</li>
                                 ";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_key'], $context['specialite'], $context['_parent']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 87
+                // line 96
                 yield "                            </ul>
                         ";
             } else {
-                // line 89
+                // line 98
                 yield "                            Pas de profession
                         ";
             }
-            // line 91
+            // line 100
             yield "                    </td>
                                 
                         <td>
                             <a href=\"";
-            // line 94
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_membres_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["membre"], "id", [], "any", false, false, false, 94)]), "html", null, true);
+            // line 103
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_membres_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["membre"], "id", [], "any", false, false, false, 103)]), "html", null, true);
             yield "\" class=\"btn btn-sm btn-success\"><i class=\"dw dw-eye\"></i></a>
                             <a href=\"";
-            // line 95
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_membres_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["membre"], "id", [], "any", false, false, false, 95)]), "html", null, true);
+            // line 104
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_membres_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["membre"], "id", [], "any", false, false, false, 104)]), "html", null, true);
             yield "\" class=\"btn btn-sm btn-secondary\"><i class=\"dw dw-edit2\"></i></a>
                             ";
-            // line 96
+            // line 105
             yield Twig\Extension\CoreExtension::include($this->env, $context, "membres/_delete_form.html.twig");
             yield "
                         </td>
@@ -284,7 +309,7 @@ class __TwigTemplate_015f79be0f092271be9779b930bc5a94 extends Template
             }
         }
         if (!$context['_iterated']) {
-            // line 100
+            // line 109
             yield "                    <tr>
                         <td colspan=\"7\">Aucun enregistrement trouvé</td>
                     </tr>
@@ -293,13 +318,84 @@ class __TwigTemplate_015f79be0f092271be9779b930bc5a94 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['membre'], $context['_parent'], $context['_iterated'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 104
+        // line 113
         yield "            </tbody>
         </table>
     </div>
 </div>
-\t</div>
-        
+</div>
+<!-- Simple Datatable start -->
+<div class=\"card-box mb-30\">
+    <div class=\"pd-20\">
+        <h4 class=\"text-success h4\">Liste des reunion</h4>
+    </div>
+    <div class=\"pb-20\">
+        <table class=\"data-table table stripe hover nowrap table-bordered\">
+            <thead>
+                <tr>
+                    <th class=\"table-plus datatable-nosort\">Réference</th>
+                    <th class=\"table-plus datatable-nosort\">Date reunion</th>
+                    <th class=\"table-plus datatable-nosort\">Thème reunion</th>
+                    <th>Dahira</th>
+                    <th>Lieu reunion</th>
+                    <th class=\"datatable-nosort\">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                ";
+        // line 136
+        $context['_parent'] = $context;
+        $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, (isset($context["dahira"]) || array_key_exists("dahira", $context) ? $context["dahira"] : (function () { throw new RuntimeError('Variable "dahira" does not exist.', 136, $this->source); })()), "reunions", [], "any", false, false, false, 136));
+        $context['_iterated'] = false;
+        foreach ($context['_seq'] as $context["_key"] => $context["reunion"]) {
+            // line 137
+            yield "                    <tr>
+                        <td class=\"table-plus\">";
+            // line 138
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["reunion"], "numero", [], "any", false, false, false, 138), "html", null, true);
+            yield "</td>
+                        <td class=\"table-plus\">";
+            // line 139
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["reunion"], "date", [], "any", false, false, false, 139), "H:i:s d/m/Y"), "html", null, true);
+            yield "</td>
+                        <td>";
+            // line 140
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["reunion"], "lieu", [], "any", false, false, false, 140), "html", null, true);
+            yield "</td>
+\t\t\t\t\t\t<td>";
+            // line 141
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["reunion"], "theme", [], "any", false, false, false, 141), "nom", [], "any", false, false, false, 141), "html", null, true);
+            yield "</td>
+\t\t\t\t\t\t<td>";
+            // line 142
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["reunion"], "dahiras", [], "any", false, false, false, 142), "nom", [], "any", false, false, false, 142), "html", null, true);
+            yield "</td>                            
+                        <td>
+                            <a href=\"";
+            // line 144
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reunion_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["reunion"], "id", [], "any", false, false, false, 144)]), "html", null, true);
+            yield "\" class=\"btn btn-sm btn-success\"><i class=\"dw dw-eye\"></i></a>
+                        </td>
+                    </tr>
+                ";
+            $context['_iterated'] = true;
+        }
+        if (!$context['_iterated']) {
+            // line 148
+            yield "                    <tr>
+                        <td colspan=\"7\">Aucun enregistrement trouvé</td>
+                    </tr>
+                ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_key'], $context['reunion'], $context['_parent'], $context['_iterated']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 152
+        yield "            </tbody>
+        </table>
+    </div>
+</div>
+</div>  
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -331,7 +427,7 @@ class __TwigTemplate_015f79be0f092271be9779b930bc5a94 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  297 => 104,  288 => 100,  271 => 96,  267 => 95,  263 => 94,  258 => 91,  254 => 89,  250 => 87,  241 => 85,  237 => 84,  234 => 83,  232 => 82,  227 => 80,  223 => 79,  219 => 78,  215 => 77,  211 => 76,  207 => 75,  203 => 74,  200 => 73,  182 => 72,  156 => 48,  153 => 45,  150 => 40,  144 => 36,  137 => 32,  130 => 28,  119 => 20,  106 => 10,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
+        return array (  394 => 152,  385 => 148,  376 => 144,  371 => 142,  367 => 141,  363 => 140,  359 => 139,  355 => 138,  352 => 137,  347 => 136,  322 => 113,  313 => 109,  296 => 105,  292 => 104,  288 => 103,  283 => 100,  279 => 98,  275 => 96,  266 => 94,  262 => 93,  259 => 92,  257 => 91,  252 => 89,  248 => 88,  244 => 87,  240 => 86,  236 => 85,  232 => 84,  228 => 83,  225 => 82,  207 => 81,  181 => 57,  178 => 54,  175 => 49,  164 => 45,  160 => 43,  156 => 42,  151 => 40,  144 => 36,  137 => 32,  130 => 28,  119 => 20,  106 => 10,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -373,7 +469,16 @@ class __TwigTemplate_015f79be0f092271be9779b930bc5a94 extends Template
 
                     <strong class=\"mx-3\"><i class=\"bx bx-pencil me-2\"></i> Description: </strong> {{ dahira.description}}
                 </li>
+                <li class=\"list-group-item d-flex align-items-center\">
 
+                    <strong class=\"mx-3\"><i class=\"bx bx-pencil me-2\"></i> Description: </strong> {{ dahira.description}}
+                </li>
+                {% for encadreur in dahira.encadreurs %}
+                <li class=\"list-group-item d-flex align-items-center\">
+
+                    <strong class=\"mx-3\"><i class=\"bx bx-pencil me-2\"></i> Encadreur: </strong> {{ encadreur.nom}} {{ encadreur.prenom}} 
+                </li>
+                {% endfor %}
 {#                <li class=\"list-group-item d-flex align-items-center\">#}
 
 {#                <strong class=\"mx-3\"> <i class=\"bx bx-calendar me-2\"></i> Date de création: </strong>#}
@@ -395,7 +500,7 @@ class __TwigTemplate_015f79be0f092271be9779b930bc5a94 extends Template
         <table class=\"data-table table stripe hover nowrap table-bordered\">
             <thead>
                 <tr>
-                    <th class=\"table-plus datatable-nosort\">id</th>
+                    <th class=\"table-plus datatable-nosort\">Matricule</th>
                     <th class=\"table-plus datatable-nosort\">Nom</th>
                     <th>Prénom</th>
                     <th>Email</th>
@@ -409,7 +514,7 @@ class __TwigTemplate_015f79be0f092271be9779b930bc5a94 extends Template
             <tbody>
                 {% for membre in dahira.membres %}
                     <tr>
-                        <td class=\"table-plus\">{{ membre.id }}</td>
+                        <td class=\"table-plus\">{{ membre.numero }}</td>
                         <td class=\"table-plus\">{{ membre.nom }}</td>
                         <td>{{ membre.prenom }}</td>
                         <td>{{ membre.email }}</td>
@@ -443,8 +548,46 @@ class __TwigTemplate_015f79be0f092271be9779b930bc5a94 extends Template
         </table>
     </div>
 </div>
-\t</div>
-        
+</div>
+<!-- Simple Datatable start -->
+<div class=\"card-box mb-30\">
+    <div class=\"pd-20\">
+        <h4 class=\"text-success h4\">Liste des reunion</h4>
+    </div>
+    <div class=\"pb-20\">
+        <table class=\"data-table table stripe hover nowrap table-bordered\">
+            <thead>
+                <tr>
+                    <th class=\"table-plus datatable-nosort\">Réference</th>
+                    <th class=\"table-plus datatable-nosort\">Date reunion</th>
+                    <th class=\"table-plus datatable-nosort\">Thème reunion</th>
+                    <th>Dahira</th>
+                    <th>Lieu reunion</th>
+                    <th class=\"datatable-nosort\">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for reunion in dahira.reunions %}
+                    <tr>
+                        <td class=\"table-plus\">{{ reunion.numero }}</td>
+                        <td class=\"table-plus\">{{ reunion.date|date('H:i:s d/m/Y') }}</td>
+                        <td>{{ reunion.lieu }}</td>
+\t\t\t\t\t\t<td>{{ reunion.theme.nom }}</td>
+\t\t\t\t\t\t<td>{{ reunion.dahiras.nom }}</td>                            
+                        <td>
+                            <a href=\"{{ path('app_reunion_show', {'id': reunion.id}) }}\" class=\"btn btn-sm btn-success\"><i class=\"dw dw-eye\"></i></a>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan=\"7\">Aucun enregistrement trouvé</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>  
 {% endblock %}
 ", "dahiras/show.html.twig", "C:\\xampp\\htdocs\\mydaara\\templates\\dahiras\\show.html.twig");
     }

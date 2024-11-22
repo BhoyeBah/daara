@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Membres;
 use App\Form\MembresType;
 use App\Repository\MembresRepository;
+use App\Service\Numerogenerator;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -14,6 +15,13 @@ use Symfony\Component\Routing\Attribute\Route;
 #[Route('/membres')]
 final class MembresController extends AbstractController
 {
+    private Numerogenerator $numerogenerator;
+
+    public function __construct(Numerogenerator $numerogenerator)
+    {
+        $this->numerogenerator = $numerogenerator;
+    }
+
     #[Route('/', name: 'app_membres_index', methods: ['GET'])]
     public function index(MembresRepository $membresRepository): Response
     {
@@ -55,8 +63,10 @@ final class MembresController extends AbstractController
          }
          
          $dahira = $encadreur->getDahiras();
-
-
+       // Récupérer le numéro du membre
+        $memberNumero = $this->numerogenerator->generateNumberMembre($dahira);
+        // Créer le membre avec le numéro généré
+        $membre->setNumero($memberNumero);
         if ($form->isSubmitted() && $form->isValid()) {
             
             $membre->setEncadreur($encadreur);

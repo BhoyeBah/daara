@@ -49,6 +49,9 @@ class Reunion
     #[ORM\OneToMany(targetEntity: Intervenant::class, mappedBy: 'reunion')]
     private Collection $intervenants;
 
+    #[ORM\Column(length: 255)]
+    private ?string $numero = null;
+
     public function __construct()
     {
         $this->presences = new ArrayCollection();
@@ -201,6 +204,18 @@ class Reunion
                 $intervenant->setReunion(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getNumero(): ?string
+    {
+        return $this->numero;
+    }
+
+    public function setNumero(string $numero): static
+    {
+        $this->numero = $numero;
 
         return $this;
     }

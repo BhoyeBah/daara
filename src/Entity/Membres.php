@@ -54,6 +54,9 @@ class Membres
     #[ORM\OneToMany(targetEntity: Intervenant::class, mappedBy: 'membre')]
     private Collection $intervenants;
 
+    #[ORM\Column(length: 255)]
+    private ?string $numero = null;
+
 
     public function __construct()
     {
@@ -232,6 +235,18 @@ class Membres
                 $intervenant->setMembre(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getNumero(): ?string
+    {
+        return $this->numero;
+    }
+
+    public function setNumero(string $numero): static
+    {
+        $this->numero = $numero;
 
         return $this;
     }

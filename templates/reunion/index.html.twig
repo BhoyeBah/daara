@@ -31,6 +31,7 @@
 						<table class="data-table table stripe hover nowrap table-bordered">
 							<thead>
 								<tr>
+									<th class="table-plus datatable-nosort">Réference</th>
 									<th class="table-plus datatable-nosort">Date Reunion</th>
 									<th>Lieu Reunion</th>
 									<th>Themes</th>
@@ -41,6 +42,7 @@
 							<tbody>
 							{% for reunion in reunion %}    
 							<tr>
+								<td>{{ reunion.numero }}</td>
 								<td>{{ reunion.date|date('H:i:s d/m/Y') }}</td>
 								<td>{{ reunion.lieu }}</td>
 								<td>{{ reunion.theme.nom }}</td>
