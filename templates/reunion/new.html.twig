@@ -71,19 +71,14 @@
                         {{ form_widget(form.decisionprise, {'attr': {'class': 'form-control', 'rows': '4', 'placeholder': 'Entrez les décisions prises'}}) }}
                     </div>
                 </div>
-                 <!-- Liste des Membres avec select multiple -->
-                 <div class="form-group row">
-                    <label for="membres" class="col-sm-12 col-md-3 col-form-label">Intervenants</label>
-                    <div class="col-sm-12 col-md-9">
-                        <select name="membres[]" id="membres" class="form-control" multiple>
-                            {% for membre in membres %}
-                                <option value="{{ membre.id }}">{{ membre.nom }} {{ membre.prenom }}</option>
-                            {% else %}
-                                <option>Aucun membre trouvé</option>
-                            {% endfor %}
-                        </select>
+           <!-- Intervenants -->
+                <div class="form-group row">
+                    {{ form_label(form.membres, null, {'label_attr': {'class': 'col-sm-12 col-md-2 col-form-label'}}) }}
+                    <div class="col-sm-12 col-md-10">
+                        {{ form_widget(form.membres, {'attr': {'class': 'form-control', 'placeholder': 'Notre premier thème'}}) }}
                     </div>
                 </div>
+                 
                 <!-- Submit Button -->
                 <div class="form-group row">
                     <div class="col-sm-12 col-md-10 offset-md-2">

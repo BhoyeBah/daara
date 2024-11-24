@@ -8,6 +8,7 @@ use App\Entity\Membres;
 use App\Entity\Specialites;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -49,6 +50,17 @@ class MembresType extends AbstractType
                 'class' => Specialites::class,
                 'choice_label' => 'nom',
                 'multiple' => true,
+            ])
+            ->add('poste', ChoiceType::class, [
+                'choices' => [
+                    'Président' => 'President',
+                    'Secrétaire' => 'Secretaire',
+                    'Encadreur' => 'Encadreur',
+                ],
+                'expanded' => false, // Affiche un select au lieu de boutons radio
+                'multiple' => false,
+                'placeholder' => 'Veuillez sélectionner un poste',
+                'required' => false,
             ])
        ;
     }

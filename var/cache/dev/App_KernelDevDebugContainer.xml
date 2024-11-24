@@ -465,9 +465,6 @@
     <service id="App\Form\EncadreurType" class="App\Form\EncadreurType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
-    <service id="App\Form\IntervenantType" class="App\Form\IntervenantType" autowire="true" autoconfigure="true">
-      <tag name="form.type"/>
-    </service>
     <service id="App\Form\MembresType" class="App\Form\MembresType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -1488,7 +1485,6 @@
         <argument>App\Form\ChangePasswordFormType</argument>
         <argument>App\Form\DahirasType</argument>
         <argument>App\Form\EncadreurType</argument>
-        <argument>App\Form\IntervenantType</argument>
         <argument>App\Form\MembresType</argument>
         <argument>App\Form\RegistrationFormType</argument>
         <argument>App\Form\ResetPasswordRequestFormType</argument>
@@ -4058,7 +4054,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension">
-      <argument type="service" id=".service_locator.kaTSbM8"/>
+      <argument type="service" id=".service_locator.mwVgLYa"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -7511,8 +7507,6 @@
     <service id=".abstract.instanceof.App\Form\DahirasType" class="App\Form\DahirasType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\EncadreurType" class="App\Form\EncadreurType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\EncadreurType" class="App\Form\EncadreurType" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\IntervenantType" class="App\Form\IntervenantType" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Form\IntervenantType" class="App\Form\IntervenantType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\MembresType" class="App\Form\MembresType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\MembresType" class="App\Form\MembresType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" abstract="true"/>
@@ -8776,14 +8770,13 @@
       <argument type="service" id="argument_resolver.query_parameter_value_resolver"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.kaTSbM8" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.mwVgLYa" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\AdminUserType" type="service_closure" id="App\Form\AdminUserType"/>
         <argument key="App\Form\ChangePasswordFormType" type="service_closure" id="App\Form\ChangePasswordFormType"/>
         <argument key="App\Form\DahirasType" type="service_closure" id="App\Form\DahirasType"/>
         <argument key="App\Form\EncadreurType" type="service_closure" id="App\Form\EncadreurType"/>
-        <argument key="App\Form\IntervenantType" type="service_closure" id="App\Form\IntervenantType"/>
         <argument key="App\Form\MembresType" type="service_closure" id="App\Form\MembresType"/>
         <argument key="App\Form\RegistrationFormType" type="service_closure" id="App\Form\RegistrationFormType"/>
         <argument key="App\Form\ResetPasswordRequestFormType" type="service_closure" id="App\Form\ResetPasswordRequestFormType"/>

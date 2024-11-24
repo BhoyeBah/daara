@@ -52,10 +52,20 @@ class Reunion
     #[ORM\Column(length: 255)]
     private ?string $numero = null;
 
+    /**
+     * @var Collection<int, Membres>
+     */
+    #[ORM\ManyToMany(targetEntity: Membres::class, inversedBy: 'reunions')]
+    private Collection $membres;
+
+   
+
     public function __construct()
     {
         $this->presences = new ArrayCollection();
         $this->intervenants = new ArrayCollection();
+        $this->membres = new ArrayCollection();
+        
     }
 
     
@@ -219,4 +229,30 @@ class Reunion
 
         return $this;
     }
+
+    /**
+     * @return Collection<int, Membres>
+     */
+    public function getMembres(): Collection
+    {
+        return $this->membres;
+    }
+
+    public function addMembre(Membres $membre): static
+    {
+        if (!$this->membres->contains($membre)) {
+            $this->membres->add($membre);
+        }
+
+        return $this;
+    }
+
+    public function removeMembre(Membres $membre): static
+    {
+        $this->membres->removeElement($membre);
+
+        return $this;
+    }
+
+    
 }

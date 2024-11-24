@@ -11,7 +11,6 @@ use App\Repository\ReunionRepository;
 use App\Service\Numerogenerator;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -23,8 +22,8 @@ class ReunionController extends AbstractController
     public function __construct(Numerogenerator $numerogenerator)
     {
         $this->numerogenerator = $numerogenerator;
-    }
 
+    }
 
     #[Route('/', name: 'app_reunion_index')]
     public function index(ReunionRepository $reunionRepository): Response
@@ -59,11 +58,13 @@ class ReunionController extends AbstractController
         $dahira = $encadreur->getDahiras();
         $membres = $membresRepository->findBy(['dahiras' => $dahira]);
 
-        $form = $this->createForm(ReunionType::class, $reunion);
+        $form = $this->createForm(ReunionType::class, $reunion, [
+            'dahira' => $dahira, // Passer l'option dahira
+        ]);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-
+          
             // Pour chaque membre, créez une présence
             foreach ($membres as $membre) {
                 $presence = new Presence();
@@ -80,27 +81,14 @@ class ReunionController extends AbstractController
              
                 // Persister chaque présence individuellement
                 $entityManager->persist($presence);
-                $reunion->addPresence($presence);
-                //enregistrement des intervenant
-                $intervenant = new Intervenant();
-
-                $intervenant->setMembre($membre);
-                $intervenant->setReunion($reunion);
-                $intervenant->setNom($membre->getNom());
-                $intervenant->setPrenom($membre->getPrenom());
-                $intervenant->setDahira($dahira);
-                // Persister l'intervenant
-                $entityManager->persist($intervenant);
-                $reunion->addIntervenant($intervenant);
-                
+                $reunion->addPresence($presence);           
             }  
             $dateReunion = $reunion->getDate(); // Assumez que la date est définie dans le formulaire
             if ($dateReunion) {
                 $numeroRef = $this->numerogenerator->gereratorNumeroRef($dahira, $dateReunion);
                 $reunion->setNumero($numeroRef);
             }
-
-            // dd($dateReunion, $numeroRef);
+            
 
             $reunion->setDahiras($dahira);
             $reunion->setEncadreur($encadreur);

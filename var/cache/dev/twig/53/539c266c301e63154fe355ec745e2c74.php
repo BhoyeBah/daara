@@ -235,7 +235,7 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
 \t\t\t\t\t\t<span class=\"user-icon\">
 \t\t\t\t\t\t\t<img src=\"";
         // line 146
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/images/photo1.jpg"), "html", null, true);
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/images/deskapp-logo.jpg"), "html", null, true);
         yield "\" alt=\"\">
 \t\t\t\t\t\t</span>
 \t\t\t\t\t\t<span class=\"user-name\">";
@@ -753,7 +753,7 @@ class __TwigTemplate_5f185751839422ba25658b08f3c113d5 extends Template
 \t\t\t\t<div class=\"dropdown\">
 \t\t\t\t\t<a class=\"dropdown-toggle\" href=\"#\" role=\"button\" data-toggle=\"dropdown\">
 \t\t\t\t\t\t<span class=\"user-icon\">
-\t\t\t\t\t\t\t<img src=\"{{ asset('vendors/images/photo1.jpg')}}\" alt=\"\">
+\t\t\t\t\t\t\t<img src=\"{{ asset('vendors/images/deskapp-logo.jpg')}}\" alt=\"\">
 \t\t\t\t\t\t</span>
 \t\t\t\t\t\t<span class=\"user-name\">{{ app.user.nom }} {{ app.user.prenom }}</span>
 \t\t\t\t\t</a>

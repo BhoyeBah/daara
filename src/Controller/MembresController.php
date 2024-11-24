@@ -67,12 +67,16 @@ final class MembresController extends AbstractController
         $memberNumero = $this->numerogenerator->generateNumberMembre($dahira);
         // Créer le membre avec le numéro généré
         $membre->setNumero($memberNumero);
+           
         if ($form->isSubmitted() && $form->isValid()) {
             
             $membre->setEncadreur($encadreur);
             $membre->setDahiras($dahira);
             // dd($membre,$encadreur,$dahira->getNom());
-
+            if (empty($membre->getPoste())) {
+                $membre->setPoste('Membre');
+            }
+    
             $entityManager->persist($membre);
             $entityManager->flush();
 

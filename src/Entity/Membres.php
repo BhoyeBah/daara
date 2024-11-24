@@ -57,12 +57,22 @@ class Membres
     #[ORM\Column(length: 255)]
     private ?string $numero = null;
 
+    /**
+     * @var Collection<int, Reunion>
+     */
+    #[ORM\ManyToMany(targetEntity: Reunion::class, mappedBy: 'membres')]
+    private Collection $reunions;
+
+    #[ORM\Column(length: 255)]
+    private ?string $poste = null;
+
 
     public function __construct()
     {
         $this->specialite = new ArrayCollection();
         $this->presences = new ArrayCollection();
         $this->intervenants = new ArrayCollection();
+        $this->reunions = new ArrayCollection();
        
     }
 
@@ -251,5 +261,43 @@ class Membres
         return $this;
     }
 
+    /**
+     * @return Collection<int, Reunion>
+     */
+    public function getReunions(): Collection
+    {
+        return $this->reunions;
+    }
+
+    public function addReunion(Reunion $reunion): static
+    {
+        if (!$this->reunions->contains($reunion)) {
+            $this->reunions->add($reunion);
+            $reunion->addMembre($this);
+        }
+
+        return $this;
+    }
+
+    public function removeReunion(Reunion $reunion): static
+    {
+        if ($this->reunions->removeElement($reunion)) {
+            $reunion->removeMembre($this);
+        }
+
+        return $this;
+    }
+
+    public function getPoste(): ?string
+    {
+        return $this->poste;
+    }
+
+    public function setPoste(string $poste): static
+    {
+        $this->poste = $poste;
+
+        return $this;
+    }
    
 }

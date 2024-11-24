@@ -203,10 +203,10 @@
     <p>
         Les intervenants principaux lors de cette réunion étaient :
     </p>
-    {% for intervenant in intervenants %}
+    {% for membre in reunion.membres %}
 
     <ul>
-        <li><strong>{{ intervenant.membre.nom }} {{ intervenant.membre.prenom }}</strong> - Encadreur</li>
+        <li><strong>{{ membre.nom }} {{ membre.prenom }}</strong> - {{ membre.poste }}</li>
     </ul>
     {% else %}
         <li>
