@@ -17825,3 +17825,9 @@ aa31d2,::1,GET,http://localhost:8000/reunion/new,1732460277,,200,request
 d25a98,::1,POST,http://localhost:8000/reunion/new,1732460295,,302,request
 3c24c5,::1,GET,http://localhost:8000/reunion/imprimer/52,1732460295,,200,request
 0ba25b,::1,GET,http://localhost:8000/reunion/,1732460335,,200,request
+d5ffc4,::1,GET,http://localhost:8000/,1732460404,,200,request
+c3b50c,::1,GET,http://localhost:8000/,1732460417,,200,request
+a6dafd,::1,GET,http://localhost:8000/reunion/,1732472059,,200,request
+0f0515,::1,GET,http://localhost:8000/reunion/18,1732472065,,200,request
+681ffb,::1,GET,http://localhost:8000/reunion/imprimer/18,1732472073,,200,request
+51c1bb,::1,GET,http://localhost:8000/reunion/,1732472080,,200,request
