@@ -102,8 +102,12 @@ final class MembresController extends AbstractController
     {
         $form = $this->createForm(MembresType::class, $membre);
         $form->handleRequest($request);
-
+       
         if ($form->isSubmitted() && $form->isValid()) {
+           
+            if (empty($membre->getPoste())) {
+                $membre->setPoste('Membre');
+            }
             $entityManager->flush();
 
             return $this->redirectToRoute('app_membres_index', [], Response::HTTP_SEE_OTHER);

@@ -46,173 +46,134 @@ class __TwigTemplate_9a9f9bb32bf59bda12a2c8b62c23df43 extends Template
 
         // line 1
         yield "<!DOCTYPE html>
-<html>
+<html lang=\"fr\">
 <head>
-\t<!-- Basic Page Info -->
-\t<meta charset=\"utf-8\">
-\t<title>Daara</title>
-
-\t<!-- Site favicon -->
-\t<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"vendors/images/apple-touch-icon.png\">
-\t<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"vendors/images/favicon-32x32.png\">
-\t<link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"vendors/images/favicon-16x16.png\">
-
-\t<!-- Mobile Specific Metas -->
-\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\">
-
-\t<!-- Google Font -->
-\t<link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap\" rel=\"stylesheet\">
-\t<!-- CSS -->
-\t<link rel=\"stylesheet\" type=\"text/css\" href=\"vendors/styles/core.css\">
-\t<link rel=\"stylesheet\" type=\"text/css\" href=\"vendors/styles/icon-font.min.css\">
-\t<link rel=\"stylesheet\" type=\"text/css\" href=\"vendors/styles/style.css\">
-
-\t<!-- Global site tag (gtag.js) - Google Analytics -->
-\t<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-119386393-1\"></script>
-\t<script>
-\t\twindow.dataLayer = window.dataLayer || [];
-\t\tfunction gtag(){dataLayer.push(arguments);}
-\t\tgtag('js', new Date());
-
-\t\tgtag('config', 'UA-119386393-1');
-\t</script>
+    <meta charset=\"UTF-8\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+    <title>Connexion</title>
+    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css\">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .login-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+        }
+        .form-container {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+        }
+        .form-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .form-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .logo-container img {
+            max-width: 120px;
+            margin-bottom: 20px;
+        }
+        .btn-success {
+            background-color: #28a745;
+            border: none;
+        }
+        .btn-outline-success {
+            border-color: #28a745;
+            color: #28a745;
+        }
+        .btn-outline-success:hover {
+            background-color: #28a745;
+            color: #fff;
+        }
+    </style>
 </head>
-<body class=\"login-page\">
-\t<div class=\"login-header box-shadow\">
-\t\t<div class=\"container-fluid d-flex justify-content-between align-items-center\">
-\t\t\t<div class=\"brand-logo\">
-\t\t\t\t<a href=\"login.html\">
-\t\t\t\t\t<img src=\"vendors/images/deskapp-logo.svg\" alt=\"\">
-\t\t\t\t</a>
-\t\t\t</div>
-\t\t\t<!-- <div class=\"login-menu\">
-\t\t\t\t<ul>
-\t\t\t\t\t<li><a href=\"register.html\"></a></li>
-\t\t\t\t</ul>
-\t\t\t</div> -->
-\t\t</div>
-\t</div>
-\t<div class=\"login-wrap d-flex align-items-center flex-wrap justify-content-center\">
-\t\t<div class=\"container\">
-\t\t\t<div class=\"row align-items-center\">
-\t\t\t\t<div class=\"col-md-6 col-lg-7\">
-\t\t\t\t\t<img src=\"vendors/images/login-page-img.png\" alt=\"\">
-\t\t\t\t</div>
-\t\t\t\t<div class=\"col-md-6 col-lg-5\">
-\t\t\t\t\t<div class=\"login-box bg-white box-shadow border-radius-10\">
-\t\t\t\t\t\t<div class=\"login-title\">
-\t\t\t\t\t\t\t<h2 class=\"text-center text-success\">Se Connecter</h2>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<form method=\"POST\">
+<body>
+    <div class=\"container login-container\">
+        <div class=\"row align-items-center justify-content-center\">
+            <!-- Form -->
+            <div class=\"col-lg-6\">
+                <div class=\"form-container\">
+                    <div class=\"text-center logo-container\">
+                        <img src=\"";
+        // line 62
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/images/deskapp-logo.jpg"), "html", null, true);
+        yield "\" alt=\"Logo\">
+                    </div>
+                    <h3 class=\"text-center text-success mb-4\">Se Connecter</h3>
+                    <form method=\"POST\">
                         ";
-        // line 60
-        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 60, $this->source); })())) {
-            // line 61
-            yield "                            <div class=\"alert alert-danger\">";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(CoreExtension::getAttribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 61, $this->source); })()), "messageKey", [], "any", false, false, false, 61), CoreExtension::getAttribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 61, $this->source); })()), "messageData", [], "any", false, false, false, 61), "security"), "html", null, true);
+        // line 66
+        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 66, $this->source); })())) {
+            // line 67
+            yield "                        <div class=\"alert alert-danger\">";
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(CoreExtension::getAttribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 67, $this->source); })()), "messageKey", [], "any", false, false, false, 67), CoreExtension::getAttribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 67, $this->source); })()), "messageData", [], "any", false, false, false, 67), "security"), "html", null, true);
             yield "</div>
                         ";
         }
-        // line 63
-        yield "
-                        ";
-        // line 64
-        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 64, $this->source); })()), "user", [], "any", false, false, false, 64)) {
-            // line 65
-            yield "                            <div class=\"mb-3\">
-                                You are logged in as ";
-            // line 66
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 66, $this->source); })()), "user", [], "any", false, false, false, 66), "userIdentifier", [], "any", false, false, false, 66), "html", null, true);
-            yield ", <a href=\"";
-            yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
-            yield "\">Logout</a>
-                            </div>
-                        ";
-        }
         // line 69
-        yield "
-\t\t\t\t\t\t\t<!-- <div class=\"select-role\">
-\t\t\t\t\t\t\t\t<div class=\"btn-group btn-group-toggle\" data-toggle=\"buttons\">
-\t\t\t\t\t\t\t\t\t<label class=\"btn active\">
-\t\t\t\t\t\t\t\t\t\t<input type=\"radio\" name=\"options\" id=\"admin\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"icon\"><img src=\"vendors/images/briefcase.svg\" class=\"svg\" alt=\"\"></div>
-\t\t\t\t\t\t\t\t\t\t<span>I'm</span>
-\t\t\t\t\t\t\t\t\t\tManager
-\t\t\t\t\t\t\t\t\t</label>
-\t\t\t\t\t\t\t\t\t<label class=\"btn\">
-\t\t\t\t\t\t\t\t\t\t<input type=\"radio\" name=\"options\" id=\"user\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"icon\"><img src=\"vendors/images/person.svg\" class=\"svg\" alt=\"\"></div>
-\t\t\t\t\t\t\t\t\t\t<span>I'm</span>
-\t\t\t\t\t\t\t\t\t\tEmployee
-\t\t\t\t\t\t\t\t\t</label>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t</div> -->
-\t\t\t\t\t\t\t<div class=\"input-group custom\">
-                                <input type=\"email\" value=\"";
-        // line 87
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 87, $this->source); })()), "html", null, true);
-        yield "\" name=\"_username\" id=\"username\" class=\"form-control\" autocomplete=\"email\" required autofocus class=\"form-control form-control-lg\" placeholder=\"Email\">
-\t\t\t\t\t\t\t\t<div class=\"input-group-append custom\">
-\t\t\t\t\t\t\t\t\t<span class=\"input-group-text\"><i class=\"icon-copy dw dw-user1\"></i></span>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t<div class=\"input-group custom\">
-\t\t\t\t\t\t\t\t<input type=\"password\" name=\"_password\" id=\"password\" class=\"form-control form-control-lg\" placeholder=\"**********\" autocomplete=\"current-password\" required>
-    \t\t\t\t\t\t\t\t<div class=\"input-group-append custom\">
-\t\t\t\t\t\t\t\t\t<span class=\"input-group-text\"><i class=\"dw dw-padlock1\"></i></span>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t<div class=\"row pb-30\">
-\t\t\t\t\t\t\t\t<div class=\"col-6\">
-\t\t\t\t\t\t\t\t\t<div class=\"custom-control custom-checkbox\">
-\t\t\t\t\t\t\t\t\t\t<input type=\"checkbox\"  name=\"_remember_me\" id=\"_remember_me\" class=\"custom-control-input\" id=\"customCheck1\">
-\t\t\t\t\t\t\t\t\t\t<label class=\"custom-control-label\" for=\"_remember_me\">Se souvenir</label>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<div class=\"col-6\">
-\t\t\t\t\t\t\t\t\t<div class=\"forgot-password\"><a href=\"forgot-password.html\">Mot de passe oublié</a></div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t</div>
-                            <input type=\"hidden\" name=\"_csrf_token\" value=\"";
-        // line 109
+        yield "                        <div class=\"mb-3\">
+                            <label for=\"username\" class=\"form-label\">Email</label>
+                            <input type=\"email\" class=\"form-control\" id=\"username\" name=\"_username\" value=\"";
+        // line 71
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 71, $this->source); })()), "html", null, true);
+        yield "\" placeholder=\"Votre email\" required>
+                        </div>
+                        <div class=\"mb-3\">
+                            <label for=\"password\" class=\"form-label\">Mot de passe</label>
+                            <input type=\"password\" class=\"form-control\" id=\"password\" name=\"_password\" placeholder=\"********\" required>
+                        </div>
+                        <div class=\"mb-3 form-check\">
+                            <input type=\"checkbox\" class=\"form-check-input\" id=\"remember_me\" name=\"_remember_me\">
+                            <label class=\"form-check-label\" for=\"remember_me\">Se souvenir de moi</label>
+                        </div>
+                        <div class=\"d-flex justify-content-between mb-3\">
+                            <a href=\"forgot-password.html\" class=\"text-muted\">Mot de passe oublié ?</a>
+                        </div>
+                        <input type=\"hidden\" name=\"_csrf_token\" value=\"";
+        // line 84
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
         yield "\">
-\t\t\t\t\t\t\t<div class=\"row\">
-\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t<div class=\"col-sm-12\">
-\t\t\t\t\t\t\t\t<div class=\"input-group mb-0\">
-\t\t\t\t\t\t\t\t\t<input class=\"btn btn-success btn-lg btn-block\" type=\"submit\" value=\"Se connecter\">
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t";
-        // line 116
-        if ((Twig\Extension\CoreExtension::length($this->env->getCharset(), (isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 116, $this->source); })())) == 0)) {
-            // line 117
-            yield "\t\t\t\t\t\t\t\t<div class=\"font-16 weight-600 pt-10 pb-10 text-center\" data-color=\"#707373\">Vous n'avez pas de compte</div>
-\t\t\t\t\t\t\t\t\t<div class=\"input-group mb-0\">
-\t\t\t\t\t\t\t\t\t\t<a class=\"btn btn-outline-success btn-lg btn-block\" href=\"";
-            // line 119
+                        <button type=\"submit\" class=\"btn btn-success btn-lg w-100\">Se connecter</button>
+\t\t\t\t\t\t
+\t\t\t\t\t\t";
+        // line 87
+        if ((Twig\Extension\CoreExtension::length($this->env->getCharset(), (isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 87, $this->source); })())) == 0)) {
+            // line 88
+            yield "                        <div class=\"text-center mt-4\">
+                            <p class=\"mb-2\">Vous n'avez pas de compte ?</p>
+                            <a href=\"";
+            // line 90
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
-            yield "\">S'inscrire</a>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t";
+            yield "\" class=\"btn btn-outline-success btn-lg\">S'inscrire</a>
+                        </div>
+\t\t\t\t\t\t";
         }
-        // line 122
-        yield "\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t</form>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t</div>
-\t\t</div>
-\t</div>
-\t<!-- js -->
-\t<script src=\"vendors/scripts/core.js\"></script>
-\t<script src=\"vendors/scripts/script.min.js\"></script>
-\t<script src=\"vendors/scripts/process.js\"></script>
-\t<script src=\"vendors/scripts/layout-settings.js\"></script>
+        // line 93
+        yield "                    </form>
+                </div>
+            </div>
+            <!-- Image -->
+            <div class=\"col-lg-6 d-none d-lg-block form-image\">
+                <img src=\"vendors/images/login-page-img.png\" alt=\"Image\">
+            </div>
+        </div>
+    </div>
+    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js\"></script>
 </body>
-</html>";
+</html>
+";
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
 
@@ -243,147 +204,115 @@ class __TwigTemplate_9a9f9bb32bf59bda12a2c8b62c23df43 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  200 => 122,  194 => 119,  190 => 117,  188 => 116,  178 => 109,  153 => 87,  133 => 69,  125 => 66,  122 => 65,  120 => 64,  117 => 63,  111 => 61,  109 => 60,  48 => 1,);
+        return array (  164 => 93,  158 => 90,  154 => 88,  152 => 87,  146 => 84,  130 => 71,  126 => 69,  120 => 67,  118 => 66,  111 => 62,  48 => 1,);
     }
 
     public function getSourceContext(): Source
     {
         return new Source("<!DOCTYPE html>
-<html>
+<html lang=\"fr\">
 <head>
-\t<!-- Basic Page Info -->
-\t<meta charset=\"utf-8\">
-\t<title>Daara</title>
-
-\t<!-- Site favicon -->
-\t<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"vendors/images/apple-touch-icon.png\">
-\t<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"vendors/images/favicon-32x32.png\">
-\t<link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"vendors/images/favicon-16x16.png\">
-
-\t<!-- Mobile Specific Metas -->
-\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\">
-
-\t<!-- Google Font -->
-\t<link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap\" rel=\"stylesheet\">
-\t<!-- CSS -->
-\t<link rel=\"stylesheet\" type=\"text/css\" href=\"vendors/styles/core.css\">
-\t<link rel=\"stylesheet\" type=\"text/css\" href=\"vendors/styles/icon-font.min.css\">
-\t<link rel=\"stylesheet\" type=\"text/css\" href=\"vendors/styles/style.css\">
-
-\t<!-- Global site tag (gtag.js) - Google Analytics -->
-\t<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-119386393-1\"></script>
-\t<script>
-\t\twindow.dataLayer = window.dataLayer || [];
-\t\tfunction gtag(){dataLayer.push(arguments);}
-\t\tgtag('js', new Date());
-
-\t\tgtag('config', 'UA-119386393-1');
-\t</script>
+    <meta charset=\"UTF-8\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+    <title>Connexion</title>
+    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css\">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .login-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+        }
+        .form-container {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+        }
+        .form-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .form-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .logo-container img {
+            max-width: 120px;
+            margin-bottom: 20px;
+        }
+        .btn-success {
+            background-color: #28a745;
+            border: none;
+        }
+        .btn-outline-success {
+            border-color: #28a745;
+            color: #28a745;
+        }
+        .btn-outline-success:hover {
+            background-color: #28a745;
+            color: #fff;
+        }
+    </style>
 </head>
-<body class=\"login-page\">
-\t<div class=\"login-header box-shadow\">
-\t\t<div class=\"container-fluid d-flex justify-content-between align-items-center\">
-\t\t\t<div class=\"brand-logo\">
-\t\t\t\t<a href=\"login.html\">
-\t\t\t\t\t<img src=\"vendors/images/deskapp-logo.svg\" alt=\"\">
-\t\t\t\t</a>
-\t\t\t</div>
-\t\t\t<!-- <div class=\"login-menu\">
-\t\t\t\t<ul>
-\t\t\t\t\t<li><a href=\"register.html\"></a></li>
-\t\t\t\t</ul>
-\t\t\t</div> -->
-\t\t</div>
-\t</div>
-\t<div class=\"login-wrap d-flex align-items-center flex-wrap justify-content-center\">
-\t\t<div class=\"container\">
-\t\t\t<div class=\"row align-items-center\">
-\t\t\t\t<div class=\"col-md-6 col-lg-7\">
-\t\t\t\t\t<img src=\"vendors/images/login-page-img.png\" alt=\"\">
-\t\t\t\t</div>
-\t\t\t\t<div class=\"col-md-6 col-lg-5\">
-\t\t\t\t\t<div class=\"login-box bg-white box-shadow border-radius-10\">
-\t\t\t\t\t\t<div class=\"login-title\">
-\t\t\t\t\t\t\t<h2 class=\"text-center text-success\">Se Connecter</h2>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<form method=\"POST\">
+<body>
+    <div class=\"container login-container\">
+        <div class=\"row align-items-center justify-content-center\">
+            <!-- Form -->
+            <div class=\"col-lg-6\">
+                <div class=\"form-container\">
+                    <div class=\"text-center logo-container\">
+                        <img src=\"{{ asset('vendors/images/deskapp-logo.jpg') }}\" alt=\"Logo\">
+                    </div>
+                    <h3 class=\"text-center text-success mb-4\">Se Connecter</h3>
+                    <form method=\"POST\">
                         {% if error %}
-                            <div class=\"alert alert-danger\">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                        <div class=\"alert alert-danger\">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
                         {% endif %}
-
-                        {% if app.user %}
-                            <div class=\"mb-3\">
-                                You are logged in as {{ app.user.userIdentifier }}, <a href=\"{{ path('app_logout') }}\">Logout</a>
-                            </div>
-                        {% endif %}
-
-\t\t\t\t\t\t\t<!-- <div class=\"select-role\">
-\t\t\t\t\t\t\t\t<div class=\"btn-group btn-group-toggle\" data-toggle=\"buttons\">
-\t\t\t\t\t\t\t\t\t<label class=\"btn active\">
-\t\t\t\t\t\t\t\t\t\t<input type=\"radio\" name=\"options\" id=\"admin\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"icon\"><img src=\"vendors/images/briefcase.svg\" class=\"svg\" alt=\"\"></div>
-\t\t\t\t\t\t\t\t\t\t<span>I'm</span>
-\t\t\t\t\t\t\t\t\t\tManager
-\t\t\t\t\t\t\t\t\t</label>
-\t\t\t\t\t\t\t\t\t<label class=\"btn\">
-\t\t\t\t\t\t\t\t\t\t<input type=\"radio\" name=\"options\" id=\"user\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"icon\"><img src=\"vendors/images/person.svg\" class=\"svg\" alt=\"\"></div>
-\t\t\t\t\t\t\t\t\t\t<span>I'm</span>
-\t\t\t\t\t\t\t\t\t\tEmployee
-\t\t\t\t\t\t\t\t\t</label>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t</div> -->
-\t\t\t\t\t\t\t<div class=\"input-group custom\">
-                                <input type=\"email\" value=\"{{ last_username }}\" name=\"_username\" id=\"username\" class=\"form-control\" autocomplete=\"email\" required autofocus class=\"form-control form-control-lg\" placeholder=\"Email\">
-\t\t\t\t\t\t\t\t<div class=\"input-group-append custom\">
-\t\t\t\t\t\t\t\t\t<span class=\"input-group-text\"><i class=\"icon-copy dw dw-user1\"></i></span>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t<div class=\"input-group custom\">
-\t\t\t\t\t\t\t\t<input type=\"password\" name=\"_password\" id=\"password\" class=\"form-control form-control-lg\" placeholder=\"**********\" autocomplete=\"current-password\" required>
-    \t\t\t\t\t\t\t\t<div class=\"input-group-append custom\">
-\t\t\t\t\t\t\t\t\t<span class=\"input-group-text\"><i class=\"dw dw-padlock1\"></i></span>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t<div class=\"row pb-30\">
-\t\t\t\t\t\t\t\t<div class=\"col-6\">
-\t\t\t\t\t\t\t\t\t<div class=\"custom-control custom-checkbox\">
-\t\t\t\t\t\t\t\t\t\t<input type=\"checkbox\"  name=\"_remember_me\" id=\"_remember_me\" class=\"custom-control-input\" id=\"customCheck1\">
-\t\t\t\t\t\t\t\t\t\t<label class=\"custom-control-label\" for=\"_remember_me\">Se souvenir</label>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<div class=\"col-6\">
-\t\t\t\t\t\t\t\t\t<div class=\"forgot-password\"><a href=\"forgot-password.html\">Mot de passe oublié</a></div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t</div>
-                            <input type=\"hidden\" name=\"_csrf_token\" value=\"{{ csrf_token('authenticate') }}\">
-\t\t\t\t\t\t\t<div class=\"row\">
-\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t<div class=\"col-sm-12\">
-\t\t\t\t\t\t\t\t<div class=\"input-group mb-0\">
-\t\t\t\t\t\t\t\t\t<input class=\"btn btn-success btn-lg btn-block\" type=\"submit\" value=\"Se connecter\">
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t{% if users|length == 0 %}
-\t\t\t\t\t\t\t\t<div class=\"font-16 weight-600 pt-10 pb-10 text-center\" data-color=\"#707373\">Vous n'avez pas de compte</div>
-\t\t\t\t\t\t\t\t\t<div class=\"input-group mb-0\">
-\t\t\t\t\t\t\t\t\t\t<a class=\"btn btn-outline-success btn-lg btn-block\" href=\"{{ path('app_register') }}\">S'inscrire</a>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t{% endif %}
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t</form>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t</div>
-\t\t</div>
-\t</div>
-\t<!-- js -->
-\t<script src=\"vendors/scripts/core.js\"></script>
-\t<script src=\"vendors/scripts/script.min.js\"></script>
-\t<script src=\"vendors/scripts/process.js\"></script>
-\t<script src=\"vendors/scripts/layout-settings.js\"></script>
+                        <div class=\"mb-3\">
+                            <label for=\"username\" class=\"form-label\">Email</label>
+                            <input type=\"email\" class=\"form-control\" id=\"username\" name=\"_username\" value=\"{{ last_username }}\" placeholder=\"Votre email\" required>
+                        </div>
+                        <div class=\"mb-3\">
+                            <label for=\"password\" class=\"form-label\">Mot de passe</label>
+                            <input type=\"password\" class=\"form-control\" id=\"password\" name=\"_password\" placeholder=\"********\" required>
+                        </div>
+                        <div class=\"mb-3 form-check\">
+                            <input type=\"checkbox\" class=\"form-check-input\" id=\"remember_me\" name=\"_remember_me\">
+                            <label class=\"form-check-label\" for=\"remember_me\">Se souvenir de moi</label>
+                        </div>
+                        <div class=\"d-flex justify-content-between mb-3\">
+                            <a href=\"forgot-password.html\" class=\"text-muted\">Mot de passe oublié ?</a>
+                        </div>
+                        <input type=\"hidden\" name=\"_csrf_token\" value=\"{{ csrf_token('authenticate') }}\">
+                        <button type=\"submit\" class=\"btn btn-success btn-lg w-100\">Se connecter</button>
+\t\t\t\t\t\t
+\t\t\t\t\t\t{% if users|length == 0 %}
+                        <div class=\"text-center mt-4\">
+                            <p class=\"mb-2\">Vous n'avez pas de compte ?</p>
+                            <a href=\"{{ path('app_register') }}\" class=\"btn btn-outline-success btn-lg\">S'inscrire</a>
+                        </div>
+\t\t\t\t\t\t{% endif %}
+                    </form>
+                </div>
+            </div>
+            <!-- Image -->
+            <div class=\"col-lg-6 d-none d-lg-block form-image\">
+                <img src=\"vendors/images/login-page-img.png\" alt=\"Image\">
+            </div>
+        </div>
+    </div>
+    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js\"></script>
 </body>
-</html>", "security/login.html.twig", "C:\\xampp\\htdocs\\mydaara\\templates\\security\\login.html.twig");
+</html>
+", "security/login.html.twig", "C:\\xampp\\htdocs\\mydaara\\templates\\security\\login.html.twig");
     }
 }

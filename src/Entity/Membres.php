@@ -21,13 +21,13 @@ class Membres
     #[ORM\Column(length: 255)]
     private ?string $prenom = null;
 
-    #[ORM\Column(length:255)]
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $telephone = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $adresse = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $email = null;
 
     /**
@@ -63,9 +63,8 @@ class Membres
     #[ORM\ManyToMany(targetEntity: Reunion::class, mappedBy: 'membres')]
     private Collection $reunions;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $poste = null;
-
 
     public function __construct()
     {
@@ -73,7 +72,6 @@ class Membres
         $this->presences = new ArrayCollection();
         $this->intervenants = new ArrayCollection();
         $this->reunions = new ArrayCollection();
-       
     }
 
     public function getId(): ?int
@@ -89,7 +87,6 @@ class Membres
     public function setNom(string $nom): static
     {
         $this->nom = $nom;
-
         return $this;
     }
 
@@ -101,7 +98,6 @@ class Membres
     public function setPrenom(string $prenom): static
     {
         $this->prenom = $prenom;
-
         return $this;
     }
 
@@ -110,10 +106,9 @@ class Membres
         return $this->telephone;
     }
 
-    public function setTelephone(string $telephone): static
+    public function setTelephone(?string $telephone): static
     {
         $this->telephone = $telephone;
-
         return $this;
     }
 
@@ -122,10 +117,9 @@ class Membres
         return $this->adresse;
     }
 
-    public function setAdresse(string $adresse): static
+    public function setAdresse(?string $adresse): static
     {
         $this->adresse = $adresse;
-
         return $this;
     }
 
@@ -134,10 +128,9 @@ class Membres
         return $this->email;
     }
 
-    public function setEmail(string $email): static
+    public function setEmail(?string $email): static
     {
         $this->email = $email;
-
         return $this;
     }
 
@@ -154,14 +147,12 @@ class Membres
         if (!$this->specialite->contains($specialite)) {
             $this->specialite->add($specialite);
         }
-
         return $this;
     }
 
     public function removeSpecialite(Specialites $specialite): static
     {
         $this->specialite->removeElement($specialite);
-
         return $this;
     }
 
@@ -173,7 +164,6 @@ class Membres
     public function setDahiras(?Dahiras $dahiras): static
     {
         $this->dahiras = $dahiras;
-
         return $this;
     }
 
@@ -185,7 +175,6 @@ class Membres
     public function setEncadreur(?Encadreur $encadreur): static
     {
         $this->encadreur = $encadreur;
-
         return $this;
     }
 
@@ -203,7 +192,6 @@ class Membres
             $this->presences->add($presence);
             $presence->setMembre($this);
         }
-
         return $this;
     }
 
@@ -215,7 +203,6 @@ class Membres
                 $presence->setMembre(null);
             }
         }
-
         return $this;
     }
 
@@ -233,7 +220,6 @@ class Membres
             $this->intervenants->add($intervenant);
             $intervenant->setMembre($this);
         }
-
         return $this;
     }
 
@@ -245,7 +231,6 @@ class Membres
                 $intervenant->setMembre(null);
             }
         }
-
         return $this;
     }
 
@@ -257,7 +242,6 @@ class Membres
     public function setNumero(string $numero): static
     {
         $this->numero = $numero;
-
         return $this;
     }
 
@@ -275,7 +259,6 @@ class Membres
             $this->reunions->add($reunion);
             $reunion->addMembre($this);
         }
-
         return $this;
     }
 
@@ -284,7 +267,6 @@ class Membres
         if ($this->reunions->removeElement($reunion)) {
             $reunion->removeMembre($this);
         }
-
         return $this;
     }
 
@@ -293,11 +275,9 @@ class Membres
         return $this->poste;
     }
 
-    public function setPoste(string $poste): static
+    public function setPoste(?string $poste): static
     {
         $this->poste = $poste;
-
         return $this;
     }
-   
 }
