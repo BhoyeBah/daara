@@ -52,60 +52,10 @@ class __TwigTemplate_9a9f9bb32bf59bda12a2c8b62c23df43 extends Template
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
     <title>Connexion</title>
     <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css\">
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        .login-container {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 15px;
-        }
-        .login-box {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: row;
-            overflow: hidden;
-            max-width: 800px; /* Limite la largeur totale */
-            width: 100%;
-        }
-        .form-container {
-            padding: 20px;
-            width: 45%; /* Réduit la taille du formulaire */
-        }
-        .form-image {
-            width: 55%; /* Réduit la taille de l'image */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .form-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            align-items: center;
-        }
-        .logo-container img {
-            max-width: 100px; /* Réduit la taille du logo */
-            margin-bottom: 15px;
-        }
-        .btn-success {
-            background-color: #28a745;
-            border: none;
-        }
-        .btn-outline-success {
-            border-color: #28a745;
-            color: #28a745;
-        }
-        .btn-outline-success:hover {
-            background-color: #28a745;
-            color: #fff;
-        }
-    </style>
+    <link rel=\"stylesheet\" href=\"";
+        // line 8
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("src/styles/login.css"), "html", null, true);
+        yield "\">
 </head>
 <body>
     <div class=\"container login-container\">
@@ -113,7 +63,7 @@ class __TwigTemplate_9a9f9bb32bf59bda12a2c8b62c23df43 extends Template
             <!-- Image -->
             <div class=\"form-image cover\">
                 <img src=\"";
-        // line 68
+        // line 15
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/images/login-page-img.jpg"), "html", null, true);
         yield "\" alt=\"Image\">
             </div>
@@ -121,27 +71,27 @@ class __TwigTemplate_9a9f9bb32bf59bda12a2c8b62c23df43 extends Template
             <div class=\"form-container\">
                 <div class=\"text-center logo-container\">
                     <img src=\"";
-        // line 73
+        // line 20
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/images/deskapp-logo.jpg"), "html", null, true);
         yield "\" alt=\"Logo\">
                 </div>
                 <h3 class=\"text-center text-success mb-3\">Se Connecter</h3>
                 <form method=\"POST\">
                     ";
-        // line 77
-        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 77, $this->source); })())) {
-            // line 78
+        // line 24
+        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 24, $this->source); })())) {
+            // line 25
             yield "                    <div class=\"alert alert-danger\">";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(CoreExtension::getAttribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 78, $this->source); })()), "messageKey", [], "any", false, false, false, 78), CoreExtension::getAttribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 78, $this->source); })()), "messageData", [], "any", false, false, false, 78), "security"), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(CoreExtension::getAttribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 25, $this->source); })()), "messageKey", [], "any", false, false, false, 25), CoreExtension::getAttribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 25, $this->source); })()), "messageData", [], "any", false, false, false, 25), "security"), "html", null, true);
             yield "</div>
                     ";
         }
-        // line 80
+        // line 27
         yield "                    <div class=\"mb-3\">
                         <label for=\"username\" class=\"form-label\">Email</label>
                         <input type=\"email\" class=\"form-control\" id=\"username\" name=\"_username\" value=\"";
-        // line 82
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 82, $this->source); })()), "html", null, true);
+        // line 29
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 29, $this->source); })()), "html", null, true);
         yield "\" placeholder=\"Votre email\" required>
                     </div>
                     <div class=\"mb-3\">
@@ -156,25 +106,25 @@ class __TwigTemplate_9a9f9bb32bf59bda12a2c8b62c23df43 extends Template
                         <a href=\"forgot-password.html\" class=\"text-muted\">Mot de passe oublié ?</a>
                     </div>
                     <input type=\"hidden\" name=\"_csrf_token\" value=\"";
-        // line 95
+        // line 42
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
         yield "\">
                     <button type=\"submit\" class=\"btn btn-success btn-lg w-100\">Se connecter</button>
                     
                     ";
-        // line 98
-        if ((Twig\Extension\CoreExtension::length($this->env->getCharset(), (isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 98, $this->source); })())) == 0)) {
-            // line 99
+        // line 45
+        if ((Twig\Extension\CoreExtension::length($this->env->getCharset(), (isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 45, $this->source); })())) == 0)) {
+            // line 46
             yield "                    <div class=\"text-center mt-3\">
                         <p class=\"mb-2\">Vous n'avez pas de compte ?</p>
                         <a href=\"";
-            // line 101
+            // line 48
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
             yield "\" class=\"btn btn-outline-success btn-lg\">S'inscrire</a>
                     </div>
                     ";
         }
-        // line 104
+        // line 51
         yield "                </form>
             </div>
         </div>
@@ -213,7 +163,7 @@ class __TwigTemplate_9a9f9bb32bf59bda12a2c8b62c23df43 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  178 => 104,  172 => 101,  168 => 99,  166 => 98,  160 => 95,  144 => 82,  140 => 80,  134 => 78,  132 => 77,  125 => 73,  117 => 68,  48 => 1,);
+        return array (  128 => 51,  122 => 48,  118 => 46,  116 => 45,  110 => 42,  94 => 29,  90 => 27,  84 => 25,  82 => 24,  75 => 20,  67 => 15,  57 => 8,  48 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -225,60 +175,7 @@ class __TwigTemplate_9a9f9bb32bf59bda12a2c8b62c23df43 extends Template
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
     <title>Connexion</title>
     <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css\">
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        .login-container {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 15px;
-        }
-        .login-box {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: row;
-            overflow: hidden;
-            max-width: 800px; /* Limite la largeur totale */
-            width: 100%;
-        }
-        .form-container {
-            padding: 20px;
-            width: 45%; /* Réduit la taille du formulaire */
-        }
-        .form-image {
-            width: 55%; /* Réduit la taille de l'image */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .form-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            align-items: center;
-        }
-        .logo-container img {
-            max-width: 100px; /* Réduit la taille du logo */
-            margin-bottom: 15px;
-        }
-        .btn-success {
-            background-color: #28a745;
-            border: none;
-        }
-        .btn-outline-success {
-            border-color: #28a745;
-            color: #28a745;
-        }
-        .btn-outline-success:hover {
-            background-color: #28a745;
-            color: #fff;
-        }
-    </style>
+    <link rel=\"stylesheet\" href=\"{{ asset('src/styles/login.css') }}\">
 </head>
 <body>
     <div class=\"container login-container\">
