@@ -41,7 +41,7 @@ DirectoryIndex index.php
     # Redirect to URI without front controller to prevent duplicate content
     # (with and without `/index.php`). Only do this redirect on the initial
     # rewrite by Apache and not on subsequent cycles. Otherwise we would get an
-    # endless redirect loop (request -> rewrite to front controller ->
+    # endless redirect loop (request -> rewrite to front controller -> 
     # redirect -> request -> ...).
     # So in case you get a "too many redirects" error or you always get redirected
     # to the start page because your Apache does not expose the REDIRECT_STATUS
