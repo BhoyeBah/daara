@@ -399,7 +399,7 @@ class ClassMetadataFactory extends AbstractClassMetadataFactory
     /**
      * Gets the lower-case short name of a class.
      *
-     * @psalm-param class-string $className
+     * @param class-string $className
      */
     private function getShortName(string $className): string
     {
@@ -612,7 +612,7 @@ class ClassMetadataFactory extends AbstractClassMetadataFactory
         }
     }
 
-    /** @psalm-return ClassMetadata::GENERATOR_TYPE_* */
+    /** @phpstan-return ClassMetadata::GENERATOR_TYPE_* */
     private function determineIdGeneratorStrategy(AbstractPlatform $platform): int
     {
         assert($this->em !== null);

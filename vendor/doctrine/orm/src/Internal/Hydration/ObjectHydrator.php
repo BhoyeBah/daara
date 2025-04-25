@@ -213,7 +213,7 @@ class ObjectHydrator extends AbstractHydrator
      * Gets an entity instance.
      *
      * @param string $dqlAlias The DQL alias of the entity's class.
-     * @psalm-param array<string, mixed> $data     The instance data.
+     * @phpstan-param array<string, mixed> $data     The instance data.
      *
      * @throws HydrationException
      */
@@ -265,8 +265,8 @@ class ObjectHydrator extends AbstractHydrator
     }
 
     /**
-     * @psalm-param class-string $className
-     * @psalm-param array<string, mixed> $data
+     * @param class-string $className
+     * @phpstan-param array<string, mixed> $data
      */
     private function getEntityFromIdentityMap(string $className, array $data): object|bool
     {
@@ -556,9 +556,7 @@ class ObjectHydrator extends AbstractHydrator
             $scalarCount = (isset($rowData['scalars']) ? count($rowData['scalars']) : 0);
 
             foreach ($rowData['newObjects'] as $objIndex => $newObject) {
-                $class = $newObject['class'];
-                $args  = $newObject['args'];
-                $obj   = $class->newInstanceArgs($args);
+                $obj = $newObject['obj'];
 
                 if ($scalarCount === 0 && count($rowData['newObjects']) === 1) {
                     $result[$resultKey] = $obj;

@@ -105,7 +105,7 @@ class Paginator implements Countable, IteratorAggregate
     /**
      * {@inheritDoc}
      *
-     * @psalm-return Traversable<array-key, T>
+     * @phpstan-return Traversable<array-key, T>
      */
     public function getIterator(): Traversable
     {
@@ -183,7 +183,7 @@ class Paginator implements Countable, IteratorAggregate
     /**
      * Appends a custom tree walker to the tree walkers hint.
      *
-     * @psalm-param class-string $walkerClass
+     * @param class-string $walkerClass
      */
     private function appendTreeWalker(Query $query, string $walkerClass): void
     {
