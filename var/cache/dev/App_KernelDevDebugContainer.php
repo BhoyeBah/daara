@@ -16,7 +16,7 @@ if (!\class_exists(App_KernelDevDebugContainer::class, false)) {
 
 return new \ContainerDOTucxF\App_KernelDevDebugContainer([
     'container.build_hash' => 'DOTucxF',
-    'container.build_id' => '62f0c647',
-    'container.build_time' => 1745594849,
+    'container.build_id' => '11fcf4eb',
+    'container.build_time' => 1745596332,
     'container.runtime_mode' => \in_array(\PHP_SAPI, ['cli', 'phpdbg', 'embed'], true) ? 'web=0' : 'web=1',
 ], __DIR__.\DIRECTORY_SEPARATOR.'ContainerDOTucxF');

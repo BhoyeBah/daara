@@ -73,11 +73,12 @@ EOT);
             throw new InvalidArgumentException("Connection does not contain a 'path' or 'dbname' parameter and cannot be dropped.");
         }
 
-        /** @psalm-suppress InvalidArrayOffset Need to be compatible with DBAL < 4, which still has `$params['url']` */
+        /* @phpstan-ignore unset.offset (Need to be compatible with DBAL < 4, which still has `$params['url']`) */
         unset($params['dbname'], $params['url']);
 
         if ($connection->getDatabasePlatform() instanceof PostgreSQLPlatform) {
-            $params['dbname'] = 'postgres';
+            /** @phpstan-ignore nullCoalesce.offset (for DBAL < 4) */
+            $params['dbname'] = $params['default_dbname'] ?? 'postgres';
         }
 
         if (! $input->getOption('force')) {
@@ -104,7 +105,6 @@ EOT);
 
         try {
             if ($shouldDropDatabase) {
-                /** @psalm-suppress TypeDoesNotContainType Bogus error, Doctrine\DBAL\Schema\AbstractSchemaManager<Doctrine\DBAL\Platforms\AbstractPlatform> does contain Doctrine\DBAL\Schema\SQLiteSchemaManager */
                 if ($schemaManager instanceof SQLiteSchemaManager) {
                     // dropDatabase() is deprecated for Sqlite
                     $connection->close();

@@ -11,3 +11,5 @@ c47c99,127.0.0.1,GET,http://127.0.0.1:8000/forgot-password.html,1745594859,,404,
 f50566,127.0.0.1,GET,http://127.0.0.1:8000/inscription,1745594895,,200,request
 30da77,127.0.0.1,GET,http://127.0.0.1:8000/vendors/images/login-page-img.png,1745594895,46c13e,404,request
 46c13e,127.0.0.1,GET,http://127.0.0.1:8000/vendors/images/login-page-img.png,1745594895,,404,request
+c911ce,127.0.0.1,GET,http://127.0.0.1:8000/,1745596366,,302,request
+0baa81,127.0.0.1,GET,http://127.0.0.1:8000/connexion,1745596366,,200,request
