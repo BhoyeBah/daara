@@ -1,0 +1,13 @@
+bd09a0,127.0.0.1,GET,http://127.0.0.1:8000/,1745594852,,302,request
+e9d3b0,127.0.0.1,GET,http://127.0.0.1:8000/connexion,1745594852,,200,request
+c65504,127.0.0.1,GET,http://127.0.0.1:8000/favicon.ico,1745594854,f6ca59,404,request
+f6ca59,127.0.0.1,GET,http://127.0.0.1:8000/favicon.ico,1745594854,,404,request
+e60c9a,127.0.0.1,GET,http://127.0.0.1:8000/forgot-password.html,1745594859,c47c99,404,request
+c47c99,127.0.0.1,GET,http://127.0.0.1:8000/forgot-password.html,1745594859,,404,request
+524203,127.0.0.1,GET,http://127.0.0.1:8000/inscription,1745594869,,200,request
+62fbeb,127.0.0.1,GET,http://127.0.0.1:8000/vendors/images/login-page-img.png,1745594870,0b69a7,404,request
+0b69a7,127.0.0.1,GET,http://127.0.0.1:8000/vendors/images/login-page-img.png,1745594870,,404,request
+2b9d0a,127.0.0.1,GET,http://127.0.0.1:8000/connexion,1745594874,,200,request
+f50566,127.0.0.1,GET,http://127.0.0.1:8000/inscription,1745594895,,200,request
+30da77,127.0.0.1,GET,http://127.0.0.1:8000/vendors/images/login-page-img.png,1745594895,46c13e,404,request
+46c13e,127.0.0.1,GET,http://127.0.0.1:8000/vendors/images/login-page-img.png,1745594895,,404,request
